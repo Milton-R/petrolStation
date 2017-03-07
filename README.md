@@ -6,7 +6,7 @@ Group Project made by:
 - Kelvin M.
 - Matas B.
 - Milton R.
-- Jordan L
+- Jordan L.
 
 
 Used for Aston University Java Programme Development CS1410
