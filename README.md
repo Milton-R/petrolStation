@@ -9,9 +9,9 @@ Group Project made by:
 - Jordan L.
 
 #Meetings:
-- 1: 7 March 2017
-	- Tristan created the GitHub repository created
-	- Kelvin started with the UML Diagram with changes stated from Antonio
+1. 7 March 2017
+	* Tristan created the GitHub repository created
+	* Kelvin started with the UML Diagram with changes stated from Antonio
 		- To be shared with everyone hopefully by 8th of March 2017
 
 
