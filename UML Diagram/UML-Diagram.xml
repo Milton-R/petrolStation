@@ -1,4 +1,4 @@
-<diagram program="umletino" version="14.2"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>237</x><y>325</y><w>150</w><h>170</h></coordinates><panel_attributes>
+<diagram program="umletino" version="14.2"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>160</x><y>235</y><w>150</w><h>170</h></coordinates><panel_attributes>
 /Vehicle/
 
 --
@@ -11,7 +11,7 @@
 /+void: fill()/
 /+ PetrolPump[]: quicker()/
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>307</x><y>485</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>718</x><y>235</y><w>140</w><h>300</h></coordinates><panel_attributes>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>395</y><w>30</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>641</x><y>235</y><w>140</w><h>300</h></coordinates><panel_attributes>
 /PetrolStation/
 
 --
@@ -25,7 +25,7 @@ _-- float: pricePerGallon_
 -
 + totalIncome()
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>247</x><y>585</y><w>140</w><h>180</h></coordinates><panel_attributes>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>170</x><y>585</y><w>140</w><h>180</h></coordinates><panel_attributes>
 FamilySedan
 
 --
@@ -35,7 +35,7 @@ _# int: maxTank _
 --
 +void: fill()
 + PetrolPump[]: quicker
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>77</x><y>585</y><w>150</w><h>180</h></coordinates><panel_attributes>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>585</y><w>150</w><h>180</h></coordinates><panel_attributes>
 SmallCar
 
 --
@@ -44,7 +44,7 @@ _# int: maxTank _
 # int: space
 --
 +void: fill()
-+ PetrolPump[]: quicker</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>178</x><y>485</y><w>100</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>80;10;10;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>417</x><y>585</y><w>140</w><h>180</h></coordinates><panel_attributes>
++ PetrolPump[]: quicker</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>101</x><y>395</y><w>100</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>80;10;10;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>585</y><w>140</w><h>180</h></coordinates><panel_attributes>
 Motorbikes
 
 --
@@ -56,7 +56,7 @@ _# int: maxTank _
 + PetrolPump[]: quicker
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>357</x><y>485</y><w>120</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;100</additional_attributes></element><element><id>UMLClass</id><coordinates><x>668</x><y>585</y><w>130</w><h>190</h></coordinates><panel_attributes>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>395</y><w>120</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>591</x><y>585</y><w>130</w><h>190</h></coordinates><panel_attributes>
 PetrolPump
 
 --
@@ -65,7 +65,7 @@ PetrolPump
 
 --
 + pump(v: : Vehicle)
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>818</x><y>588</y><w>120</w><h>190</h></coordinates><panel_attributes>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>741</x><y>588</y><w>120</w><h>190</h></coordinates><panel_attributes>
 PetrolShop
 
 --
@@ -73,4 +73,4 @@ _- int: time_
 - 
 --
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>291</y><w>360</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>340;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>820</x><y>531</y><w>40</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>20;10;18;60</additional_attributes></element><element><id>Relation</id><coordinates><x>730</x><y>531</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element></diagram>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>303</x><y>291</y><w>360</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>340;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>743</x><y>531</y><w>40</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>20;10;18;60</additional_attributes></element><element><id>Relation</id><coordinates><x>653</x><y>531</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element></diagram>
