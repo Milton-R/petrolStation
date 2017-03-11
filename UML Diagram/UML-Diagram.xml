@@ -4,6 +4,7 @@
 --
 # int: tank
 # int: space
+# int: currentTank
 # Random: random
 - Probability: p
 - PetrolStation: station
@@ -30,8 +31,6 @@ FamilySedan
 
 --
 _# int: maxTank _
-# int: currentTank
-# int: space
 --
 +void: fill()
 + PetrolPump[]: quicker
@@ -40,8 +39,6 @@ SmallCar
 
 --
 _# int: maxTank _
-# int: currentTank
-# int: space
 --
 +void: fill()
 + PetrolPump[]: quicker</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>101</x><y>259</y><w>100</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>80;10;10;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>449</y><w>140</w><h>180</h></coordinates><panel_attributes>
@@ -49,8 +46,6 @@ Motorbikes
 
 --
 _# int: maxTank _
-# int: currentTank
-# int: space
 --
 +void: fill()
 + PetrolPump[]: quicker
