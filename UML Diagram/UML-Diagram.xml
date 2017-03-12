@@ -1,4 +1,4 @@
-<diagram program="umletino" version="14.2"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>160</x><y>99</y><w>150</w><h>170</h></coordinates><panel_attributes>
+<diagram program="umletino" version="14.2"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>160</x><y>99</y><w>150</w><h>180</h></coordinates><panel_attributes>
 /Vehicle/
 
 --
@@ -12,7 +12,7 @@
 /+void: fill()/
 /+ PetrolPump[]: quicker()/
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>259</y><w>30</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>641</x><y>99</y><w>140</w><h>300</h></coordinates><panel_attributes>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>269</y><w>30</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>UMLClass</id><coordinates><x>641</x><y>99</y><w>140</w><h>300</h></coordinates><panel_attributes>
 /PetrolStation/
 
 --
@@ -32,26 +32,22 @@ FamilySedan
 --
 _# int: maxTank _
 --
-+void: fill()
-+ PetrolPump[]: quicker
+
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>449</y><w>150</w><h>180</h></coordinates><panel_attributes>
 SmallCar
 
 --
 _# int: maxTank _
 --
-+void: fill()
-+ PetrolPump[]: quicker</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>101</x><y>259</y><w>100</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>80;10;10;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>449</y><w>140</w><h>180</h></coordinates><panel_attributes>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>101</x><y>269</y><w>100</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>80;10;10;180</additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>449</y><w>140</w><h>180</h></coordinates><panel_attributes>
 Motorbikes
 
 --
 _# int: maxTank _
 --
-+void: fill()
-+ PetrolPump[]: quicker
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>259</y><w>120</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>591</x><y>449</y><w>130</w><h>190</h></coordinates><panel_attributes>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>269</y><w>120</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;180</additional_attributes></element><element><id>UMLClass</id><coordinates><x>591</x><y>449</y><w>130</w><h>190</h></coordinates><panel_attributes>
 PetrolPump
 
 --
@@ -68,4 +64,4 @@ _- int: time_
 - 
 --
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>303</x><y>155</y><w>310</w><h>320</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>290;300;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>743</x><y>395</y><w>40</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>20;10;18;60</additional_attributes></element><element><id>Relation</id><coordinates><x>653</x><y>395</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element></diagram>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>303</x><y>85</y><w>310</w><h>390</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>290;370;10;14</additional_attributes></element><element><id>Relation</id><coordinates><x>743</x><y>395</y><w>40</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>20;10;18;60</additional_attributes></element><element><id>Relation</id><coordinates><x>653</x><y>395</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element></diagram>
