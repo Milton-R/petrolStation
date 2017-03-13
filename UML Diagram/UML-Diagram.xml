@@ -4,15 +4,13 @@
 --
 # int: tank
 # int: space
-# int: currentTank
-# Random: random
 - Probability: p
 - PetrolStation: station
 --
 /+void: fill()/
 /+ PetrolPump[]: quicker()/
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>240</y><w>30</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>811</x><y>0</y><w>140</w><h>300</h></coordinates><panel_attributes>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>240</y><w>30</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>981</x><y>0</y><w>140</w><h>300</h></coordinates><panel_attributes>
 /PetrolStation/
 
 --
@@ -23,6 +21,7 @@ _- int: numTicks_
 - PetrolShop: shop
 _-- float: pricePerGallon_
 - double: totalPrice
+# Random: random
 -
 + totalIncome()
 
@@ -30,24 +29,19 @@ _-- float: pricePerGallon_
 FamilySedan
 
 --
-_# int: maxTank _
---
 
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>430</y><w>150</w><h>180</h></coordinates><panel_attributes>
 SmallCar
 
 --
-_# int: maxTank _
---
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>661</x><y>340</y><w>320</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>300;160;19;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>430</y><w>140</w><h>180</h></coordinates><panel_attributes>
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>771</x><y>340</y><w>320</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>300;160;19;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>430</y><w>140</w><h>180</h></coordinates><panel_attributes>
 Motorbikes
 
 --
-_# int: maxTank _
---
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>240</y><w>120</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>961</x><y>483</y><w>120</w><h>190</h></coordinates><panel_attributes>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>240</y><w>120</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;100;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1071</x><y>483</y><w>120</w><h>190</h></coordinates><panel_attributes>
 Shop
 
 --
@@ -55,7 +49,7 @@ _- int: time_
 - 
 --
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>303</x><y>126</y><w>120</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>100;150;10;14</additional_attributes></element><element><id>Relation</id><coordinates><x>923</x><y>296</y><w>80</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;58;190</additional_attributes></element><element><id>Relation</id><coordinates><x>783</x><y>296</y><w>70</w><h>250</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>50;10;10;230</additional_attributes></element><element><id>UMLClass</id><coordinates><x>731</x><y>530</y><w>130</w><h>190</h></coordinates><panel_attributes>Pump
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>303</x><y>126</y><w>90</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>70;150;10;14</additional_attributes></element><element><id>Relation</id><coordinates><x>1073</x><y>296</y><w>50</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>30;10;18;190</additional_attributes></element><element><id>Relation</id><coordinates><x>883</x><y>296</y><w>140</w><h>320</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>120;10;10;300</additional_attributes></element><element><id>UMLClass</id><coordinates><x>831</x><y>600</y><w>130</w><h>190</h></coordinates><panel_attributes>Pump
 
 --
 - int: pumpQueue
@@ -63,17 +57,22 @@ _- int: time_
 
 --
 + pump(v: : Vehicle)
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>276</y><w>150</w><h>70</h></coordinates><panel_attributes>PumpQueue
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>276</y><w>150</w><h>70</h></coordinates><panel_attributes>PumpQueue
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>26</y><w>120</w><h>130</h></coordinates><panel_attributes>Queue Class
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>660</x><y>86</y><w>120</w><h>60</h></coordinates><panel_attributes>Queue Class
 --
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>146</y><w>110</w><h>150</h></coordinates><panel_attributes>lt=&lt;.
-&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>20;10;10;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>276</y><w>140</w><h>70</h></coordinates><panel_attributes>TillQueue
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>136</y><w>260</w><h>160</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>240;10;10;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>276</y><w>140</w><h>70</h></coordinates><panel_attributes>ShopQueue
 -
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>146</y><w>150</w><h>160</h></coordinates><panel_attributes>lt=&lt;.
-&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>10;10;110;140</additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>336</y><w>310</w><h>220</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>290;200;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>40</x><y>240</y><w>140</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>120;10;30;130;10;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>980</x><y>30</y><w>210</w><h>70</h></coordinates><panel_attributes>Config
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>136</y><w>140</w><h>160</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>80;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>420</x><y>336</y><w>440</w><h>290</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>420;270;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>40</x><y>240</y><w>140</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>120;10;10;190</additional_attributes></element><element><id>Relation</id><coordinates><x>1110</x><y>100</y><w>210</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;70;190;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>660</x><y>276</y><w>140</w><h>70</h></coordinates><panel_attributes>TillQueue
+-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>140</y><w>160</w><h>160</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>140;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>340</y><w>480</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>460;180;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>410</x><y>40</y><w>150</w><h>70</h></coordinates><panel_attributes>Customer
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>70</y><w>130</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>110;10;10;30</additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>100</y><w>80</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>60;180;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1170</x><y>40</y><w>210</w><h>70</h></coordinates><panel_attributes>Config
 --
 all the info about everything
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>940</x><y>90</y><w>200</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;80;180;10</additional_attributes></element></diagram>
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
