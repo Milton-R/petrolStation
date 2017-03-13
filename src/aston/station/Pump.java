@@ -2,7 +2,7 @@ package aston.station;
 
 import aston.vehicles.Vehicle;
 
-public class PetrolPump {
+public class Pump {
 	
 	Vehicle currentVehicle;
 
