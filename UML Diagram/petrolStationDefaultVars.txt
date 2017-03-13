@@ -1,0 +1,44 @@
+DEFAULT
+
+Tank:
+-smallCar: 7-9g
+-motorbike: 5g
+-familySedan: 12-18g
+
+Space:
+-smallCar: 1u
+-motorbike: 0.75u
+-familySedan: 1.5u
+
+Queue Size:
+-3u
+
+Pumps:
+-1g/t
+-2 pumps
+-£1.2/g
+
+Tills:
+-4 tills
+
+
+Tick:
+-10secs
+
+Probability:
+-smallCar: 0.03
+-motorbike: 0.02
+-familySedan: 0.01
+
+Shopping Time:
+-smallCar: t < 5min => p = 0.3, 2-4min, £5-£10
+-motobike: n.a. p = 0
+-familySedan: t < 10min => p = 0.4, 2-5min, £8-£16
+
+---------
+Trucks
+-Tank: 30-40g
+-Space: 2u
+-Shopping Time: t < 8min => p = 1, 4-6min, £15-£20
+-Probability: 0.02 (CAN DECREASE DYNAMICALLY)
+-Probability reduction: 0.8
