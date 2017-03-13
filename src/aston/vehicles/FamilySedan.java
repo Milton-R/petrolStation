@@ -1,4 +1,4 @@
-package petrolStation;
+package aston.vehicles;
 
 public class FamilySedan extends Vehicle{
 

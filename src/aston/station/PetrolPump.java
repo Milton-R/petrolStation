@@ -1,4 +1,6 @@
-package petrolStation;
+package aston.station;
+
+import aston.vehicles.Vehicle;
 
 public class PetrolPump {
 	
