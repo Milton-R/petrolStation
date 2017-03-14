@@ -26,8 +26,8 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 	* Matas has made changes to the UML Diagram as how the Java Classes are different overall
 	* Kelvin has made Vehicle SuperClass abstract along with some fo the methods
 	* Kelvin has started creating the GUI Class
-	* Kelvin will start the GUI Wireframe
-	- _Things Stated by Antonio_
+	* Kelvin hopefully will start the GUI Wireframe
+	**_Things Stated by Antonio_
 		- Use Map
 		- Config Class is preferred to use encapsulation (get & set)
 		- Have a run() method.
