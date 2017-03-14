@@ -7,7 +7,7 @@ import aston.resources.*;
 public class Vehicle{
 	//Variables
 	protected int tank;							//Vehicle's Tank Size
-	protected int space;						//How much space the vehicle uses in queue
+	protected double space;						//How much space the vehicle uses in queue
 	protected int currentTank; 					//Vehicle's Current Tank
 	//protected int arrivalProbability;			//Probability that the vehicle will arrive
 	protected int shopTimeLimit;				//Time that which pump must take less than in order for the customer to shop
