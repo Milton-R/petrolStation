@@ -29,4 +29,12 @@ public abstract class Vehicle{
 		
 	}
 	
+	public void fillTank(int pumpSpd)
+	{
+		if (currentTank < tank)
+		{
+			tank += pumpSpd;
+		}
+	}
+	
 }
