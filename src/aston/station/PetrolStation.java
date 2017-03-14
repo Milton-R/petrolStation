@@ -1,5 +1,9 @@
 package aston.station;
 
+import java.util.*;
+import aston.resources.*;
+import aston.vehicles.*;
+
 /**
  * 
  * @author Kelvin M.
@@ -12,5 +16,8 @@ package aston.station;
  */
 
 public class PetrolStation {
-	private int maxQueue;
+	
+	//instances
+	public Config config = new Config();
+	public Random rand = new Random(config.randomSeed);
 }
