@@ -34,4 +34,10 @@ public class PetrolStation {
 			pumps[i] = p;
 		}
 	}
+	
+	//Main run method
+	public void run()
+	{
+		
+	}
 }
