@@ -1,16 +1,4 @@
-<diagram program="umletino" version="14.2"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>160</x><y>70</y><w>150</w><h>180</h></coordinates><panel_attributes>
-/Vehicle/
-
---
-# int: tank
-# int: space
-- Probability: p
-- PetrolStation: station
---
-/+void: fill()/
-/+ PetrolPump[]: quicker()/
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>230</x><y>240</y><w>30</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>981</x><y>0</y><w>140</w><h>300</h></coordinates><panel_attributes>
+<diagram program="umletino" version="14.2"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>Relation</id><coordinates><x>230</x><y>240</y><w>30</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>981</x><y>0</y><w>140</w><h>300</h></coordinates><panel_attributes>
 /PetrolStation/
 
 --
@@ -49,7 +37,7 @@ _- int: time_
 - 
 --
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>303</x><y>126</y><w>90</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>70;150;10;14</additional_attributes></element><element><id>Relation</id><coordinates><x>1073</x><y>296</y><w>50</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>30;10;18;190</additional_attributes></element><element><id>Relation</id><coordinates><x>883</x><y>296</y><w>140</w><h>320</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>120;10;10;300</additional_attributes></element><element><id>UMLClass</id><coordinates><x>831</x><y>600</y><w>130</w><h>190</h></coordinates><panel_attributes>Pump
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>293</x><y>16</y><w>100</w><h>280</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>80;260;17;14</additional_attributes></element><element><id>Relation</id><coordinates><x>1073</x><y>296</y><w>50</w><h>210</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>30;10;18;190</additional_attributes></element><element><id>Relation</id><coordinates><x>883</x><y>296</y><w>140</w><h>320</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>120;10;10;300</additional_attributes></element><element><id>UMLClass</id><coordinates><x>831</x><y>600</y><w>130</w><h>190</h></coordinates><panel_attributes>Pump
 
 --
 - int: pumpQueue
@@ -75,4 +63,20 @@ _- int: time_
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>70</y><w>130</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>110;10;10;30</additional_attributes></element><element><id>Relation</id><coordinates><x>470</x><y>100</y><w>80</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>60;180;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1170</x><y>40</y><w>210</w><h>70</h></coordinates><panel_attributes>Config
 --
 all the info about everything
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>140</x><y>40</y><w>180</w><h>220</h></coordinates><panel_attributes>
+/Vehicle/
+
+--
+# int: tank
+# int: current tank
+# int: shopTimeLimit 
+# double: shoppingProbability		
+# int: shopTimeLimit
+# int: timeTakenShopping 	
+# int: space
+# int: moneySpentShopping
+--
+/+void: fillTank()/
+
+
 </panel_attributes><additional_attributes></additional_attributes></element></diagram>
