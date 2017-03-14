@@ -53,7 +53,7 @@ public class Config {
 	
 	//Pump
 	public static final int gallonPerTick = 1;//gallon
-	public static final int numberOfpumps = 2;
+	public static final int numberOfPumps = 2;
 	public static final int pencePerGallon = 1200;//pence
 	
 	//Tills

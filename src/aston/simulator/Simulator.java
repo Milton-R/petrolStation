@@ -15,7 +15,7 @@ public class Simulator {
 		
 		Simulator s = new Simulator();
 		
-		s.simulate(numSteps); // we need to create a simulate method
+		//s.simulate(numSteps); // we need to create a simulate method
 	}
 
 }

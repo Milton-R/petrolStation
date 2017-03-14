@@ -17,6 +17,21 @@ import aston.vehicles.*;
 
 public class PetrolStation {
 	
+	//variables
+	int numOfPumps = Config.numberOfPumps;
+	
 	//instances
 	public static Random rand = new Random(Config.randomSeed); //temp static
+	private Pump[] pumps = new Pump[numOfPumps];
+	private Shop shop = new Shop();
+	
+	//constructor
+	public PetrolStation()
+	{
+		for (int i = 0; i < numOfPumps; i++)
+		{
+			Pump p = new Pump();
+			pumps[i] = p;
+		}
+	}
 }
