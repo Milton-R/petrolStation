@@ -24,6 +24,7 @@ public class Config {
 	
 	//Motorbike
 	public static final int motorBike_tank = 5;//gallons
+	public static final int motorBike_tankRange = 0;//gallons
 	public static final double motorBike_space = 0.75;//u
 	public static final double motorBike_probability = 0.02;
 	public static final int motorBikeShoppingTimeLimit = 0;//ticks

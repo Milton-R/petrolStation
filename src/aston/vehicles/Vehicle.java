@@ -4,7 +4,7 @@ import java.util.Random;
 import aston.station.*;
 import aston.resources.*;
 
-public class Vehicle{
+public abstract class Vehicle{
 	//Variables
 	protected int tank;							//Vehicle's Tank Size
 	protected double space;						//How much space the vehicle uses in queue

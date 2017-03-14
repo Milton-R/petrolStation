@@ -14,6 +14,7 @@ public class Motorbike extends Vehicle{
 	 */
 	public Motorbike(){
 		super();
+		tank = Config.motorBike_tank + PetrolStation.rand.nextInt(Config.motorBike_tankRange);
 		space = Config.motorBike_space;
 		shopTimeLimit = Config.motorBikeShoppingTimeLimit;
 		shoppingProbability = Config.motorBikeShoppingProbability;
