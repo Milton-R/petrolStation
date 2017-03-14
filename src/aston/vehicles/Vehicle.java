@@ -1,6 +1,8 @@
 package aston.vehicles;
 
 import java.util.Random;
+import aston.station.*;
+import aston.resources.*;
 
 public class Vehicle{
 	//Variables

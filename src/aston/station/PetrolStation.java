@@ -18,6 +18,5 @@ import aston.vehicles.*;
 public class PetrolStation {
 	
 	//instances
-	public Config config = new Config();
-	public Random rand = new Random(config.randomSeed);
+	public static Random rand = new Random(Config.randomSeed); //temp static
 }

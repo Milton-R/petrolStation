@@ -1,5 +1,8 @@
 package aston.vehicles;
 
+import aston.resources.*;
+import aston.station.*;
+
 public class FamilySedan extends Vehicle{
 	//Variables
 	private int currentTank; //FamilySedan's Maximum Tank Size
@@ -11,5 +14,7 @@ public class FamilySedan extends Vehicle{
 	 */
 	public FamilySedan(){
 		super();
+		tank = Config.familySedan_tank + PetrolStation.rand.nextInt(Config.familySedan_tankRange);
+		
 	}
 }
