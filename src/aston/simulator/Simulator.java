@@ -8,6 +8,7 @@ public class Simulator {
 	//instances
 	PetrolStation petrolStation = new PetrolStation();
 	
+	
 	//variables
 	private int step;
 	

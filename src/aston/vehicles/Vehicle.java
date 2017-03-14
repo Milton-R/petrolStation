@@ -47,8 +47,8 @@ public abstract class Vehicle{
 		}
 	}
 	
-	
-	public VehiclePump[] goToQueue(PetrolPump[] p){
+	/*
+	public Pump[] goToQueue(Pump[] p){
 		//Counter to set the minimum
 		int min = 10;
 		//Loop into the Petrol Pump Array
@@ -63,6 +63,7 @@ public abstract class Vehicle{
 			}
 		}
 	}
+	*/
 	
 	public void goInPumpQueue(){
 		
@@ -72,5 +73,9 @@ public abstract class Vehicle{
 		
 	}
 	
+	public double getVehicleSize()
+	{
+		return space;
+	}
 	
 }

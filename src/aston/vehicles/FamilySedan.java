@@ -2,6 +2,7 @@ package aston.vehicles;
 
 import aston.resources.*;
 import aston.station.*;
+import aston.simulator.*;
 
 public class FamilySedan extends Vehicle{
 	//Variables
