@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Window" id="20" x="48" y="48" width="305" height="361" text="Window" measuredWidth="305" measuredHeight="361"/>
+  <widgets xsi:type="model:Button" id="21" x="192" y="344" width="129" height="33" text="run" measuredWidth="129" measuredHeight="33">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="23" x="107" y="208" width="174" text="tank " measuredWidth="174" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="24" x="107" y="256" width="174" text="time spent shopping" measuredWidth="174" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="25" x="107" y="304" width="174" text="money spent" measuredWidth="174" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="27" x="112" y="80" width="169" text="vehicles" measuredWidth="169" measuredHeight="67">
+    <font size="43px"/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="28" x="107" y="160" width="174" text="Vehicle types" measuredWidth="174" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Window" id="29" x="427" y="48" width="505" height="537" text="Window" measuredWidth="505" measuredHeight="537"/>
+  <widgets xsi:type="model:Label" id="30" x="544" y="102" text="Petrol Station " measuredWidth="272" measuredHeight="67">
+    <font size="43px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="31" x="496" y="248" width="57" text="P value" measuredWidth="57" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="32" x="576" y="248" width="193" text="Text field" measuredWidth="193" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="33" x="576" y="298" width="193" text="Text field" measuredWidth="193" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="34" x="496" y="298" width="41" text="Q value" measuredWidth="41" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="35" x="496" y="357" width="73" text="Gallon Price" measuredWidth="73" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:HSlider" id="36" x="496" y="392" width="377" measuredWidth="377" measuredHeight="17"/>
+  <widgets xsi:type="model:Label" id="37" x="496" y="448" width="105" text="Number of Pumps" measuredWidth="105" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:HSlider" id="38" x="491" y="512" width="377" measuredWidth="377" measuredHeight="17"/>
+  <widgets xsi:type="model:TextField" id="40" x="576" y="208" width="193" text="Text field" measuredWidth="193" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="41" x="496" y="208" width="57" text="time run" measuredWidth="57" measuredHeight="23">
+    <font/>
+  </widgets>
+  <hRuler>
+    <guides position="1113"/>
+  </hRuler>
+  <vRuler>
+    <guides position="678"/>
+  </vRuler>
+  <font size="12px"/>
+  <note>This the start screen that shows all the main parts of the *WireframeSketcher*'s user interface.
+
+You can find out more detailed information about each part by consulting the integrated help that can be opened using *F1*.
+
+This description in particular is a screen note that you can edit using the *Notes* view.</note>
+</model:Screen>
