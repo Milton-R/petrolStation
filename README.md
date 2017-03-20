@@ -28,7 +28,7 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 	* Kelvin has started creating the GUI Class
 	* Kelvin hopefully will start the GUI Wireframe
 		* Changed to Milton on the 17th March
-	* _Things Stated by Antonio_
+	** _Things Stated by Antonio_
 		- Use Map
 		- Config Class is preferred to use encapsulation (get & set)
 		- Have a run() method.
