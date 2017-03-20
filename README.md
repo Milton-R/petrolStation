@@ -27,10 +27,16 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 	* Kelvin has made Vehicle SuperClass abstract along with some fo the methods
 	* Kelvin has started creating the GUI Class
 	* Kelvin hopefully will start the GUI Wireframe
-	**_Things Stated by Antonio_
+		* Changed to Milton on the 17th March
+	* _Things Stated by Antonio_
 		- Use Map
 		- Config Class is preferred to use encapsulation (get & set)
 		- Have a run() method.
-	
+4. 20 March 2017
+	* Matas Started the String Representation for Canonical Form 
+	* Kelvin Started the Petrol GUI code
+		* Steps 1 and 2 Only
+	* Milton has Finished the Wireframe
+
 # Advisory
 Used for Aston University Java Programme Development CS1410
