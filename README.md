@@ -16,7 +16,7 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 		- To be shared with everyone hopefully by 8th of March 2017
 2. 13 March 2017
 	* Jordan and Tristan has managed to complete a more concrete UML diagram
-		- Shared to the group and Manage to create a [Default Variable List](http://github.com)
+		- Shared to the group and Manage to create a [Default Variable List](https://github.com/TristanJP/petrolStation/blob/master/UML%20Diagram/petrolStationDefaultVars.txt)
 	* Matas and Milton has started coding the Config Class
 	* Kelvin has started coding the Vehicle Packages
 	* Tristan will be starting the Customer Class to be placed in the Vehicle Class

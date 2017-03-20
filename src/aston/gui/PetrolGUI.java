@@ -23,6 +23,7 @@ public class PetrolGUI {
 		// Step 1: Create the components
 			//Title
 		JLabel title = new JLabel();
+		timeFrame = new JTextArea();
 			//Simulation
 		//JPanel simPanel = new JPanel();
 			//Log Section
@@ -37,7 +38,7 @@ public class PetrolGUI {
 			//Title
 		title.setText("Petrol Station Simulation");
 			//Time
-		
+		timeFrame.setText("");
 			//Buttons
 		quitButton.setText("Quit");
 		addCar.setText("");
