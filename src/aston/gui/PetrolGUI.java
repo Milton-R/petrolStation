@@ -1,5 +1,7 @@
 package aston.gui;
 
+import java.awt.*;
+
 import javax.swing.*;
 
 import aston.gui.*;
@@ -12,6 +14,7 @@ public class PetrolGUI {
 	private JFrame mainFrame;
 	private Object o;
 	private JTextArea log;
+	private JTextArea timeFrame;
 	
 	
 	public PetrolGUI(Object o){
@@ -21,16 +24,26 @@ public class PetrolGUI {
 			//Title
 		JLabel title = new JLabel();
 			//Simulation
-		JPanel simPanel = new JPanel();
+		//JPanel simPanel = new JPanel();
 			//Log Section
 		JPanel logPanel = new JPanel();
-		JScrollPane listScroll = new JScrollPane(logPanel);
-		
+		log = new JTextArea();
+		JScrollPane listScroll = new JScrollPane(log);
+			//Buttons
 		JButton quitButton = new JButton();
-		JButton newButton = new JButton();
+		JButton addCar = new JButton();
 		
 		// Step 2: Set the properties of the components 
+			//Title
 		title.setText("Petrol Station Simulation");
+			//Time
+		
+			//Buttons
+		quitButton.setText("Quit");
+		addCar.setText("");
+			//List
+		listScroll.setPreferredSize(new Dimension(300,300));
+		listScroll.setMinimumSize(new Dimension(200,200));
 		// Step 3: Create containers to hold the components
 		mainFrame = new JFrame("Petrol Simulator");
 		// Step 4: Specify LayoutManagers
