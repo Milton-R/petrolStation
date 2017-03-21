@@ -43,6 +43,7 @@ public class PetrolStation {
 		for (Pump p : pumps)
 		{
 			p.pumpFuel();
+			System.out.println("Pumping: "+p);
 		}
 		//create a new vehicle
 		if (spawnVehicle())

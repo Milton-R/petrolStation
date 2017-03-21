@@ -16,19 +16,24 @@ public class Pump {
 	{
 		try 
 		{
+			System.out.println("1");
 			currentVehicle = currentQueue.getFrontVehicle();
+			System.out.println(currentVehicle);
 			if(currentVehicle.fillTank(pumpSpeed))
 			{
 				//do nothing
+				System.out.println("2");
 			}
 			else
 			{
 				removeFrontVehicle();
+				System.out.println("removed v: "+currentVehicle);
 			}
 		} 
 		catch (Exception e)
 		{
 			//do nothing
+			System.out.println("queue empty");
 		}
 	}
 	

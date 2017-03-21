@@ -43,11 +43,13 @@ public abstract class Vehicle{
 	{
 		if (currentTank < tank)
 		{
-			tank += pumpSpd;
+			currentTank += pumpSpd;
+			System.out.println("tank: "+currentTank);
 			return true;
 		}
 		else
 		{
+			System.out.println("tfull");
 			return false;
 		}
 	}
