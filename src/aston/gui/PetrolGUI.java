@@ -1,6 +1,7 @@
 package aston.gui;
 
 import java.awt.*;
+import java.awt.event.*;
 
 import javax.swing.*;
 import javax.swing.border.*;
@@ -35,6 +36,7 @@ public class PetrolGUI {
 		JTextField stepField = new JTextField();
 		JTextField priceField = new JTextField();
 		JButton runButton = new JButton();
+		JButton quitButton = new JButton();
 		
 		// Step 2: Set the properties of the components 
 		title.setText("Petrol Simulator");
@@ -60,6 +62,8 @@ public class PetrolGUI {
 			//Button
 		runButton.setText("Run Simulation");
 		runButton.setToolTipText("Start the Simulation");
+		quitButton.setText("Quit Simulation");
+		quitButton.setToolTipText("Quit the Program");
 		// Step 3: Create containers to hold the components
 		mainFrame = new JFrame("Petrol Simulator");
 		mainFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -100,6 +104,10 @@ public class PetrolGUI {
 		mainPanel.setLayout(new BorderLayout());
 		mainPanel.setBorder(new EmptyBorder(6, 6, 6, 6));
 		
+		JPanel buttonPanel = new JPanel();
+		buttonPanel.setLayout(new BorderLayout());
+		buttonPanel.setBorder(new EmptyBorder(6, 6, 6, 6));
+		
 		// Step 5: Add components to containers 
 		pumpPanel.add(label1, BorderLayout.WEST);
 		pumpPanel.add(pSlider, BorderLayout.CENTER);
@@ -119,18 +127,55 @@ public class PetrolGUI {
 		paramBotPanel.add(stepPanel, BorderLayout.NORTH);
 		paramBotPanel.add(stepPanel, BorderLayout.SOUTH);
 		
+		buttonPanel.add(runButton, BorderLayout.WEST);
+		buttonPanel.add(quitButton, BorderLayout.EAST);
+		
 		paramPanel.add(paramTopPanel, BorderLayout.NORTH);
 		paramPanel.add(paramBotPanel, BorderLayout.CENTER);
 		
 		mainPanel.add(title, BorderLayout.NORTH);
 		mainPanel.add(paramPanel, BorderLayout.CENTER);
-		mainPanel.add(runButton, BorderLayout.SOUTH);
+		mainPanel.add(buttonPanel, BorderLayout.SOUTH);
 		
 		// Step 6: Arrange to handle events in the user interface
+		mainFrame.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
+				exitApp();
+			}
+		});
+		
+		quitButton.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				exitApp();
+			}
+		});
+		
+		runButton.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				//Link Simulator Logic
+			}
+		});
 		
 		// Step 7: Display the GUI
 		mainFrame.pack();
 		mainFrame.setVisible(true);
+	}
+	
+	/**
+	 * Helper method to ensure consistency in leaving application.
+	 */
+	private void exitApp() {
+		// Display confirmation dialog before exiting application
+		int response = JOptionPane.showConfirmDialog(mainFrame, 
+				"Do you really want to quit?",
+				"Quit?",
+				JOptionPane.YES_NO_OPTION,
+				JOptionPane.QUESTION_MESSAGE);
+		if (response == JOptionPane.YES_OPTION) {
+			System.exit(0);
+		}
+		
+		// Don't quit
 	}
 	
 }
