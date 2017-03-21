@@ -41,7 +41,7 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 	* All have worked on the GUI Wireframe
 	* Milton is working on the tabbed GUIs
 	* Kelvin Started working on the GUI based on the wireframe
-	* Matas and Tristan are working on the Canonical Form
+	* Matas and Tristan are working on the Canonical Form on PetrolStation
 	** _Things Stated by Antonio_
 		- Should Show the state of Pump and Tills
 		- Look at Lab 5
