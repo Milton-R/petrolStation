@@ -7,12 +7,12 @@ public class VehicleQueue {
 	
 	private Queue<Vehicle> q;
 	private double queueSpace = Config.queueSize;
-	private double spaceTaken = 0;
+	public double spaceTaken = 0;
 	
 	//Constructor
 	public VehicleQueue()
 	{
-		q = new PriorityQueue<Vehicle>();
+		q = new LinkedList<Vehicle>();
 	}
 	
 	/*
@@ -22,7 +22,7 @@ public class VehicleQueue {
 	 */
 	public boolean addVehicle(Vehicle v)
 	{
-		if (queueSpace < v.getVehicleSize() + spaceTaken)
+		if (queueSpace > v.getVehicleSize() + spaceTaken)
 		{
 			spaceTaken += v.getVehicleSize();
 			q.add(v);

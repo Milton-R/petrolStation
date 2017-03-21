@@ -6,7 +6,7 @@ import aston.resources.*;
 public class Pump {
 	
 	Vehicle currentVehicle;
-	VehicleQueue currentQueue;
+	VehicleQueue currentQueue = new VehicleQueue();
 	int pumpSpeed = Config.gallonPerTick;
 	
 	/**
@@ -14,9 +14,9 @@ public class Pump {
 	 */
 	public void pumpFuel()
 	{
-		currentVehicle = currentQueue.getFrontVehicle();
-		if (currentQueue.getFrontVehicle() != null)
-		{	
+		try 
+		{
+			currentVehicle = currentQueue.getFrontVehicle();
 			if(currentVehicle.fillTank(pumpSpeed))
 			{
 				//do nothing
@@ -25,6 +25,10 @@ public class Pump {
 			{
 				removeFrontVehicle();
 			}
+		} 
+		catch (Exception e)
+		{
+			//do nothing
 		}
 	}
 	

@@ -19,6 +19,7 @@ public class PetrolStation {
 	
 	//variables
 	int numOfPumps = Config.numberOfPumps;
+	Vehicle generatedV;
 	
 	//instances
 	public static Random rand = new Random(Config.randomSeed); //temp static
@@ -44,22 +45,36 @@ public class PetrolStation {
 			p.pumpFuel();
 		}
 		//create a new vehicle
-		Vehicle v = spawnVehicle();
-		if (v != null)
+		if (spawnVehicle())
 		{
+			Vehicle v = generatedV;
+			System.out.println(v);
 			boolean added = false;
 			for (Pump p : pumps)
 			{
+				System.out.println(p);
+				System.out.println(p.currentQueue.spaceTaken);
+				System.out.println(v);
 				if (p.addVehicleToQueue(v))
 				{
 					added = true;
+					System.out.println("vehicle added to a que");
+					System.out.println(p.currentQueue.spaceTaken);
 					break;
+				}
+				else
+				{
+					System.out.println("no space");
 				}
 			}
 			if (!added)
 			{
-				//code that stores info on missed money
+				System.out.println("vehicle leaves as no space at pump");
 			}
+		}
+		else
+		{
+			System.out.println("no v");
 		}
 	}
 	
@@ -67,25 +82,31 @@ public class PetrolStation {
 	 * creates one random subclass of the vehicle class, based on probabilities in config.
 	 * @return Vehicle
 	 */
-	private Vehicle spawnVehicle()
+	private boolean spawnVehicle()
 	{
 		double num = rand.nextDouble();
-		Vehicle v = null;
+		System.out.println(num);
+		Vehicle v;
 		
 		//chose a vehicle
 		if (num < Config.smallCar_probability)
 		{
-			v = new SmallCar();
+			generatedV = new SmallCar();
+			return true;
 		}
 		else if (num < (Config.smallCar_probability + Config.motorBike_probability))
 		{
-			v = new Motorbike();
+			generatedV = new Motorbike();
+			return true;
 		}
 		else if (num < (Config.smallCar_probability + Config.motorBike_probability + Config.familySedan_probability))
 		{
-			v = new FamilySedan();
+			generatedV = new FamilySedan();
+			return true;
 		}
-		
-		return v;
+		else
+		{
+			return false;
+		}
 	}
 }

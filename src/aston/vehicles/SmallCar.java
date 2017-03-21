@@ -14,7 +14,14 @@ public class SmallCar extends Vehicle{
 	 */
 	public SmallCar(){
 		super();
-		tank = Config.smallCar_tank + PetrolStation.rand.nextInt(Config.smallCar_tankRange);
+		if (Config.smallCar_tankRange > 0)
+		{
+			tank = Config.smallCar_tank + PetrolStation.rand.nextInt(Config.smallCar_tankRange);
+		}
+		else
+		{
+			tank = Config.smallCar_tank;
+		}
 		space = Config.smallCar_space;
 		shopTimeLimit = Config.smallCarShoppingTimeLimit;
 		shoppingProbability = Config.smallCarShoppingProbability;

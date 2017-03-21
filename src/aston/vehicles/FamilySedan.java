@@ -15,7 +15,14 @@ public class FamilySedan extends Vehicle{
 	 */
 	public FamilySedan(){
 		super();
-		tank = Config.familySedan_tank + PetrolStation.rand.nextInt(Config.familySedan_tankRange);
+		if (Config.familySedan_tankRange > 0)
+		{
+			tank = Config.familySedan_tank + PetrolStation.rand.nextInt(Config.familySedan_tankRange);
+		}
+		else
+		{
+			tank = Config.familySedan_tank;
+		}
 		space = Config.familySedan_space;
 		shopTimeLimit = Config.familySedanShoppingTimeLimit;
 		shoppingProbability = Config.familySedanShoppingProbability;
