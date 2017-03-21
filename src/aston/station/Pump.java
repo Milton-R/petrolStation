@@ -9,9 +9,39 @@ public class Pump {
 	VehicleQueue currentQueue;
 	int pumpSpeed = Config.gallonPerTick;
 	
+	/**
+	 * sets current vehicle to the vehicle in the front of the queue, checks if it's null, pumps fuel into the current vehicle
+	 */
 	public void pumpFuel()
 	{
-		currentVehicle.fillTank(pumpSpeed);
+		currentVehicle = currentQueue.getFrontVehicle();
+		if (currentQueue.getFrontVehicle() != null)
+		{	
+			if(currentVehicle.fillTank(pumpSpeed))
+			{
+				//do nothing
+			}
+			else
+			{
+				removeFrontVehicle();
+			}
+		}
+	}
+	
+	/**
+	 * adds Vehicle to queue
+	 */
+	private boolean addVehicleToQueue(Vehicle v)
+	{
+		return currentQueue.addVehicle(v);
+	}
+	
+	/**
+	 * Removes the vehicle at the front of the queue
+	 */
+	private void removeFrontVehicle()
+	{
+		currentQueue.removeFrontVehicle();
 	}
 
 }

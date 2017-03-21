@@ -38,7 +38,15 @@ public class PetrolStation {
 	//Main run method, runs every step/tick.
 	public void run()
 	{
-		
+		for (Pump p : pumps)
+		{
+			p.pumpFuel();
+		}
+		Vehicle v = spawnVehicle();
+		for (Pump p : pumps)
+		{
+			//p.
+		}
 	}
 	
 	/**
