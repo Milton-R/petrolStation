@@ -13,38 +13,23 @@ public class PetrolGUI {
 	//JFrame for the 
 	private JFrame mainFrame;
 	private Object o;
-	private JTextArea log;
-	private JTextArea timeFrame;
+	private JTextArea logOutput;
 	
-	
+	/**
+	 * The GUI Simulation of the Petrol Pump Simulator 
+	 * 
+	 * @param Object o
+	 */
 	public PetrolGUI(Object o){
 		this.o = o;
 		
 		// Step 1: Create the components
-			//Title
-		JLabel title = new JLabel();
-		timeFrame = new JTextArea();
-			//Simulation
-		//JPanel simPanel = new JPanel();
-			//Log Section
-		JPanel logPanel = new JPanel();
-		log = new JTextArea();
-		JScrollPane listScroll = new JScrollPane(log);
-			//Buttons
-		JButton quitButton = new JButton();
-		JButton addCar = new JButton();
+		JLabel label1 = new JLabel();
+		JLabel label2 = new JLabel();
+		
 		
 		// Step 2: Set the properties of the components 
-			//Title
-		title.setText("Petrol Station Simulation");
-			//Time
-		timeFrame.setText("");
-			//Buttons
-		quitButton.setText("Quit");
-		addCar.setText("");
-			//List
-		listScroll.setPreferredSize(new Dimension(300,300));
-		listScroll.setMinimumSize(new Dimension(200,200));
+
 		// Step 3: Create containers to hold the components
 		mainFrame = new JFrame("Petrol Simulator");
 		// Step 4: Specify LayoutManagers
