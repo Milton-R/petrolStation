@@ -10,7 +10,7 @@ public class SmallCar extends Vehicle{
 	//Methods
 		//Constructors
 	/**
-	 * Motorbike Constructor that is calling the super-class: Vehicle
+	 * SmallCar Constructor that is calling the super-class: Vehicle
 	 */
 	public SmallCar(){
 		super();
@@ -20,6 +20,7 @@ public class SmallCar extends Vehicle{
 		shoppingProbability = Config.smallCarShoppingProbability;
 		timeTakenShopping = Config.smallCarTimeTakenShopping + PetrolStation.rand.nextInt(Config.smallCarTimeTakenShoppingRange);
 		moneySpentShopping = Config.smallCarMoneySpent + PetrolStation.rand.nextInt(Config.smallCarMoneySpentRange);
-		currentTank = 0;
+		
 	}
+	
 }

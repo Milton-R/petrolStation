@@ -39,11 +39,16 @@ public abstract class Vehicle{
 	 * Fill the Vehicle's Tank 
 	 * @param pumpSpd
 	 */
-	public void fillTank(int pumpSpd)
+	public boolean fillTank(int pumpSpd)
 	{
 		if (currentTank < tank)
 		{
 			tank += pumpSpd;
+			return true;
+		}
+		else
+		{
+			return false;
 		}
 	}
 	
@@ -64,18 +69,38 @@ public abstract class Vehicle{
 		}
 	}
 	*/
-	
-	public void goInPumpQueue(){
+	public int getMoneySpentShopping()
+	{
+		return moneySpentShopping; 
 		
 	}
-	
-	public void goOutPumpQueue(){
+	public int getTimeTakenShopping()
+	{
+		return timeTakenShopping;
+	}
+	public double getShoppingProbability()
+	{
+		return shoppingProbability;
+	}
+	public int getShopTimeLimit()
+	{
+		return shopTimeLimit;
+		
+	}
+	public int getCurrentTank()
+	{
+		return currentTank;
 		
 	}
 	
 	public double getVehicleSize()
 	{
 		return space;
+	}
+	
+	public String toString()
+	{
+		return "tank: "+tank+", space: "+space+", shop time limit: " + shopTimeLimit + ", shopping probability: " + shoppingProbability + ", time taken shopping: " + timeTakenShopping + ", moneySpentShopping: " + moneySpentShopping ;
 	}
 	
 }
