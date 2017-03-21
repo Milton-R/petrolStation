@@ -47,6 +47,22 @@ public class PetrolStation {
 	 */
 	private Vehicle spawnVehicle()
 	{
+		double num = rand.nextDouble();
+		Vehicle v = null;
+		
+		//chose a vehicle
+		if (num < Config.smallCar_probability)
+		{
+			v = new SmallCar();
+		}
+		else if (num < (Config.smallCar_probability + Config.motorBike_probability))
+		{
+			v = new Motorbike();
+		}
+		else if (num < (Config.smallCar_probability + Config.motorBike_probability + Config.familySedan_probability))
+		{
+			v = new FamilySedan();
+		}
 		
 		return v;
 	}
