@@ -65,14 +65,6 @@ public abstract class Vehicle{
 	}
 	*/
 	
-	public void goInPumpQueue(){
-		
-	}
-	
-	public void goOutPumpQueue(){
-		
-	}
-	
 	public double getVehicleSize()
 	{
 		return space;
