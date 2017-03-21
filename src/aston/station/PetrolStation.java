@@ -35,9 +35,19 @@ public class PetrolStation {
 		}
 	}
 	
-	//Main run method
+	//Main run method, runs every step/tick.
 	public void run()
 	{
 		
+	}
+	
+	/**
+	 * creates one random subclass of the vehicle class, based on probabilities in config.
+	 * @return Vehicle
+	 */
+	private Vehicle spawnVehicle()
+	{
+		
+		return v;
 	}
 }
