@@ -38,14 +38,28 @@ public class PetrolStation {
 	//Main run method, runs every step/tick.
 	public void run()
 	{
+		//make each Pump pump fuel
 		for (Pump p : pumps)
 		{
 			p.pumpFuel();
 		}
+		//create a new vehicle
 		Vehicle v = spawnVehicle();
-		for (Pump p : pumps)
+		if (v != null)
 		{
-			//p.
+			boolean added = false;
+			for (Pump p : pumps)
+			{
+				if (p.addVehicleToQueue(v))
+				{
+					added = true;
+					break;
+				}
+			}
+			if (!added)
+			{
+				//code that stores info on missed money
+			}
 		}
 	}
 	

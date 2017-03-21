@@ -31,7 +31,7 @@ public class Pump {
 	/**
 	 * adds Vehicle to queue
 	 */
-	private boolean addVehicleToQueue(Vehicle v)
+	public boolean addVehicleToQueue(Vehicle v)
 	{
 		return currentQueue.addVehicle(v);
 	}
