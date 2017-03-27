@@ -15,7 +15,6 @@ public class PetrolGUI {
 	//JFrame for the 
 	private JFrame mainFrame;
 	private Object o;
-	private JTextArea logOutput;
 	
 	/**
 	 * The GUI Simulation of the Petrol Pump Simulator 
@@ -153,6 +152,8 @@ public class PetrolGUI {
 		runButton.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				//Link Simulator Logic
+				
+				JTextArea logOutput;
 			}
 		});
 		
