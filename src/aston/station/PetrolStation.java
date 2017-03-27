@@ -37,7 +37,7 @@ public class PetrolStation {
 	}
 	
 	//Main run method, runs every step/tick.
-	public void run()
+	public String run()
 	{
 		//make each Pump pump fuel
 		for (Pump p : pumps)
@@ -77,6 +77,7 @@ public class PetrolStation {
 		{
 			System.out.println("no v");
 		}
+		return "all the info";
 	}
 	
 	/**
