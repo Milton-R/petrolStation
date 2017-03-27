@@ -53,10 +53,18 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 			* Question against the Output = GUI Output
 			* Information Output as a Log 
 			
-6. 27 March 2017
+6. *27 March 2017*
 	* Kelvin has finished all the componenets for the GUI
 		- GUI MainFrame and GUI Simulation Log Window
-	* 
+	* Matas has finished the JavaDocs
+	* Matas and Milton has started creating the output class
+		- Milton finished the Output Class
+	* Tristan is reconstructing the Simulation
+		- For both GUI and Textual
+		
+7. 28 March 2017
+	*
+	 
 	
 # Advisory
 Used for Aston University Java Programme Development CS1410

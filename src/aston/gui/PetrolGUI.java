@@ -21,11 +21,12 @@ public class PetrolGUI {
 	private JSlider qSlider;
 	private JTextField stepField;
 	private JTextField priceField;
+	private JCheckBox truckCheck;
 	
 	/**
 	 * The GUI Simulation of the Petrol Pump Simulator 
 	 * 
-	 * @param Object o
+	 * 
 	 */
 	public PetrolGUI(){
 		
@@ -43,6 +44,8 @@ public class PetrolGUI {
 		priceField = new JTextField();
 		JButton runButton = new JButton();
 		JButton quitButton = new JButton();
+		JLabel label5 = new JLabel();
+		truckCheck = new JCheckBox();
 		
 		// Step 2: Set the properties of the components 
 		title.setText("Petrol Simulator");
@@ -50,6 +53,7 @@ public class PetrolGUI {
 		label2.setText("Probability of q:");
 		label3.setText("Simulation Time (steps):");
 		label4.setText("Price per Gallon:");
+		label5.setText("With/Without Trucks:");
 			//numPump slider
 		pSlider.setMinimum(1);
 		pSlider.setMaximum(5);
@@ -72,6 +76,8 @@ public class PetrolGUI {
 		runButton.setToolTipText("Start the Simulation");
 		quitButton.setText("Quit Simulation");
 		quitButton.setToolTipText("Quit the Program");
+			//Checkbox
+		truckCheck.setSelected(false);
 		// Step 3: Create containers to hold the components
 		mainFrame = new JFrame("Petrol Simulator");
 		mainFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -95,6 +101,10 @@ public class PetrolGUI {
 		JPanel pricePanel = new JPanel();
 		pricePanel.setLayout(new BorderLayout());
 		pricePanel.setBorder(new EmptyBorder(6, 6, 6, 6));
+		
+		JPanel truckPanel = new JPanel();
+		truckPanel.setLayout(new BorderLayout());
+		truckPanel.setBorder(new EmptyBorder(6, 6, 6, 6));
 		
 		JPanel paramPanel = new JPanel();	
 		paramPanel.setLayout(new BorderLayout());
@@ -127,6 +137,9 @@ public class PetrolGUI {
 		pricePanel.add(label4, BorderLayout.WEST);
 		pricePanel.add(priceField, BorderLayout.CENTER);
 		
+		truckPanel.add(label5, BorderLayout.WEST);
+		truckPanel.add(truckCheck, BorderLayout.CENTER);
+		
 		paramTopPanel.add(pumpPanel, BorderLayout.NORTH);
 		paramTopPanel.add(tillPanel, BorderLayout.SOUTH);
 		
@@ -138,6 +151,7 @@ public class PetrolGUI {
 		
 		paramPanel.add(paramTopPanel, BorderLayout.NORTH);
 		paramPanel.add(paramBotPanel, BorderLayout.CENTER);
+		paramPanel.add(truckPanel, BorderLayout.SOUTH);
 		
 		mainFrame.add(title, BorderLayout.NORTH);
 		mainFrame.add(paramPanel, BorderLayout.CENTER);
@@ -201,6 +215,9 @@ public class PetrolGUI {
 		// Don't quit
 	}
 	
+	/**
+	 * Starts the Simulation Steps
+	 */
 	private void startSimulation(){
 		//Link Simulator Logic
 		
@@ -211,12 +228,12 @@ public class PetrolGUI {
 		JScrollPane listScroll2 = new JScrollPane(logOutput);
 		JScrollPane listScroll3 = new JScrollPane(logOutput);
 		JScrollPane listScroll4 = new JScrollPane(logOutput);
-		JLabel pLabel = new JLabel();
 		JButton stopButton = new JButton();
 		JLabel titleLog = new JLabel();
 		// Step 2: Set the properties of the components
 		stopButton.setText("Stop");
 		titleLog.setText("Simulation");
+		
 		// Step 3: Create containers to hold the components
 		logFrame = new JFrame("Simulation");
 		logFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
@@ -269,10 +286,23 @@ public class PetrolGUI {
 		logFrame.setVisible(true);
 	}
 	
+	/**
+	 * Takes the input from the MainFrame and passes to the
+	 */
 	public void update(){
 		int var1 = pSlider.getValue();
 		int var2 = qSlider.getValue();
 		String var3 = stepField.getText();
 		String var4 = priceField.getText();
-	}	
+		boolean withTrucks = truckCheck.isSelected();
+	}
+
+	public void updateGUI(){
+		pSlider.setValue(1);
+		qSlider.setValue(1);
+		stepField.setText("");
+		priceField.setText("");
+		
+		truckCheck.setSelected(false);
+	}
 }
