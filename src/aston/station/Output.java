@@ -2,18 +2,21 @@ package aston.station;
 
 public class Output {
 	
-	private Pump pump;
+	private Pump pump= new Pump();
 	private int numSc, numM, numFs, numGallons;
 	
-	Output()
-	{
+	Output(){ 
+		
+		
+	}
 		
 	public void getGallons()
 		{
-			pump= new Pump();
 			numGallons = pump.getNumOfGallons();
 			
+			
 		}
-	}
+	
+	public void get
 
 }
