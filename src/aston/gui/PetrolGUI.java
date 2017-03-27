@@ -98,10 +98,6 @@ public class PetrolGUI {
 		paramBotPanel.setLayout(new BorderLayout());
 		paramBotPanel.setBorder(new EmptyBorder(6, 6, 6, 6));
 		
-		JPanel mainPanel = new JPanel();
-		mainPanel.setLayout(new BorderLayout());
-		mainPanel.setBorder(new EmptyBorder(6, 6, 6, 6));
-		
 		JPanel buttonPanel = new JPanel();
 		buttonPanel.setLayout(new BorderLayout());
 		buttonPanel.setBorder(new EmptyBorder(6, 6, 6, 6));
@@ -131,9 +127,9 @@ public class PetrolGUI {
 		paramPanel.add(paramTopPanel, BorderLayout.NORTH);
 		paramPanel.add(paramBotPanel, BorderLayout.CENTER);
 		
-		mainPanel.add(title, BorderLayout.NORTH);
-		mainPanel.add(paramPanel, BorderLayout.CENTER);
-		mainPanel.add(buttonPanel, BorderLayout.SOUTH);
+		mainFrame.add(title, BorderLayout.NORTH);
+		mainFrame.add(paramPanel, BorderLayout.CENTER);
+		mainFrame.add(buttonPanel, BorderLayout.SOUTH);
 		
 		// Step 6: Arrange to handle events in the user interface
 		mainFrame.addWindowListener(new WindowAdapter() {
