@@ -296,13 +296,4 @@ public class PetrolGUI {
 		String var4 = priceField.getText();
 		boolean withTrucks = truckCheck.isSelected();
 	}
-
-	public void updateGUI(){
-		pSlider.setValue(1);
-		qSlider.setValue(1);
-		stepField.setText("");
-		priceField.setText("");
-		
-		truckCheck.setSelected(false);
-	}
 }
