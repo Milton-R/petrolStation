@@ -98,10 +98,6 @@ public class PetrolGUI {
 		paramBotPanel.setLayout(new BorderLayout());
 		paramBotPanel.setBorder(new EmptyBorder(6, 6, 6, 6));
 		
-		JPanel mainPanel = new JPanel();
-		mainPanel.setLayout(new BorderLayout());
-		mainPanel.setBorder(new EmptyBorder(6, 6, 6, 6));
-		
 		JPanel buttonPanel = new JPanel();
 		buttonPanel.setLayout(new BorderLayout());
 		buttonPanel.setBorder(new EmptyBorder(6, 6, 6, 6));
