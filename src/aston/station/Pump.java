@@ -22,7 +22,7 @@ public class Pump {
 			if(currentVehicle.fillTank(pumpSpeed))
 			{
 				//do nothing
-				System.out.println("2");
+				System.out.println("filling tank");
 			}
 			else
 			{

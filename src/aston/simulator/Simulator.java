@@ -2,20 +2,22 @@ package aston.simulator;
 import aston.station.*;
 import aston.resources.*;
 import aston.vehicles.*;
+import aston.gui.*;
 
 public class Simulator {
 	
 	//instances
 	PetrolStation petrolStation = new PetrolStation();
-	
+	PetrolGUI gui = new PetrolGUI();
 	
 	//variables
 	private int step;
 	
 	/**
-	 * Create a simulation and run it for a specified number of steps
+	 * Create a simulation and run it for a specified number of steps, based on lab5 simulator
 	 */
 	public static void main(String[] args) {
+		//gui
 		int numSteps = 1;  // By default, run for 1 step
 		if (args.length >= 1) {
 			numSteps = Integer.parseInt(args[0]);
@@ -25,17 +27,23 @@ public class Simulator {
 		
 		Simulator s = new Simulator();
 		s.simulate(numSteps);
+		
 	}
 	
-	public void simulate(int numSteps)
+	private void simulate(int numSteps)
 	{
 		for(int step = 0; step <= numSteps-1; step++) {
 			simulateStep();
 		}
 	}
 	
-	public void simulateStep()
+	private void simulateStep()
 	{
 		petrolStation.run();
+		updateGUI();
+	}
+	
+	private void updateGUI(){
+		
 	}
 }

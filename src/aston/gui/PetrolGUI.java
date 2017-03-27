@@ -15,15 +15,13 @@ public class PetrolGUI {
 	//JFrame for the 
 	private JFrame mainFrame;
 	private JFrame logFrame;
-	private Object o;
 	
 	/**
 	 * The GUI Simulation of the Petrol Pump Simulator 
 	 * 
 	 * @param Object o
 	 */
-	public PetrolGUI(Object o){
-		this.o = o;
+	public PetrolGUI(){
 		
 		// Step 1: Create the components
 		JLabel title = new JLabel();
