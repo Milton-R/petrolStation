@@ -5,6 +5,8 @@ import java.awt.event.*;
 
 import javax.swing.*;
 import javax.swing.border.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 import aston.gui.*;
 import aston.resources.*;
@@ -15,6 +17,10 @@ public class PetrolGUI {
 	//JFrame for the 
 	private JFrame mainFrame;
 	private JFrame logFrame;
+	private JSlider pSlider;
+	private JSlider qSlider;
+	private JTextField stepField;
+	private JTextField priceField;
 	
 	/**
 	 * The GUI Simulation of the Petrol Pump Simulator 
@@ -29,10 +35,12 @@ public class PetrolGUI {
 		JLabel label2 = new JLabel();
 		JLabel label3 = new JLabel();
 		JLabel label4 = new JLabel();
-		JSlider pSlider = new JSlider(1,4);
-		JSlider qSlider = new JSlider(1,4);
-		JTextField stepField = new JTextField();
-		JTextField priceField = new JTextField();
+		pSlider = new JSlider(1,5);
+		JLabel slidePNum = new JLabel();
+		qSlider = new JSlider(1,5);
+		JLabel slideQNum = new JLabel();
+		stepField = new JTextField();
+		priceField = new JTextField();
 		JButton runButton = new JButton();
 		JButton quitButton = new JButton();
 		
@@ -44,19 +52,21 @@ public class PetrolGUI {
 		label4.setText("Price per Gallon:");
 			//numPump slider
 		pSlider.setMinimum(1);
-		pSlider.setMaximum(4);
+		pSlider.setMaximum(5);
 		pSlider.setValue(1);
 		pSlider.setMajorTickSpacing(1);
 		pSlider.setToolTipText("Number of Petrol Pumps");
+		pSlider.setPaintTicks(true);
 			//numTill slider
 		qSlider.setMinimum(1);
-		qSlider.setMaximum(4);
+		qSlider.setMaximum(5);
 		qSlider.setValue(1);
 		qSlider.setMajorTickSpacing(1);
+		qSlider.setPaintTicks(true);
 			//Step Field
-		stepField.setText("");
+		stepField.setText("0");
 			//Price Field
-		priceField.setText("");
+		priceField.setText("12.34");
 			//Button
 		runButton.setText("Run Simulation");
 		runButton.setToolTipText("Start the Simulation");
@@ -105,9 +115,11 @@ public class PetrolGUI {
 		// Step 5: Add components to containers 
 		pumpPanel.add(label1, BorderLayout.WEST);
 		pumpPanel.add(pSlider, BorderLayout.CENTER);
+		pumpPanel.add(slidePNum, BorderLayout.EAST);
 		
 		tillPanel.add(label2,BorderLayout.WEST);
 		tillPanel.add(qSlider, BorderLayout.CENTER);
+		tillPanel.add(slideQNum, BorderLayout.EAST);
 		
 		stepPanel.add(label3,BorderLayout.WEST);
 		stepPanel.add(stepField, BorderLayout.CENTER);
@@ -119,7 +131,7 @@ public class PetrolGUI {
 		paramTopPanel.add(tillPanel, BorderLayout.SOUTH);
 		
 		paramBotPanel.add(stepPanel, BorderLayout.NORTH);
-		paramBotPanel.add(stepPanel, BorderLayout.SOUTH);
+		paramBotPanel.add(pricePanel, BorderLayout.SOUTH);
 		
 		buttonPanel.add(runButton, BorderLayout.WEST);
 		buttonPanel.add(quitButton, BorderLayout.EAST);
@@ -151,6 +163,22 @@ public class PetrolGUI {
 				
 		});
 		
+		pSlider.addChangeListener(new ChangeListener(){
+			public void stateChanged(ChangeEvent e){
+				int value = ((JSlider)e.getSource()).getValue();
+				slidePNum.setText("0.0" + value + "");
+				
+			}
+		});
+		
+		qSlider.addChangeListener(new ChangeListener(){
+			public void stateChanged(ChangeEvent e){
+				int value = ((JSlider)e.getSource()).getValue();
+				slideQNum.setText(value + "");
+				
+			}
+		});
+		
 		// Step 7: Display the GUI
 		mainFrame.pack();
 		mainFrame.setVisible(true);
@@ -179,7 +207,11 @@ public class PetrolGUI {
 		// Step 1: Create the components
 		JTextArea logOutput = new JTextArea();
 		logOutput.setEditable(false);
-		JScrollPane scrollPane = new JScrollPane(logOutput);
+		JScrollPane listScroll1 = new JScrollPane(logOutput);
+		JScrollPane listScroll2 = new JScrollPane(logOutput);
+		JScrollPane listScroll3 = new JScrollPane(logOutput);
+		JScrollPane listScroll4 = new JScrollPane(logOutput);
+		JLabel pLabel = new JLabel();
 		JButton stopButton = new JButton();
 		JLabel titleLog = new JLabel();
 		// Step 2: Set the properties of the components
@@ -191,9 +223,31 @@ public class PetrolGUI {
 		// Step 4: Specify LayoutManagers
 		logFrame.setLayout(new BorderLayout());	
 		((JPanel)logFrame.getContentPane()).setBorder(new EmptyBorder(6, 6, 6, 6));
+		
+		JPanel logPanel = new JPanel();
+		logPanel.setLayout(new BorderLayout());
+		logPanel.setBorder(new EmptyBorder(6, 6, 6, 6));
+		
+		JPanel leftPanel = new JPanel();
+		leftPanel.setLayout(new BorderLayout());
+		leftPanel.setBorder(new EmptyBorder(6, 6, 6, 6));
+		
+		JPanel rightPanel = new JPanel();
+		rightPanel.setLayout(new BorderLayout());
+		rightPanel.setBorder(new EmptyBorder(6, 6, 6, 6));
+		
 		// Step 5: Add components to containers
+		leftPanel.add(listScroll1, BorderLayout.NORTH);
+		leftPanel.add(listScroll2, BorderLayout.SOUTH);
+		
+		rightPanel.add(listScroll3, BorderLayout.NORTH);
+		rightPanel.add(listScroll4, BorderLayout.NORTH);
+		
+		logPanel.add(leftPanel, BorderLayout.WEST);
+		logPanel.add(leftPanel, BorderLayout.EAST);
+		
 		logFrame.add(titleLog, BorderLayout.NORTH);
-		logFrame.add(logOutput, BorderLayout.CENTER);
+		logFrame.add(logPanel, BorderLayout.NORTH);
 		logFrame.add(stopButton, BorderLayout.SOUTH);
 		// Step 6: Arrange to handle events in the user interface
 		logFrame.addWindowListener(new WindowAdapter() {
@@ -215,4 +269,10 @@ public class PetrolGUI {
 		logFrame.setVisible(true);
 	}
 	
+	public void update(){
+		int var1 = pSlider.getValue();
+		int var2 = qSlider.getValue();
+		String var3 = stepField.getText();
+		String var4 = priceField.getText();
+	}	
 }
