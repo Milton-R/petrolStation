@@ -4,7 +4,14 @@ import java.util.Random;
 import aston.station.*;
 import aston.resources.*;
 import aston.simulator.*;
-
+/**
+ * A superclass for vehicles, extended by Family Sedan, Motorbike, Small Car.  
+ * The vehicle takes up a certain amount of space and it has a tank that needs to be filled.
+ *
+ * @author Tristan P. , Matas B., Kelvin M. and Milton R.
+ * @version 27/03/2017
+ * 
+ */
 public abstract class Vehicle{
 	//Variables
 	protected int tank;							//Vehicle's Tank Size
@@ -54,52 +61,73 @@ public abstract class Vehicle{
 		}
 	}
 	
-	/*
-	public Pump[] goToQueue(Pump[] p){
-		//Counter to set the minimum
-		int min = 10;
-		//Loop into the Petrol Pump Array
-		for(int i = 0; i < p.length(); i++){
-			//If the queue is longer than the current queue
-			if(min < p[i]){
-				min = p[i];
-			}
-			//Else if no queues are avaliable
-			if(min != p[i]){
-				//Vehicle Leaves
-			}
-		}
-	}
-	*/
+	/**
+	 * Gets the money that has been spent by the customers belonging to the Vehicle. 
+	 * @return Money spent by the customers.
+	 */
 
 	public int getMoneySpentShopping()
 	{
 		return moneySpentShopping; 
 		
 	}
+	
+	/**
+	 * Gets the time taken to shop, by the customers belonging to the Vehicle. 
+	 * @return The time takan to shop.
+	 */
+	
 	public int getTimeTakenShopping()
 	{
 		return timeTakenShopping;
 	}
+	
+	/**
+	 * Gets the probability that a belonging to the Vehicle will shop. 
+	 * @return The time taken to shop.
+	 */
+	
 	public double getShoppingProbability()
 	{
 		return shoppingProbability;
 	}
+	
+	/**
+	 * Gets the maximum amount of time that a customer belonging to the vehicle will spend shopping. 
+	 * @return The the time limit.
+	 */
+	
 	public int getShopTimeLimit()
 	{
 		return shopTimeLimit;
 		
 	}
+	
+	/**
+	 * Gets the current amount of fuel in the vehicles tank. 
+	 * @return The current amount of fuel.
+	 */
+	
 	public int getCurrentTank()
 	{
 		return currentTank;
 		
 	}
 	
+	/**
+	 * Gets the size of the vehicle in terms of the queue. 
+	 * @return The space taken.
+	 */
+	
 	public double getVehicleSize()
 	{
 		return space;
 	}
+	
+	/**
+	 * Gets the toString representation of the class. 
+	 * @return The string representation.
+	 */
 	
 	public String toString()
 	{
