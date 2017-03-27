@@ -152,25 +152,9 @@ public class PetrolGUI {
 		
 		runButton.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				//Link Simulator Logic
-				
-				// Step 1: Create the components
-				JTextArea logOutput = new JTextArea();
-				JButton closeButton = new JButton();
-				// Step 2: Set the properties of the components
-				closeButton.setText("Stop");
-				// Step 3: Create containers to hold the components
-				logFrame = new JFrame("Simulation");
-				logFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-				// Step 4: Specify LayoutManagers
-				mainFrame.setLayout(new BorderLayout());	
-				((JPanel)mainFrame.getContentPane()).setBorder(new EmptyBorder(6, 6, 6, 6));
-				// Step 5: Add components to containers
-				// Step 6: Arrange to handle events in the user interface
-				// Step 7: Display the GUI
-				logFrame.pack();
-				logFrame.setVisible(true);
+				startSimulation();
 			}
+				
 		});
 		
 		// Step 7: Display the GUI
@@ -193,6 +177,52 @@ public class PetrolGUI {
 		}
 		
 		// Don't quit
+	}
+	
+	private void startSimulation(){
+		//Link Simulator Logic
+		
+		// Step 1: Create the components
+		JTextArea logOutput = new JTextArea();
+		logOutput.setEditable(false);
+		JScrollPane scrollPane = new JScrollPane(logOutput);
+		JButton stopButton = new JButton();
+		JLabel titleLog = new JLabel();
+		// Step 2: Set the properties of the components
+		stopButton.setText("Stop");
+		titleLog.setText("Simulation");
+		// Step 3: Create containers to hold the components
+		logFrame = new JFrame("Simulation");
+		logFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+		// Step 4: Specify LayoutManagers
+		logFrame.setLayout(new BorderLayout());	
+		((JPanel)logFrame.getContentPane()).setBorder(new EmptyBorder(6, 6, 6, 6));
+		
+		JPanel logPanel = new JPanel();
+		logPanel.setLayout(new BorderLayout());
+		logPanel.setBorder(new EmptyBorder(6, 6, 6, 6));
+		// Step 5: Add components to containers
+		logPanel.add(titleLog, BorderLayout.NORTH);
+		logPanel.add(logOutput, BorderLayout.CENTER);
+		logPanel.add(stopButton, BorderLayout.SOUTH);
+		// Step 6: Arrange to handle events in the user interface
+		logFrame.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
+				logFrame.dispose();
+			}
+		});
+		
+		stopButton.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				//Logic to stop then
+				logFrame.dispose();
+			}
+				
+		});
+		
+		// Step 7: Display the GUI
+		logFrame.pack(); 
+		logFrame.setVisible(true);
 	}
 	
 }
