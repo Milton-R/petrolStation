@@ -22,9 +22,8 @@ public class Pump {
 			System.out.println(currentVehicle);
 			if(currentVehicle.fillTank(pumpSpeed))
 			{
-				//do nothing
 				numGallons ++;
-				System.out.println("2");
+				System.out.println("filling tank");
 			}
 			else
 			{
