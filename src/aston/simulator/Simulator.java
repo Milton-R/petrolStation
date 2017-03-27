@@ -44,6 +44,6 @@ public class Simulator {
 	}
 	
 	private void updateGUI(){
-		
+		gui.update();
 	}
 }
