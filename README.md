@@ -48,6 +48,8 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 		- Clarification on the Specifications
 			* Question against the Output = GUI Output
 			* Information Output: 
-
+6. 27 March 2017
+	* Kelvin is finishing up the Log GUI
+	
 # Advisory
 Used for Aston University Java Programme Development CS1410

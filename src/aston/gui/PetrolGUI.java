@@ -14,6 +14,7 @@ public class PetrolGUI {
 	
 	//JFrame for the 
 	private JFrame mainFrame;
+	private JFrame logFrame;
 	private Object o;
 	
 	/**
@@ -153,7 +154,22 @@ public class PetrolGUI {
 			public void actionPerformed(ActionEvent e){
 				//Link Simulator Logic
 				
-				JTextArea logOutput;
+				// Step 1: Create the components
+				JTextArea logOutput = new JTextArea();
+				JButton closeButton = new JButton();
+				// Step 2: Set the properties of the components
+				closeButton.setText("Stop");
+				// Step 3: Create containers to hold the components
+				logFrame = new JFrame("Simulation");
+				logFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+				// Step 4: Specify LayoutManagers
+				mainFrame.setLayout(new BorderLayout());	
+				((JPanel)mainFrame.getContentPane()).setBorder(new EmptyBorder(6, 6, 6, 6));
+				// Step 5: Add components to containers
+				// Step 6: Arrange to handle events in the user interface
+				// Step 7: Display the GUI
+				logFrame.pack();
+				logFrame.setVisible(true);
 			}
 		});
 		
