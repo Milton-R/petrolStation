@@ -191,14 +191,10 @@ public class PetrolGUI {
 		// Step 4: Specify LayoutManagers
 		logFrame.setLayout(new BorderLayout());	
 		((JPanel)logFrame.getContentPane()).setBorder(new EmptyBorder(6, 6, 6, 6));
-		
-		JPanel logPanel = new JPanel();
-		logPanel.setLayout(new BorderLayout());
-		logPanel.setBorder(new EmptyBorder(6, 6, 6, 6));
 		// Step 5: Add components to containers
-		logPanel.add(titleLog, BorderLayout.NORTH);
-		logPanel.add(logOutput, BorderLayout.CENTER);
-		logPanel.add(stopButton, BorderLayout.SOUTH);
+		logFrame.add(titleLog, BorderLayout.NORTH);
+		logFrame.add(logOutput, BorderLayout.CENTER);
+		logFrame.add(stopButton, BorderLayout.SOUTH);
 		// Step 6: Arrange to handle events in the user interface
 		logFrame.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {

@@ -5,6 +5,7 @@ import aston.resources.*;
 
 public class Pump {
 	
+	int numGallons;
 	Vehicle currentVehicle;
 	VehicleQueue currentQueue = new VehicleQueue();
 	int pumpSpeed = Config.gallonPerTick;
@@ -21,7 +22,7 @@ public class Pump {
 			System.out.println(currentVehicle);
 			if(currentVehicle.fillTank(pumpSpeed))
 			{
-				//do nothing
+				numGallons ++;
 				System.out.println("filling tank");
 			}
 			else
@@ -53,4 +54,10 @@ public class Pump {
 		currentQueue.removeFrontVehicle();
 	}
 
+	
+	public int getNumOfGallons()
+	{
+		return numGallons;
+		
+	}
 }
