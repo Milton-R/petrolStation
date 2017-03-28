@@ -4,7 +4,7 @@ import aston.gui.PetrolGUI;
 
 public class runGUI {
 	
-	PetrolGUI gui = new PetrolGUI();
+	static PetrolGUI gui = new PetrolGUI();
 	
 	/**
 	 * Create a simulation and run it for a specified number of steps, based on lab5 simulator
@@ -19,6 +19,7 @@ public class runGUI {
 		
 		Simulator s = new Simulator();
 		s.simulate(numSteps);
+		gui.guiVisible();
 		s.updateGUI();
 	}
 

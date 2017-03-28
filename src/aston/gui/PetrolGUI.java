@@ -26,7 +26,6 @@ public class PetrolGUI {
 	/**
 	 * The GUI Simulation of the Petrol Pump Simulator 
 	 * 
-	 * 
 	 */
 	public PetrolGUI(){
 		
@@ -62,8 +61,8 @@ public class PetrolGUI {
 		pSlider.setToolTipText("Number of Petrol Pumps");
 		pSlider.setPaintTicks(true);
 			//numTill slider
-		qSlider.setMinimum(1);
-		qSlider.setMaximum(5);
+		qSlider.setMinimum(0);
+		qSlider.setMaximum(2);
 		qSlider.setValue(1);
 		qSlider.setMajorTickSpacing(1);
 		qSlider.setPaintTicks(true);
@@ -188,7 +187,8 @@ public class PetrolGUI {
 		qSlider.addChangeListener(new ChangeListener(){
 			public void stateChanged(ChangeEvent e){
 				int value = ((JSlider)e.getSource()).getValue();
-				slideQNum.setText(value + "");
+				int present = (int) Math.pow(2, value);
+				slideQNum.setText(present + "");
 				
 			}
 		});
@@ -222,14 +222,33 @@ public class PetrolGUI {
 		//Link Simulator Logic
 		
 		// Step 1: Create the components
-		JTextArea logOutput = new JTextArea();
-		logOutput.setEditable(false);
-		JScrollPane listScroll1 = new JScrollPane(logOutput);
-		JScrollPane listScroll2 = new JScrollPane(logOutput);
-		JScrollPane listScroll3 = new JScrollPane(logOutput);
-		JScrollPane listScroll4 = new JScrollPane(logOutput);
 		JButton stopButton = new JButton();
 		JLabel titleLog = new JLabel();
+		
+		JTextArea logOutput1 = new JTextArea();
+		JTextArea logOutput2 = new JTextArea();
+		JTextArea logOutput3 = new JTextArea();
+		JTextArea logOutput4 = new JTextArea();
+		
+		logOutput1.setEditable(false);
+		JScrollPane listScroll1 = new JScrollPane(logOutput1);
+		listScroll1.setPreferredSize(new Dimension(300, 300));
+		listScroll1.setMinimumSize(new Dimension(200,200));
+		
+		logOutput2.setEditable(false);
+		JScrollPane listScroll2 = new JScrollPane(logOutput2);
+		listScroll2.setPreferredSize(new Dimension(300, 300));
+		listScroll2.setMinimumSize(new Dimension(200,200));
+		
+		logOutput3.setEditable(false);
+		JScrollPane listScroll3 = new JScrollPane(logOutput3);
+		listScroll3.setPreferredSize(new Dimension(300, 300));
+		listScroll3.setMinimumSize(new Dimension(200,200));
+		
+		logOutput4.setEditable(false);
+		JScrollPane listScroll4 = new JScrollPane(logOutput4);
+		listScroll4.setPreferredSize(new Dimension(300, 300));
+		listScroll4.setMinimumSize(new Dimension(200,200));
 		// Step 2: Set the properties of the components
 		stopButton.setText("Stop");
 		titleLog.setText("Simulation");
@@ -237,6 +256,7 @@ public class PetrolGUI {
 		// Step 3: Create containers to hold the components
 		logFrame = new JFrame("Simulation");
 		logFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+		logFrame.setVisible(true);
 		// Step 4: Specify LayoutManagers
 		logFrame.setLayout(new BorderLayout());	
 		((JPanel)logFrame.getContentPane()).setBorder(new EmptyBorder(6, 6, 6, 6));
@@ -261,7 +281,7 @@ public class PetrolGUI {
 		rightPanel.add(listScroll4, BorderLayout.NORTH);
 		
 		logPanel.add(leftPanel, BorderLayout.WEST);
-		logPanel.add(leftPanel, BorderLayout.EAST);
+		logPanel.add(rightPanel, BorderLayout.EAST);
 		
 		logFrame.add(titleLog, BorderLayout.NORTH);
 		logFrame.add(logPanel, BorderLayout.NORTH);
@@ -278,12 +298,11 @@ public class PetrolGUI {
 				//Logic to stop then
 				logFrame.dispose();
 			}
-				
 		});
 		
 		// Step 7: Display the GUI
 		logFrame.pack(); 
-		logFrame.setVisible(true);
+		//logFrame.setVisible(true);
 	}
 	
 	/**
@@ -295,5 +314,12 @@ public class PetrolGUI {
 		String var3 = stepField.getText();
 		String var4 = priceField.getText();
 		boolean withTrucks = truckCheck.isSelected();
+	}
+	
+	/**
+	 * Makes the GUI Visible to the user 
+	 */
+	public void guiVisible(){
+		mainFrame.setVisible(true);
 	}
 }

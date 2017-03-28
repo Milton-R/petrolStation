@@ -63,7 +63,8 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 		- For both GUI and Textual
 		
 7. 28 March 2017
-	*
+	* Kelvin made GUI Visible for runGUI class
+	
 	 
 	
 # Advisory
