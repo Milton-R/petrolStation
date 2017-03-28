@@ -2,7 +2,6 @@ package aston.station;
 
 public class Output {
 	private PetrolStation petrolstation= new PetrolStation();
-	private Pump pump= new Pump();
 	private int numSc, numM, numFs, numGallons, totalVSpwnd;
 	
 	/*Things we need to keep track of:
@@ -17,8 +16,13 @@ public class Output {
 	 * #Throughout simulation
 	 * - What vehicles are in what pump queues
 	 * - Current fuel tank of vehicle at front of queue
+	 * - How much of the queue is taken up for each queue
 	 * - What Customes are in the store?
 	 * - What Customers are in what till queues?
+	 * - What step it is on
+	 * 
+	 * #Truck
+	 * - truck probability?
 	 */
 	
 	Output(){ 

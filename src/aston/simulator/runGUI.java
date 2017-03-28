@@ -18,10 +18,7 @@ public class runGUI {
 		}
 		if (numSteps <= 0) 
 			numSteps = 1;
-		
-		s = new Simulator();
-		s.simulate(numSteps);
+		;
 		gui.guiVisible();
-		s.updateGUI();
 	}
 }
