@@ -1,7 +1,7 @@
 # petrolStation
 A Petrol Station Simulation made in Java via Eclipse IDE
 
-#Group 11 Project Members
+# Group 11 Project Members
 - Tristan P.
 - Kelvin M.
 - Matas B.
@@ -43,7 +43,7 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 	
 5. 21 March 2017
 	* All have worked on the GUI Wireframe
-	* Milton is working on the tabbed GUIs
+	* Milton is working on the tabbed GUI Wireframe
 	* Kelvin Started working on the GUI based on the wireframe
 	* Matas and Tristan are working on the Canonical Form on PetrolStation
 	* _Things Stated by Antonio_
@@ -64,7 +64,8 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 		
 7. 28 March 2017
 	* Kelvin made GUI Visible for runGUI class
-	
+	* Milton will be making changes to the UML Diagrams
+	* 
 	 
 	
 # Advisory
