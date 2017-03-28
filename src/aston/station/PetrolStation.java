@@ -25,7 +25,9 @@ public class PetrolStation {
 	public static Random rand = new Random(Config.randomSeed); //temp static
 	private Pump[] pumps = new Pump[numOfPumps];
 	private Shop shop = new Shop();
-	private int numSc, numM, numFs;
+	private Output output = new Output();
+	
+	
 	//constructor
 	public PetrolStation()
 	{
@@ -88,25 +90,24 @@ public class PetrolStation {
 	{
 		double num = rand.nextDouble();
 		System.out.println(num);
-		Vehicle v;
 		
 		//chose a vehicle
 		if (num < Config.smallCar_probability)
 		{
 			generatedV = new SmallCar();
-			numSc++;
+			output.addSC();
 			return true;
 		}
 		else if (num < (Config.smallCar_probability + Config.motorBike_probability))
 		{
 			generatedV = new Motorbike();
-			numM++;
+			output.addM();
 			return true;
 		}
 		else if (num < (Config.smallCar_probability + Config.motorBike_probability + Config.familySedan_probability))
 		{
 			generatedV = new FamilySedan();
-			numFs++;
+			output.addFS();
 			return true;
 		}
 		else

@@ -7,12 +7,15 @@ import aston.gui.*;
 public class Simulator {
 	
 	//instances
-	PetrolStation petrolStation = new PetrolStation();
-
+	PetrolStation petrolStation;
 	
 	//variables
 	private int step;
-	
+	 
+	public void resetSim()
+	{
+		petrolStation = new PetrolStation();
+	}
 	
 	public void simulate(int numSteps)
 	{
