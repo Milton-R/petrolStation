@@ -308,7 +308,7 @@ public class PetrolGUI {
 	}
 	
 	/**
-	 * Takes the input from the MainFrame and passes to the
+	 * Takes the input from the MainFrame and passes to the 
 	 */
 	public void update(){
 		int var1 = pSlider.getValue();

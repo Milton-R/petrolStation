@@ -22,6 +22,4 @@ public class runGUI {
 		gui.guiVisible();
 		s.updateGUI();
 	}
-
-
 }
