@@ -56,16 +56,18 @@ public class PetrolGUI {
 			//numPump slider
 		pSlider.setMinimum(1);
 		pSlider.setMaximum(5);
-		pSlider.setValue(1);
+		pSlider.setValue(0);
 		pSlider.setMajorTickSpacing(1);
 		pSlider.setToolTipText("Number of Petrol Pumps");
 		pSlider.setPaintTicks(true);
+		slidePNum.setText("0.01");
 			//numTill slider
 		qSlider.setMinimum(0);
 		qSlider.setMaximum(2);
-		qSlider.setValue(1);
+		qSlider.setValue(0);
 		qSlider.setMajorTickSpacing(1);
 		qSlider.setPaintTicks(true);
+		slideQNum.setText("1");
 			//Step Field
 		stepField.setText("0");
 			//Price Field
