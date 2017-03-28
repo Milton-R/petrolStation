@@ -18,9 +18,10 @@ public class Output {
 		}
 
 	public void getVehicles()
-	{
+		{
+			petrolstation.
 		
-	}
+		}
 	
 
 }
