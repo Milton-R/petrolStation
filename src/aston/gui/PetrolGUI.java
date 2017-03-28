@@ -295,6 +295,23 @@ public class PetrolGUI {
 	private void startSimulation(){
 		//Link Simulator Logic
 		
+		//create simulation
+		Simulator s = new Simulator();
+		
+		//set config values
+		s.config.setScProb(pSlider.getValue());
+		s.config.setMProb(pSlider.getValue());
+		s.config.setFsProb(qSlider.getValue());
+		s.config.setNumPumps(pumpSlider.getValue());
+		
+		//create PetrolStation
+		s.createPetrolStation();
+		
+		System.out.println(s.config.getScProb()/100);
+		System.out.println(s.config.getMProb()/100);
+		System.out.println(s.config.getFsProb()/100);
+		System.out.println(s.config.getNumPumps()+1);
+		
 		// Step 1: Create the components
 		JButton stopButton = new JButton();
 		JLabel titleLog = new JLabel();

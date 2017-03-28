@@ -1,7 +1,7 @@
 package aston.station;
 
 public class Output {
-	private PetrolStation petrolstation= new PetrolStation();
+	
 	private int numSc, numM, numFs, numGallons, totalVSpwnd;
 	
 	/*Things we need to keep track of:

@@ -18,24 +18,28 @@ import aston.vehicles.*;
 public class PetrolStation {
 	
 	//variables
-	int numOfPumps = Config.numberOfPumps;
+	Config config;
 	Vehicle generatedV;
 	
 	//instances
 	public static Random rand = new Random(Config.randomSeed); //temp static
-	private Pump[] pumps = new Pump[numOfPumps];
-	private Shop shop = new Shop();
+	private Pump[] pumps;
+	private Shop shop;
 	private Output output = new Output();
 	
 	
 	//constructor
-	public PetrolStation()
+	public PetrolStation(Config c)
 	{
+		config = c;
+		int numOfPumps = config.getNumPumps();
+		pumps = new Pump[numOfPumps];
 		for (int i = 0; i < numOfPumps; i++)
 		{
 			Pump p = new Pump();
 			pumps[i] = p;
 		}
+		shop = new Shop(config.getNumberOftills());
 	}
 	
 	//Main run method, runs every step/tick.
@@ -92,19 +96,19 @@ public class PetrolStation {
 		System.out.println(num);
 		
 		//chose a vehicle
-		if (num < Config.smallCar_probability)
+		if (num < config.getScProb())
 		{
 			generatedV = new SmallCar();
 			output.addSC();
 			return true;
 		}
-		else if (num < (Config.smallCar_probability + Config.motorBike_probability))
+		else if (num < (config.getScProb() + config.getMProb()))
 		{
 			generatedV = new Motorbike();
 			output.addM();
 			return true;
 		}
-		else if (num < (Config.smallCar_probability + Config.motorBike_probability + Config.familySedan_probability))
+		else if (num < (config.getScProb() + config.getMProb() + config.getFsProb()))
 		{
 			generatedV = new FamilySedan();
 			output.addFS();

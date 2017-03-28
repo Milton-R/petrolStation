@@ -8,14 +8,10 @@ public class Simulator {
 	
 	//instances
 	PetrolStation petrolStation;
+	public Config config = new Config();
 	
 	//variables
 	private int step;
-	 
-	public void resetSim()
-	{
-		petrolStation = new PetrolStation();
-	}
 	
 	public void simulate(int numSteps)
 	{
@@ -27,6 +23,11 @@ public class Simulator {
 	private String simulateStep()
 	{
 		return petrolStation.run();
+	}
+	
+	public void createPetrolStation()
+	{
+		petrolStation = new PetrolStation(config);
 	}
 	
 	public void updateGUI()
