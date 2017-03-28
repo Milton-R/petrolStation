@@ -280,7 +280,7 @@ public class PetrolGUI {
 		leftPanel.add(listScroll2, BorderLayout.SOUTH);
 		
 		rightPanel.add(listScroll3, BorderLayout.NORTH);
-		rightPanel.add(listScroll4, BorderLayout.NORTH);
+		rightPanel.add(listScroll4, BorderLayout.SOUTH);
 		
 		logPanel.add(leftPanel, BorderLayout.WEST);
 		logPanel.add(rightPanel, BorderLayout.EAST);
