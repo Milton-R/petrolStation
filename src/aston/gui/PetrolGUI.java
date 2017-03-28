@@ -340,7 +340,6 @@ public class PetrolGUI {
 		// Step 3: Create containers to hold the components
 		logFrame = new JFrame("Simulation");
 		logFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-		logFrame.setVisible(true);
 		// Step 4: Specify LayoutManagers
 		logFrame.setLayout(new BorderLayout());	
 		((JPanel)logFrame.getContentPane()).setBorder(new EmptyBorder(6, 6, 6, 6));
@@ -414,7 +413,7 @@ public class PetrolGUI {
 		
 		// Step 7: Display the GUI
 		logFrame.pack(); 
-		//logFrame.setVisible(true);
+		logFrame.setVisible(true);
 	}
 	
 	/**
