@@ -32,7 +32,7 @@ public class Output {
 		
 	public void getGallons()
 	{
-			numGallons = pump.getNumOfGallons();
+			//numGallons = pump.getNumOfGallons();
 			System.out.println(numGallons);	
 	}
 

@@ -5,7 +5,6 @@ import aston.gui.PetrolGUI;
 public class runGUI {
 	
 	static PetrolGUI gui = new PetrolGUI();
-	static Simulator s;
 	
 	/**
 	 * Create a simulation and run it for a specified number of steps, based on lab5 simulator
