@@ -299,18 +299,29 @@ public class PetrolGUI {
 		Simulator s = new Simulator();
 		
 		//set config values
-		s.config.setScProb(pSlider.getValue());
-		s.config.setMProb(pSlider.getValue());
-		s.config.setFsProb(qSlider.getValue());
-		s.config.setNumPumps(pumpSlider.getValue());
+		s.config.setScProb((double) pSlider.getValue()/100);
+		s.config.setMProb((double)pSlider.getValue()/100);
+		s.config.setFsProb((double)qSlider.getValue()/100);
+		s.config.setNumPumps((int) Math.pow(2, pumpSlider.getValue()));
+		s.config.setNumTills((int) Math.pow(2, tillSlider.getValue()));
+		s.config.setNumSteps(Integer.parseInt(stepField.getText()));
+		s.config.setPencePerGallon((int)(Double.parseDouble(priceField.getText())*100));
 		
 		//create PetrolStation
 		s.createPetrolStation();
 		
-		System.out.println(s.config.getScProb()/100);
-		System.out.println(s.config.getMProb()/100);
-		System.out.println(s.config.getFsProb()/100);
-		System.out.println(s.config.getNumPumps()+1);
+		//run simulation
+		s.simulate(s.config.getNumSteps());
+		
+		/*Test
+		System.out.println(s.config.getScProb());
+		System.out.println(s.config.getMProb());
+		System.out.println(s.config.getFsProb());
+		System.out.println(s.config.getNumPumps());
+		System.out.println(s.config.getNumTills());
+		System.out.println(s.config.getNumSteps());
+		System.out.println(s.config.getPencePerGallon());
+		*/
 		
 		// Step 1: Create the components
 		JButton stopButton = new JButton();

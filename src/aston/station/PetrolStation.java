@@ -39,7 +39,7 @@ public class PetrolStation {
 			Pump p = new Pump();
 			pumps[i] = p;
 		}
-		shop = new Shop(config.getNumberOftills());
+		shop = new Shop(config.getNumTills());
 	}
 	
 	//Main run method, runs every step/tick.

@@ -79,6 +79,17 @@ public class Config {
 	//RandomSeed
 	public static final int randomSeed = 42;
 	
+	//Number of steps to run for
+	public int numSteps = 1;
+	public void setNumSteps(int i)
+	{
+		numSteps = i;
+	}
+	public int getNumSteps()
+	{
+		return numSteps;
+	}
+	
 	//Queue
 	public static final int queueSize = 3;
 	
@@ -107,11 +118,11 @@ public class Config {
 	{
 		pencePerGallon = i;
 	}
-	public int getNumberOftills()
+	public int getNumTills()
 	{
 		return numberOftills;
 	}
-	public void setNumberOftills(int i)
+	public void setNumTills(int i)
 	{
 		numberOftills = i;
 	}
