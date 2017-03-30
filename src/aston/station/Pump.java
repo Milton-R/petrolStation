@@ -9,6 +9,12 @@ public class Pump {
 	Vehicle currentVehicle;
 	VehicleQueue currentQueue = new VehicleQueue();
 	int pumpSpeed = Config.gallonPerTick;
+	String name;
+	
+	public Pump(int n)
+	{
+		name = "Pump"+n;
+	}
 	
 	/**
 	 * sets current vehicle to the vehicle in the front of the queue, checks if it's null, pumps fuel into the current vehicle
@@ -17,24 +23,20 @@ public class Pump {
 	{
 		try 
 		{
-			System.out.println("1");
 			currentVehicle = currentQueue.getFrontVehicle();
-			System.out.println(currentVehicle);
 			if(currentVehicle.fillTank(pumpSpeed))
 			{
 				numGallons ++;
-				System.out.println("filling tank");
 			}
 			else
 			{
 				removeFrontVehicle();
-				System.out.println("removed v: "+currentVehicle);
 			}
 		} 
 		catch (Exception e)
 		{
 			//do nothing
-			System.out.println("queue empty");
+			//System.out.println("queue empty");
 		}
 	}
 	
@@ -59,5 +61,10 @@ public class Pump {
 	{
 		return numGallons;
 		
+	}
+	
+	public String textToString()
+	{
+		return name + ":\n" + currentQueue.toString();
 	}
 }

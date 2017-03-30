@@ -4,15 +4,13 @@ import aston.resources.Config;
 import aston.station.PetrolStation;
 
 public class Motorbike extends Vehicle{
-	//Variables
-	private int currentTank; //Motorbike's Maximum Tank Size
 	
 	//Methods
 		//Constructors
 	/**
 	 * Motorbike Constructor that is calling the super-class: Vehicle
 	 */
-	public Motorbike(){
+	public Motorbike(String n){
 		super();
 		if (Config.motorBike_tankRange > 0)
 		{
@@ -42,5 +40,6 @@ public class Motorbike extends Vehicle{
 			moneySpentShopping = Config.motorBikeMoneySpent;
 		}
 		currentTank = 0;
+		name = "Motorbike" + n;
 	}
 }

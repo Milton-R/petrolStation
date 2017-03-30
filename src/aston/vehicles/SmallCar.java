@@ -4,15 +4,13 @@ import aston.resources.Config;
 import aston.station.PetrolStation;
 
 public class SmallCar extends Vehicle{
-	//Variables
-	private int currentTank; //Vehicle's Maximum Tank Size
 	
 	//Methods
 		//Constructors
 	/**
 	 * SmallCar Constructor that is calling the super-class: Vehicle
 	 */
-	public SmallCar(){
+	public SmallCar(String n){
 		super();
 		if (Config.smallCar_tankRange > 0)
 		{
@@ -27,7 +25,7 @@ public class SmallCar extends Vehicle{
 		shoppingProbability = Config.smallCarShoppingProbability;
 		timeTakenShopping = Config.smallCarTimeTakenShopping + PetrolStation.rand.nextInt(Config.smallCarTimeTakenShoppingRange);
 		moneySpentShopping = Config.smallCarMoneySpent + PetrolStation.rand.nextInt(Config.smallCarMoneySpentRange);
-		
+		name = "SmallCar" + n;
 	}
 	
 }

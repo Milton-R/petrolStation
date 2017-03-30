@@ -36,7 +36,7 @@ public class PetrolStation {
 		pumps = new Pump[numOfPumps];
 		for (int i = 0; i < numOfPumps; i++)
 		{
-			Pump p = new Pump();
+			Pump p = new Pump(i+1);
 			pumps[i] = p;
 		}
 		shop = new Shop(config.getNumTills());
@@ -49,39 +49,36 @@ public class PetrolStation {
 		for (Pump p : pumps)
 		{
 			p.pumpFuel();
-			System.out.println("Pumping: "+p);
 		}
 		//create a new vehicle
 		if (spawnVehicle())
 		{
 			Vehicle v = generatedV;
-			System.out.println(v);
 			boolean added = false;
 			for (Pump p : pumps)
 			{
-				System.out.println(p);
-				System.out.println(p.currentQueue.spaceTaken);
-				System.out.println(v);
 				if (p.addVehicleToQueue(v))
 				{
 					added = true;
-					System.out.println("vehicle added to a que");
-					System.out.println(p.currentQueue.spaceTaken);
 					break;
 				}
 				else
 				{
-					System.out.println("no space");
+					//System.out.println("no space");
 				}
 			}
 			if (!added)
 			{
-				System.out.println("vehicle leaves as no space at pump");
+				//System.out.println("vehicle leaves as no space at pump");
 			}
 		}
 		else
 		{
-			System.out.println("no v");
+			//System.out.println("no v");
+		}
+		for (Pump p : pumps)
+		{
+			System.out.println(p.textToString());
 		}
 		return "all the info";
 	}
@@ -93,25 +90,25 @@ public class PetrolStation {
 	private boolean spawnVehicle()
 	{
 		double num = rand.nextDouble();
-		System.out.println(num);
+		//System.out.println(num);
 		
 		//chose a vehicle
 		if (num < config.getScProb())
 		{
-			generatedV = new SmallCar();
 			output.addSC();
+			generatedV = new SmallCar(Integer.toString(output.getSC()));
 			return true;
 		}
 		else if (num < (config.getScProb() + config.getMProb()))
 		{
-			generatedV = new Motorbike();
 			output.addM();
+			generatedV = new Motorbike(Integer.toString(output.getM()));
 			return true;
 		}
 		else if (num < (config.getScProb() + config.getMProb() + config.getFsProb()))
 		{
-			generatedV = new FamilySedan();
 			output.addFS();
+			generatedV = new FamilySedan(Integer.toString(output.getFS()));
 			return true;
 		}
 		else

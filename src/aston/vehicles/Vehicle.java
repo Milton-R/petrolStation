@@ -14,6 +14,7 @@ import aston.simulator.*;
  */
 public abstract class Vehicle{
 	//Variables
+	protected String name;
 	protected int tank;							//Vehicle's Tank Size
 	protected double space;						//How much space the vehicle uses in queue
 	protected int currentTank; 					//Vehicle's Current Tank
@@ -51,12 +52,12 @@ public abstract class Vehicle{
 		if (currentTank < tank)
 		{
 			currentTank += pumpSpd;
-			System.out.println("tank: "+currentTank);
+			//System.out.println("tank: "+currentTank);
 			return true;
 		}
 		else
 		{
-			System.out.println("tfull");
+			//System.out.println("tfull");
 			return false;
 		}
 	}
@@ -132,6 +133,12 @@ public abstract class Vehicle{
 	public String toString()
 	{
 		return "tank: "+tank+", space: "+space+", shop time limit: " + shopTimeLimit + ", shopping probability: " + shoppingProbability + ", time taken shopping: " + timeTakenShopping + ", moneySpentShopping: " + moneySpentShopping ;
+	}
+	
+	//returns info for text view
+	public String textToString()
+	{
+		return name + ", Tank: " + currentTank + "/" + tank + ", Size: " + space;
 	}
 	
 }

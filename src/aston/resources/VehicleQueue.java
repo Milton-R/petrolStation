@@ -57,4 +57,14 @@ public class VehicleQueue {
 			spaceTaken -= v.getVehicleSize();
 		}
 	}
+	
+	public String toString()
+	{
+		String s = "Space Taken: " + spaceTaken;
+		for (Vehicle v : q)
+		{
+			s += ", (" + v.textToString() + ")";
+		}
+		return s;
+	}
 }
