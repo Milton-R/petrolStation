@@ -1,17 +1,20 @@
 package aston.station;
 
+import aston.resources.Config;
+
 public class Output {
-	private PetrolStation petrolstation= new PetrolStation();
-	private int numSc, numM, numFs, TotalFuelP, totalVSpwnd, moneyFromFuel ;
+
+	
+	private int numSc, numM, numFs, numGallons, totalVSpwnd, currentStep = 0, fuelMoney;
 	
 	/*Things we need to keep track of:
 	 * #At the end of simulation
 	 * - Total number of vehicles
 	 * - How many of each type of vehicle
-	 * - Ammount of fuel pumped
-	 * - Ammount of money earned from fuel
-	 * - Ammount of money earned from store
-	 * - Ammount of money missed
+	 * - Amount of fuel pumped
+	 * - Amount of money earned from fuel
+	 * - Amount of money earned from store
+	 * - Amount of money missed
 	 * 
 	 * #Throughout simulation
 	 * - What vehicles are in what pump queues
@@ -19,7 +22,7 @@ public class Output {
 	 * - How much of the queue is taken up for each queue
 	 * - What Customers are in the store?
 	 * - What Customers are in what till queues?
-	 * - What step it is on
+	 * - What step it is on.
 	 * 
 	 * #Truck
 	 * - truck probability?
@@ -29,26 +32,16 @@ public class Output {
 		
 		
 	}
-		
-	public int totalfuelPumped()
+	
+	public void setNumGallons(int i)
 	{
-		return  TotalFuelP;
+		numGallons = i;
+	}
 		
 
-	}
-	
-	public void TotalFP()
-	
+	public int getGallons()
 	{
-		TotalFuelP++;
-		moneyFromFuel = moneyFromFuel + 1200;
-	}
-	
-	public int MoneyFFuel()
-	
-	{
-		
-		return moneyFromFuel;
+		return numGallons;
 	}
 	
 	public void MoneyStore(){
@@ -107,6 +100,26 @@ public class Output {
 	public int getFS()
 	{
 		return numFs;
+	}
+	
+	public int getNumSteps()
+	{
+		return currentStep;
+	}
+	
+	public void incStep()
+	{
+		currentStep++;
+	}
+	
+	public void setFuelMoney(int m)
+	{
+		fuelMoney = m;
+	}
+	
+	public int getFuelMoney()
+	{
+		return fuelMoney;
 	}
 
 }

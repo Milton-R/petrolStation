@@ -22,7 +22,7 @@ public class VehicleQueue {
 	 */
 	public boolean addVehicle(Vehicle v)
 	{
-		if (queueSpace > v.getVehicleSize() + spaceTaken)
+		if (queueSpace >= v.getVehicleSize() + spaceTaken)
 		{
 			spaceTaken += v.getVehicleSize();
 			q.add(v);
@@ -56,5 +56,15 @@ public class VehicleQueue {
 			q.remove();
 			spaceTaken -= v.getVehicleSize();
 		}
+	}
+	
+	public String toString()
+	{
+		String s = "Space Taken: " + spaceTaken;
+		for (Vehicle v : q)
+		{
+			s += ", (" + v.textToString() + ")";
+		}
+		return s;
 	}
 }

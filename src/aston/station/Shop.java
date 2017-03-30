@@ -3,11 +3,10 @@ import aston.resources.*;
 
 public class Shop {
 	
-	int numTills = Config.numberOftills;
-	Till[] tills = new Till[numTills];
 	
-	public Shop()
+	public Shop(int numTills)
 	{
+		Till[] tills = new Till[numTills];
 		for (int i = 0; i < numTills; i++)
 		{
 			Till t = new Till();
