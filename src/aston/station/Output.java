@@ -2,7 +2,7 @@ package aston.station;
 
 public class Output {
 	
-	private int numSc, numM, numFs, numGallons, totalVSpwnd, currentStep;
+	private int numSc, numM, numFs, numGallons, totalVSpwnd, currentStep = 0;
 	
 	/*Things we need to keep track of:
 	 * #At the end of simulation
@@ -77,6 +77,11 @@ public class Output {
 	public int getNumSteps()
 	{
 		return currentStep;
+	}
+	
+	public void incStep()
+	{
+		currentStep++;
 	}
 
 }

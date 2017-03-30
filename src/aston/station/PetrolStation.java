@@ -25,7 +25,7 @@ public class PetrolStation {
 	public static Random rand = new Random(Config.randomSeed); //temp static
 	private Pump[] pumps;
 	private Shop shop;
-	private Output output = new Output();
+	public Output output = new Output();
 	
 	
 	//constructor
@@ -45,6 +45,7 @@ public class PetrolStation {
 	//Main run method, runs every step/tick.
 	public String run()
 	{
+		System.out.println("Step: " + output.getNumSteps());
 		//make each Pump pump fuel
 		for (Pump p : pumps)
 		{

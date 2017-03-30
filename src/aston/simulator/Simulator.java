@@ -22,6 +22,7 @@ public class Simulator {
 	
 	private String simulateStep()
 	{
+		petrolStation.output.incStep();
 		return petrolStation.run();
 	}
 	
@@ -30,14 +31,5 @@ public class Simulator {
 		petrolStation = new PetrolStation(config);
 	}
 	
-	public void updateGUI()
-	{
-		
-	}
-	
-	public void updateText()
-	{
-		
-	}
 	
 }
