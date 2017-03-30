@@ -2,7 +2,7 @@ package aston.station;
 
 public class Output {
 	
-	private int numSc, numM, numFs, numGallons, totalVSpwnd;
+	private int numSc, numM, numFs, numGallons, totalVSpwnd, currentStep;
 	
 	/*Things we need to keep track of:
 	 * #At the end of simulation
@@ -19,7 +19,7 @@ public class Output {
 	 * - How much of the queue is taken up for each queue
 	 * - What Customes are in the store?
 	 * - What Customers are in what till queues?
-	 * - What step it is on
+	 * - What step it is on.
 	 * 
 	 * #Truck
 	 * - truck probability?
@@ -72,6 +72,11 @@ public class Output {
 	public int getFS()
 	{
 		return numFs;
+	}
+	
+	public int getNumSteps()
+	{
+		return currentStep;
 	}
 
 }
