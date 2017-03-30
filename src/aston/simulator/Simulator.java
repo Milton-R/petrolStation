@@ -18,6 +18,8 @@ public class Simulator {
 		for(int step = 0; step <= numSteps-1; step++) {
 			simulateStep();
 		}
+		System.out.println("Total Fuel Pumped: " + petrolStation.output.getGallons() + " gallons");
+		System.out.println("Money From Fuel: " + petrolStation.output.getFuelMoney() + "p");
 	}
 	
 	private String simulateStep()

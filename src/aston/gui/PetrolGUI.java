@@ -323,6 +323,7 @@ public class PetrolGUI {
 		System.out.println(s.config.getPencePerGallon());
 		*/
 		
+		
 		// Step 1: Create the components
 		JButton stopButton = new JButton();
 		JLabel titleLog = new JLabel();

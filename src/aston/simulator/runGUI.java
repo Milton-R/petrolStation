@@ -11,13 +11,6 @@ public class runGUI {
 	 */
 	public static void main(String[] args) {
 		
-		int numSteps = 1;  // By default, run for 1 step
-		if (args.length >= 1) {
-			numSteps = Integer.parseInt(args[0]);
-		}
-		if (numSteps <= 0) 
-			numSteps = 1;
-		;
 		gui.guiVisible();
 	}
 }

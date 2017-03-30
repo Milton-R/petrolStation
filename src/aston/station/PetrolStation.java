@@ -45,7 +45,7 @@ public class PetrolStation {
 	//Main run method, runs every step/tick.
 	public String run()
 	{
-		System.out.println("Step: " + output.getNumSteps());
+		System.out.println("\nStep: " + output.getNumSteps());
 		//make each Pump pump fuel
 		for (Pump p : pumps)
 		{
@@ -77,10 +77,17 @@ public class PetrolStation {
 		{
 			//System.out.println("no v");
 		}
+		
+		//update output and print info
+		int totalPumped = 0;
 		for (Pump p : pumps)
 		{
+			totalPumped += p.getNumOfGallons();
 			System.out.println(p.textToString());
 		}
+		output.setNumGallons(totalPumped);
+		output.setFuelMoney((int) totalPumped*config.getPencePerGallon());
+		//System.out.println(output.getGallons());
 		return "all the info";
 	}
 	

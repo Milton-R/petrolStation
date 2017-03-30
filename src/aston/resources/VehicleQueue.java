@@ -22,7 +22,7 @@ public class VehicleQueue {
 	 */
 	public boolean addVehicle(Vehicle v)
 	{
-		if (queueSpace > v.getVehicleSize() + spaceTaken)
+		if (queueSpace >= v.getVehicleSize() + spaceTaken)
 		{
 			spaceTaken += v.getVehicleSize();
 			q.add(v);

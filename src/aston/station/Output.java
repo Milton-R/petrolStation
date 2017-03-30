@@ -1,8 +1,10 @@
 package aston.station;
 
+import aston.resources.Config;
+
 public class Output {
 	
-	private int numSc, numM, numFs, numGallons, totalVSpwnd, currentStep = 0;
+	private int numSc, numM, numFs, numGallons, totalVSpwnd, currentStep = 0, fuelMoney;
 	
 	/*Things we need to keep track of:
 	 * #At the end of simulation
@@ -29,11 +31,15 @@ public class Output {
 		
 		
 	}
-		
-	public void getGallons()
+	
+	public void setNumGallons(int i)
 	{
-			//numGallons = pump.getNumOfGallons();
-			System.out.println(numGallons);	
+		numGallons = i;
+	}
+		
+	public int getGallons()
+	{
+		return numGallons;
 	}
 
 	public int getTotalVehicles()
@@ -82,6 +88,16 @@ public class Output {
 	public void incStep()
 	{
 		currentStep++;
+	}
+	
+	public void setFuelMoney(int m)
+	{
+		fuelMoney = m;
+	}
+	
+	public int getFuelMoney()
+	{
+		return fuelMoney;
 	}
 
 }

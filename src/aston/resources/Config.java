@@ -96,7 +96,7 @@ public class Config {
 	//Pump
 	public static final int gallonPerTick = 1;//gallon
 	private int numberOfPumps = 2;
-	private int pencePerGallon = 1200;//pence
+	private int pencePerGallon = 120;//pence
 	
 	//Tills
 	private int numberOftills = 4;
