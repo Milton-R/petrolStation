@@ -45,6 +45,7 @@ public class PetrolStation {
 		for (Pump p : pumps)
 		{
 			p.pumpFuel();
+			output.TotalFP(); // call output class
 			System.out.println("Pumping: "+p);
 		}
 		//create a new vehicle

@@ -2,7 +2,7 @@ package aston.station;
 
 public class Output {
 	private PetrolStation petrolstation= new PetrolStation();
-	private int numSc, numM, numFs, numGallons, totalVSpwnd;
+	private int numSc, numM, numFs, TotalFuelP, totalVSpwnd, moneyFromFuel ;
 	
 	/*Things we need to keep track of:
 	 * #At the end of simulation
@@ -17,7 +17,7 @@ public class Output {
 	 * - What vehicles are in what pump queues
 	 * - Current fuel tank of vehicle at front of queue
 	 * - How much of the queue is taken up for each queue
-	 * - What Customes are in the store?
+	 * - What Customers are in the store?
 	 * - What Customers are in what till queues?
 	 * - What step it is on
 	 * 
@@ -30,12 +30,40 @@ public class Output {
 		
 	}
 		
-	public void getGallons()
+	public int totalfuelPumped()
 	{
-			numGallons = pump.getNumOfGallons();
-			System.out.println(numGallons);	
-	}
+		return  TotalFuelP;
+		
 
+	}
+	
+	public void TotalFP()
+	
+	{
+		TotalFuelP++;
+		moneyFromFuel = moneyFromFuel + 1200;
+	}
+	
+	public int MoneyFFuel()
+	
+	{
+		
+		return moneyFromFuel;
+	}
+	
+	public void MoneyStore(){
+		
+		
+	}
+	
+	public void VehicleInQueue()
+	{
+		
+		
+		
+	}
+   
+	
 	public int getTotalVehicles()
 	{
 		return totalVSpwnd;
@@ -47,23 +75,30 @@ public class Output {
 		totalVSpwnd++;
 	}
 	
+	//stores number of motorcycles
 	public void addM()
 	{
 		numM++;
 		totalVSpwnd++;
 	}
 	
+	
+	// stores family sudans
 	public void addFS()
 	{
 		numFs++;
 		totalVSpwnd++;
 	}
 	
+	
+	//stores small car
 	public int getSC()
 	{
 		return numSc;
 	}
 	
+	
+	//gets motorcycle
 	public int getM()
 	{
 		return numM;
