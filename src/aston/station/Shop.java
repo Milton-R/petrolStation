@@ -1,7 +1,10 @@
 package aston.station;
 import aston.resources.*;
+import aston.vehicles.*;
 
 public class Shop {
+	
+	//we need to create a customer queue to store out customers.
 	
 	
 	public Shop(int numTills)
@@ -12,6 +15,11 @@ public class Shop {
 			Till t = new Till();
 			tills[i] = t;
 		}
+	}
+	
+	public void goToShop(Customer c)
+	{
+		//put Customer c into the queue
 	}
 
 }

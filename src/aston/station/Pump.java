@@ -30,7 +30,8 @@ public class Pump {
 			}
 			else
 			{
-				removeFrontVehicle();
+				//removeFrontVehicle();
+				currentVehicle.createCustomer();
 			}
 		} 
 		catch (Exception e)
