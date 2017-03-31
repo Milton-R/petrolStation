@@ -27,13 +27,17 @@ public abstract class Vehicle{
 	//protected int moneySpentShoppingRange;	//Min + Random Value in Payment
 	//protected Random random;					//Random Class
 	
+	PetrolStation petrolStation;
+	
 	//Methods
 		//Constructors
 	/**
 	 * Constructor of the Vehicle
 	 * 
 	 */
-	public Vehicle(){
+	public Vehicle(PetrolStation ps){
+		petrolStation = ps;
+		
 		tank = 0;
 		space = 0;
 		currentTank = 0;

@@ -39,7 +39,7 @@ public class runText {
 			numPumps = Integer.parseInt(args[3]);
 		}
 		
-		//change num pumps
+		//change num tills
 		int numTills = 2;
 		if (args.length >= 5)
 		{

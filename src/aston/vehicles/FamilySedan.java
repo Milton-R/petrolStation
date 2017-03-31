@@ -6,17 +6,16 @@ import aston.simulator.*;
 
 public class FamilySedan extends Vehicle{
 
-	
 	//Methods
 		//Constructors
 	/**
 	 * Motorbike Constructor that is calling the super-class: Vehicle
 	 */
-	public FamilySedan(String n){
-		super();
+	public FamilySedan(String n, PetrolStation ps){
+		super(ps);
 		if (Config.familySedan_tankRange > 0)
 		{
-			tank = Config.familySedan_tank + PetrolStation.rand.nextInt(Config.familySedan_tankRange);
+			tank = Config.familySedan_tank + petrolStation.rand.nextInt(Config.familySedan_tankRange);
 		}
 		else
 		{
@@ -25,8 +24,8 @@ public class FamilySedan extends Vehicle{
 		space = Config.familySedan_space;
 		shopTimeLimit = Config.familySedanShoppingTimeLimit;
 		shoppingProbability = Config.familySedanShoppingProbability;
-		timeTakenShopping = Config.familySedanTimeTakenShopping + PetrolStation.rand.nextInt(Config.familySedanTimeTakenShoppingRange);
-		moneySpentShopping = Config.familySedanMoneySpent + PetrolStation.rand.nextInt(Config.familySedanMoneySpentRange);
+		timeTakenShopping = Config.familySedanTimeTakenShopping + petrolStation.rand.nextInt(Config.familySedanTimeTakenShoppingRange);
+		moneySpentShopping = Config.familySedanMoneySpent + petrolStation.rand.nextInt(Config.familySedanMoneySpentRange);
 		currentTank = 0;
 		name = "FamilySedan" + n;
 	}

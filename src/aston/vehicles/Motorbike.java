@@ -10,11 +10,11 @@ public class Motorbike extends Vehicle{
 	/**
 	 * Motorbike Constructor that is calling the super-class: Vehicle
 	 */
-	public Motorbike(String n){
-		super();
+	public Motorbike(String n, PetrolStation ps){
+		super(ps);
 		if (Config.motorBike_tankRange > 0)
 		{
-			tank = Config.motorBike_tank + PetrolStation.rand.nextInt(Config.motorBike_tankRange);
+			tank = Config.motorBike_tank + petrolStation.rand.nextInt(Config.motorBike_tankRange);
 		}
 		else
 		{
@@ -25,7 +25,7 @@ public class Motorbike extends Vehicle{
 		shoppingProbability = Config.motorBikeShoppingProbability;
 		if (Config.motorBikeTimeTakenShoppingRange > 0)
 		{
-			timeTakenShopping = Config.motorBikeTimeTakenShopping + PetrolStation.rand.nextInt(Config.motorBikeTimeTakenShoppingRange);
+			timeTakenShopping = Config.motorBikeTimeTakenShopping + petrolStation.rand.nextInt(Config.motorBikeTimeTakenShoppingRange);
 		}
 		else
 		{
@@ -33,7 +33,7 @@ public class Motorbike extends Vehicle{
 		}
 		if (Config.motorBikeMoneySpentRange > 0)
 		{
-			moneySpentShopping = Config.motorBikeMoneySpent + PetrolStation.rand.nextInt(Config.motorBikeMoneySpentRange);
+			moneySpentShopping = Config.motorBikeMoneySpent + petrolStation.rand.nextInt(Config.motorBikeMoneySpentRange);
 		}
 		else
 		{

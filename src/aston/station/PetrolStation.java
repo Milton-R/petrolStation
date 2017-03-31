@@ -22,7 +22,7 @@ public class PetrolStation {
 	Vehicle generatedV;
 	
 	//instances
-	public static Random rand = new Random(Config.randomSeed); //temp static
+	public Random rand = new Random(Config.randomSeed); //temp static
 	private Pump[] pumps;
 	private Shop shop;
 	public Output output = new Output();
@@ -104,19 +104,19 @@ public class PetrolStation {
 		if (num < config.getScProb())
 		{
 			output.addSC();
-			generatedV = new SmallCar(Integer.toString(output.getSC()));
+			generatedV = new SmallCar(Integer.toString(output.getSC()),this);
 			return true;
 		}
 		else if (num < (config.getScProb() + config.getMProb()))
 		{
 			output.addM();
-			generatedV = new Motorbike(Integer.toString(output.getM()));
+			generatedV = new Motorbike(Integer.toString(output.getM()),this);
 			return true;
 		}
 		else if (num < (config.getScProb() + config.getMProb() + config.getFsProb()))
 		{
 			output.addFS();
-			generatedV = new FamilySedan(Integer.toString(output.getFS()));
+			generatedV = new FamilySedan(Integer.toString(output.getFS()),this);
 			return true;
 		}
 		else
