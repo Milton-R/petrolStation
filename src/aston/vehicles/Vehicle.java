@@ -127,7 +127,7 @@ public abstract class Vehicle{
 	public void createCustomer()
 	{
 		Customer customer = new Customer(this);
-		petrolStation.shop.goToStore(customer);
+		petrolStation.goToShop(customer);
 	}
 	
 	/**

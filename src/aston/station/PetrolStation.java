@@ -91,6 +91,12 @@ public class PetrolStation {
 		return "all the info";
 	}
 	
+	//send customer to the store
+	public void goToShop(Customer c)
+	{
+		shop.enter(c);
+	}
+	
 	/**
 	 * creates one random subclass of the vehicle class, based on probabilities in config.
 	 * @return Vehicle

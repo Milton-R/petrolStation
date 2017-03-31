@@ -4,8 +4,8 @@ import aston.vehicles.*;
 
 public class Shop {
 	
-	//we need to create a customer queue to store out customers.
-	
+	//we need an array to hold the customers that are browing the store.
+	//we need to create a customer queue to store our customers once they have finished browsing.
 	
 	public Shop(int numTills)
 	{
@@ -17,7 +17,8 @@ public class Shop {
 		}
 	}
 	
-	public void goToShop(Customer c)
+	//adds the customer to an array while timer counts down.
+	public void enter(Customer c)
 	{
 		//put Customer c into the queue
 	}
