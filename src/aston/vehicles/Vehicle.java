@@ -126,7 +126,20 @@ public abstract class Vehicle{
 	//creates the Customer object
 	public void createCustomer()
 	{
-		Customer customer = new Customer(this);
+		int shoppingTime = 0;
+		if (name.contains("SmallCar"))
+		{
+			shoppingTime = Config.smallCarTimeTakenShopping + petrolStation.rand.nextInt(Config.smallCarTimeTakenShoppingRange);
+		}
+		else if (name.contains("Motorbike"))
+		{
+			shoppingTime = Config.motorBikeTimeTakenShopping + petrolStation.rand.nextInt(Config.motorBikeTimeTakenShoppingRange);
+		}
+		else if (name.contains("FamilySedan"))
+		{
+			shoppingTime = Config.familySedanTimeTakenShopping + petrolStation.rand.nextInt(Config.familySedanTimeTakenShoppingRange);
+		}
+		Customer customer = new Customer(this, shoppingTime);
 		petrolStation.goToShop(customer);
 	}
 	
