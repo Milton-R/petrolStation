@@ -10,6 +10,9 @@ public class Customer {
 		owndenVehicle = ov;
 		this.shoppingTime = shoppingTime;
 	}
-	
+	public int getShoppingTime()
+	{		
+		return shoppingTime;
+	}
 	
 }

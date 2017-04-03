@@ -8,7 +8,7 @@ public class TillQueue {
 	
 	TillQueue()
 	{
-		
+
 	}
 	
 	private void addCustomer(Customer e)
@@ -23,7 +23,8 @@ public class TillQueue {
 	{
 		for(Customer c : tillQueue)
 		{
-			c.ticks -= 10;
+			int i= c.getShoppingTime();
+			i -= 10;
 		}
 	}
 	
