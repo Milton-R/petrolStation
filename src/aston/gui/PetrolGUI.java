@@ -24,6 +24,12 @@ public class PetrolGUI {
 	private JTextField stepField;
 	private JTextField priceField;
 	private JCheckBox truckCheck;
+	JTextArea logOutput1 = new JTextArea();
+	JTextArea logOutput2 = new JTextArea();
+	JTextArea logOutput3 = new JTextArea();
+	JTextArea logOutput4 = new JTextArea();
+	//create simulation
+	Simulator s = new Simulator();
 	
 	/**
 	 * The GUI Simulation of the Petrol Pump Simulator 
@@ -293,36 +299,6 @@ public class PetrolGUI {
 	 * Starts the Simulation Steps
 	 */
 	private void startSimulation(){
-		//Link Simulator Logic
-		
-		//create simulation
-		Simulator s = new Simulator();
-		
-		//set config values
-		s.config.setScProb((double) pSlider.getValue()/100);
-		s.config.setMProb((double)pSlider.getValue()/100);
-		s.config.setFsProb((double)qSlider.getValue()/100);
-		s.config.setNumPumps((int) Math.pow(2, pumpSlider.getValue()));
-		s.config.setNumTills((int) Math.pow(2, tillSlider.getValue()));
-		s.config.setNumSteps(Integer.parseInt(stepField.getText()));
-		s.config.setPencePerGallon((int)(Double.parseDouble(priceField.getText())*100));
-		
-		//create PetrolStation
-		s.createPetrolStation();
-		
-		//run simulation
-		s.simulate(s.config.getNumSteps());
-		
-		/*Test
-		System.out.println(s.config.getScProb());
-		System.out.println(s.config.getMProb());
-		System.out.println(s.config.getFsProb());
-		System.out.println(s.config.getNumPumps());
-		System.out.println(s.config.getNumTills());
-		System.out.println(s.config.getNumSteps());
-		System.out.println(s.config.getPencePerGallon());
-		*/
-		
 		
 		// Step 1: Create the components
 		JButton stopButton = new JButton();
@@ -332,11 +308,6 @@ public class PetrolGUI {
 		JLabel pumpLabel2 = new JLabel();
 		JLabel pumpLabel3 = new JLabel();
 		JLabel pumpLabel4 = new JLabel();
-		
-		JTextArea logOutput1 = new JTextArea();
-		JTextArea logOutput2 = new JTextArea();
-		JTextArea logOutput3 = new JTextArea();
-		JTextArea logOutput4 = new JTextArea();
 		
 		logOutput1.setEditable(false);
 		JScrollPane listScroll1 = new JScrollPane(logOutput1);
@@ -443,6 +414,33 @@ public class PetrolGUI {
 		// Step 7: Display the GUI
 		logFrame.pack(); 
 		logFrame.setVisible(true);
+		
+		
+		//set config values
+		s.config.setScProb((double) pSlider.getValue()/100);
+		s.config.setMProb((double)pSlider.getValue()/100);
+		s.config.setFsProb((double)qSlider.getValue()/100);
+		s.config.setNumPumps((int) Math.pow(2, pumpSlider.getValue()));
+		s.config.setNumTills((int) Math.pow(2, tillSlider.getValue()));
+		s.config.setNumSteps(Integer.parseInt(stepField.getText()));
+		s.config.setPencePerGallon((int)(Double.parseDouble(priceField.getText())*100));
+		
+		//create PetrolStation
+		s.createPetrolStation();
+		
+		//run simulation
+		s.simulate(s.config.getNumSteps());
+		
+		/*Test
+		System.out.println(s.config.getScProb());
+		System.out.println(s.config.getMProb());
+		System.out.println(s.config.getFsProb());
+		System.out.println(s.config.getNumPumps());
+		System.out.println(s.config.getNumTills());
+		System.out.println(s.config.getNumSteps());
+		System.out.println(s.config.getPencePerGallon());
+		*/
+		
 	}
 	
 	/**
@@ -462,9 +460,4 @@ public class PetrolGUI {
 	public void guiVisible(){
 		mainFrame.setVisible(true);
 	}
-	
-	public void printToTextBox(){
-		
-	}
-	
 }

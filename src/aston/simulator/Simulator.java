@@ -22,7 +22,7 @@ public class Simulator {
 		System.out.println("Money From Fuel: " + petrolStation.output.getFuelMoney() + "p");
 	}
 	
-	private String simulateStep()
+	public String simulateStep()
 	{
 		petrolStation.output.incStep();
 		return petrolStation.run();
@@ -33,5 +33,8 @@ public class Simulator {
 		petrolStation = new PetrolStation(config);
 	}
 	
+	public String toString(){
+		return petrolStation.run();
+	}
 	
 }
