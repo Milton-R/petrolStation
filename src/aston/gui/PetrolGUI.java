@@ -66,7 +66,7 @@ public class PetrolGUI {
 		title.setText("Petrol Simulator");
 		label1.setText("Probability of p:");
 		label2.setText("Probability of q:");
-		label3.setText("Simulation Time (steps):");
+		label3.setText("Simulation Time (ticks):");
 		label4.setText("Price per Gallon:");
 		label5.setText("Number of Pumps:");
 		label6.setText("Number of Tills:");
@@ -93,7 +93,7 @@ public class PetrolGUI {
 		pumpSlider.setValue(0);
 		pumpSlider.setMajorTickSpacing(1);
 		pumpSlider.setPaintTicks(true);
-		pumpSlider.setToolTipText("Number of Pumpss");
+		pumpSlider.setToolTipText("Number of Pumps");
 		pumpSlideNum.setText("1");
 			//numTill Slider
 		tillSlider.setMinimum(0);
@@ -101,7 +101,7 @@ public class PetrolGUI {
 		tillSlider.setValue(0);
 		tillSlider.setMajorTickSpacing(1);
 		tillSlider.setPaintTicks(true);
-		tillSlider.setToolTipText("Number of Pumpss");
+		tillSlider.setToolTipText("Number of Tills");
 		tillSlideNum.setText("1");
 			//Step Field
 		stepField.setText("10");
@@ -462,4 +462,9 @@ public class PetrolGUI {
 	public void guiVisible(){
 		mainFrame.setVisible(true);
 	}
+	
+	public void printToTextBox(){
+		
+	}
+	
 }

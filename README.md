@@ -66,6 +66,9 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 	* Kelvin made GUI Visible for runGUI class
 	* Milton will be making changes to the UML Diagrams
 	* 
+	
+8. 4 April 2017
+	* 
 	 
 	
 # Advisory
