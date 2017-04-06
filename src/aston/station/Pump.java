@@ -10,14 +10,17 @@ public class Pump {
 	VehicleQueue currentQueue = new VehicleQueue();
 	int pumpSpeed = Config.gallonPerTick;
 	String name;
-	
+	/**
+	 * Constructor
+	 * @param n Number of Pumps from the GUI
+	 */
 	public Pump(int n)
 	{
 		name = "Pump"+n;
 	}
 	
 	/**
-	 * sets current vehicle to the vehicle in the front of the queue, checks if it's null, pumps fuel into the current vehicle
+	 * sets current vehicle to the vehicle in the fronst of the queue, checks if it's null, pumps fuel into the current vehicle
 	 */
 	public void pumpFuel()
 	{
