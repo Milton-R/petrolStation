@@ -31,7 +31,7 @@ public class PetrolGUI {
 	JTextArea logOutput4 = new JTextArea();
 	// create simulation
 	Simulator s = new Simulator();
-	private	Pump pump;
+	private PetrolStation petrol;	
 	
 	/**
 	 * The GUI Simulation of the Petrol Pump Simulator
@@ -451,11 +451,6 @@ public class PetrolGUI {
 			}
 		});
 		
-		for(int i = 1; i <= Integer.parseInt(stepField.getText()); i++ ){
-			pump = new Pump(i);
-			logOutput1.setText(logOutput1.getText() + pump.textToString() + "\n");
-		}
-
 		// Step 7: Display the GUI
 		logFrame.pack();
 		logFrame.setVisible(true);

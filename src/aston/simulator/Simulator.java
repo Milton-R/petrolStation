@@ -25,7 +25,8 @@ public class Simulator {
 	public String simulateStep()
 	{
 		petrolStation.output.incStep();
-		return petrolStation.run();
+		//return petrolStation.run(); //Possible Error for Duplication
+		return toString();
 	}
 	
 	public void createPetrolStation()
