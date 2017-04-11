@@ -15,9 +15,9 @@ import aston.station.*;
 
 public class PetrolGUI {
 
-	// JFrame for the
+	// JFrame for the Parameter Setting
 	private JFrame mainFrame;
-	private JFrame logFrame;
+	
 	private JSlider pSlider;
 	private JSlider qSlider;
 	private JSlider pumpSlider;
@@ -25,17 +25,58 @@ public class PetrolGUI {
 	private JTextField stepField;
 	private JTextField priceField;
 	private JCheckBox truckCheck;
-	//	JTextArea logOutput1 = new JTextArea();
-	//	JTextArea logOutput2 = new JTextArea();
-	//	JTextArea logOutput3 = new JTextArea();
-	//	JTextArea logOutput4 = new JTextArea();
+	
+	// JFrame for the Simulation in Action
+	private JFrame logFrame;
+	
+		//Pump Row 1
+	JTextField pump1Text11;
+	JTextField pump1Text12;
+	JTextField pump1Text13;
+	JTextField pump1Text14;
+		//Pump Row 2
+	JTextField pump1Text21;
+	JTextField pump1Text22;
+	JTextField pump1Text23;
+	JTextField pump1Text24;
+		//Pump Row 3
+	JTextField pump1Text31;
+	JTextField pump1Text32;
+	JTextField pump1Text33;
+	JTextField pump1Text34;
+		//Pump Row 4
+	JTextField pump1Text41;
+	JTextField pump1Text42;
+	JTextField pump1Text43;
+	JTextField pump1Text44;
+		//Till Row 1
+	JTextField till1Text11;
+	JTextField till1Text12;
+	JTextField till1Text13;
+	JTextField till1Text14;
+		//Till Row 2
+	JTextField till1Text21;
+	JTextField till1Text22;
+	JTextField till1Text23;
+	JTextField till1Text24;
+	
+		//Till Row 3
+	JTextField till1Text31;
+	JTextField till1Text32;
+	JTextField till1Text33;
+	JTextField till1Text34;
+		//Till Row 4
+	JTextField till1Text41;
+	JTextField till1Text42;
+	JTextField till1Text43;
+	JTextField till1Text44;
+	
 	// create simulation
-	Simulator s = new Simulator(this);
+	private Simulator s = new Simulator(this);
 	private PetrolStation petrol;	
 
 	/**
 	 * The GUI Simulation of the Petrol Pump Simulator
-	 * 
 	 */
 	public PetrolGUI() {
 
@@ -280,8 +321,9 @@ public class PetrolGUI {
 		mainFrame.setVisible(true);
 	}
 
+
 	/**
-	 * Helper method to ensure consistency in leaving application.
+	 * Closes the Program
 	 */
 	private void exitApp() {
 		// Display confirmation dialog before exiting application
@@ -290,119 +332,125 @@ public class PetrolGUI {
 		if (response == JOptionPane.YES_OPTION) {
 			System.exit(0);
 		}
-
 		// Don't quit
 	}
 
+	/**
+	 * New GUI Simulation presenting the Pump's/Till's queue
+	 */
 	private void newSimulation() {
 		// Step 1: Create the components
 		JButton stopButton = new JButton();
 		JLabel titleLog = new JLabel();
+		
+		JLabel ticksStep = new JLabel();
+		JLabel simMoney = new JLabel();
+		JLabel simLoss = new JLabel();
 
 		//Pumps
 			//Row 1
 		JLabel pumpLabel1 = new JLabel();
 
-		JTextField pump1Text11 = new JTextField(10);
+		pump1Text11 = new JTextField(10);
 		pump1Text11.setEditable(false);
-		JTextField pump1Text12 = new JTextField(10);
+		pump1Text12 = new JTextField(10);
 		pump1Text12.setEditable(false);
-		JTextField pump1Text13 = new JTextField(10);
+		pump1Text13 = new JTextField(10);
 		pump1Text13.setEditable(false);
-		JTextField pump1Text14 = new JTextField(10);
+		pump1Text14 = new JTextField(10);
 		pump1Text14.setEditable(false);
 		
 		JLabel pumpCost1 = new JLabel();
 			//Row 2
 		JLabel pumpLabel2 = new JLabel();
 
-		JTextField pump1Text21 = new JTextField(10);
+		pump1Text21 = new JTextField(10);
 		pump1Text21.setEditable(false);
-		JTextField pump1Text22 = new JTextField(10);
+		pump1Text22 = new JTextField(10);
 		pump1Text22.setEditable(false);
-		JTextField pump1Text23 = new JTextField(10);
+		pump1Text23 = new JTextField(10);
 		pump1Text23.setEditable(false);
-		JTextField pump1Text24 = new JTextField(10);
+		pump1Text24 = new JTextField(10);
 		pump1Text24.setEditable(false);
 		
 		JLabel pumpCost2 = new JLabel();
 			//Row 3
 		JLabel pumpLabel3 = new JLabel();
 		
-		JTextField pump1Text31 = new JTextField(10);
+		pump1Text31 = new JTextField(10);
 		pump1Text31.setEditable(false);
-		JTextField pump1Text32 = new JTextField(10);
+		pump1Text32 = new JTextField(10);
 		pump1Text32.setEditable(false);
-		JTextField pump1Text33 = new JTextField(10);
+		pump1Text33 = new JTextField(10);
 		pump1Text33.setEditable(false);
-		JTextField pump1Text34 = new JTextField(10);
+		pump1Text34 = new JTextField(10);
 		pump1Text34.setEditable(false);
 		
 		JLabel pumpCost3 = new JLabel();
 			//Row 4
 		JLabel pumpLabel4 = new JLabel();
 		
-		JTextField pump1Text41 = new JTextField(10);
+		pump1Text41 = new JTextField(10);
 		pump1Text41.setEditable(false);
-		JTextField pump1Text42 = new JTextField(10);
+		pump1Text42 = new JTextField(10);
 		pump1Text42.setEditable(false);
-		JTextField pump1Text43 = new JTextField(10);
+		pump1Text43 = new JTextField(10);
 		pump1Text43.setEditable(false);
-		JTextField pump1Text44 = new JTextField(10);
+		pump1Text44 = new JTextField(10);
 		pump1Text44.setEditable(false);
 		
 		JLabel pumpCost4 = new JLabel();
 		
-		//Pumps
+		//Tills
 			//Row 1
 		JLabel tillLabel1 = new JLabel();
 	
-		JTextField till1Text11 = new JTextField(10);
+		till1Text11 = new JTextField(10);
 		till1Text11.setEditable(false);
-		JTextField till1Text12 = new JTextField(10);
+		till1Text12 = new JTextField(10);
 		till1Text12.setEditable(false);
-		JTextField till1Text13 = new JTextField(10);
+		till1Text13 = new JTextField(10);
 		till1Text13.setEditable(false);
-		JTextField till1Text14 = new JTextField(10);
+		till1Text14 = new JTextField(10);
 		till1Text14.setEditable(false);
 		
 		JLabel tillCost1 = new JLabel();
 			//Row 2
 		JLabel tillLabel2 = new JLabel();
 	
-		JTextField till1Text21 = new JTextField(10);
+		till1Text21 = new JTextField(10);
 		till1Text21.setEditable(false);
-		JTextField till1Text22 = new JTextField(10);
+		till1Text22 = new JTextField(10);
 		till1Text22.setEditable(false);
-		JTextField till1Text23 = new JTextField(10);
+		till1Text23 = new JTextField(10);
 		till1Text23.setEditable(false);
-		JTextField till1Text24 = new JTextField(10);
+		till1Text24 = new JTextField(10);
 		till1Text24.setEditable(false);
 		
 		JLabel tillCost2 = new JLabel();
 			//Row 3
 		JLabel tillLabel3 = new JLabel();
 		
-		JTextField till1Text31 = new JTextField(10);
+		till1Text31 = new JTextField(10);
 		till1Text31.setEditable(false);
-		JTextField till1Text32 = new JTextField(10);
+		till1Text32 = new JTextField(10);
 		till1Text32.setEditable(false);
-		JTextField till1Text33 = new JTextField(10);
+		till1Text33 = new JTextField(10);
 		till1Text33.setEditable(false);
-		JTextField till1Text34 = new JTextField(10);
+		till1Text34 = new JTextField(10);
 		till1Text34.setEditable(false);
 		
 		JLabel tillCost3 = new JLabel();
 			//Row 4
 		JLabel tillLabel4 = new JLabel();
 		
-		JTextField till1Text41 = new JTextField(10);
+		till1Text41 = new JTextField(10);
 		till1Text41.setEditable(false);
-		JTextField till1Text42 = new JTextField(10);
+		till1Text42 = new JTextField(10);
 		till1Text42.setEditable(false);
-		JTextField till1Text43 = new JTextField(10);
+		till1Text43 = new JTextField(10);
 		till1Text43.setEditable(false);
-		JTextField till1Text44 = new JTextField(10);
+		till1Text44 = new JTextField(10);
 		till1Text44.setEditable(false);
 		
 		JLabel tillCost4 = new JLabel();
@@ -429,6 +477,10 @@ public class PetrolGUI {
 		tillCost3.setText("Cost: ");
 		tillCost4.setText("Cost: ");
 		
+		ticksStep.setText("Step: \t");
+		simMoney.setText("Amount of Money Gained: \t");
+		simLoss.setText("Money Missed: \t");
+		
 		stopButton.setText("Close Current Simulation");
 		
 		// Step 3: Create containers to hold the components
@@ -439,6 +491,11 @@ public class PetrolGUI {
 		logFrame.setLayout(new BorderLayout());
 		((JPanel) logFrame.getContentPane()).setBorder(new EmptyBorder(12, 12, 12, 12));
 
+			//Title Info Panel
+		JPanel titlePanel = new JPanel();
+		titlePanel.setLayout(new BorderLayout());
+		titlePanel.setBorder(new EmptyBorder(6, 6, 6, 6));
+		
 			//Simulation Info Panel
 		JPanel simPanel = new JPanel();
 		simPanel.setLayout(new BorderLayout());
@@ -457,7 +514,7 @@ public class PetrolGUI {
 		JPanel bottomPumps = new JPanel();
 		bottomPumps.setLayout(new BorderLayout());
 		bottomPumps.setBorder(new EmptyBorder(6, 6, 6, 6));
-		
+
 			//Pump 1
 		JPanel pump1 = new JPanel();
 		pump1.setLayout(new BorderLayout());
@@ -693,8 +750,14 @@ public class PetrolGUI {
 		simPanel.add(pumpsPanel, BorderLayout.NORTH);
 		simPanel.add(tillsPanel, BorderLayout.SOUTH);
 		
+		//Merge Title Panel Componenets
+		titlePanel.add(titleLog, BorderLayout.NORTH);
+		titlePanel.add(ticksStep, BorderLayout.WEST);
+		titlePanel.add(simMoney, BorderLayout.CENTER);
+		titlePanel.add(simLoss, BorderLayout.EAST);
+
 		//Stuff To Present
-		logFrame.add(titleLog, BorderLayout.NORTH);
+		logFrame.add(titlePanel, BorderLayout.NORTH);
 		logFrame.add(simPanel, BorderLayout.CENTER);
 		logFrame.add(stopButton, BorderLayout.SOUTH);
 		
@@ -751,135 +814,18 @@ public class PetrolGUI {
 		 */
 	}
 	
-	//displays information to GUI output
-	public void display(String info)
-	{
-		//add code that splits "info" string into parts and displays them in the GUI output interface
-		System.out.println(info);
-	}
-
 	/**
-	 * Starts the Simulation Steps * NOT IN USE *
-	 *
-	private void oldSimulation() {
-
-		// Step 1: Create the components
-		JButton stopButton = new JButton();
-		JLabel titleLog = new JLabel();
-
-		JLabel pumpLabel1 = new JLabel();
-		JLabel pumpLabel2 = new JLabel();
-		JLabel pumpLabel3 = new JLabel();
-		JLabel pumpLabel4 = new JLabel();
-
-		logOutput1.setEditable(false);
-		JScrollPane listScroll1 = new JScrollPane(logOutput1);
-		listScroll1.setPreferredSize(new Dimension(200, 200));
-		listScroll1.setMinimumSize(new Dimension(100, 100));
-
-		logOutput2.setEditable(false);
-		JScrollPane listScroll2 = new JScrollPane(logOutput2);
-		listScroll2.setPreferredSize(new Dimension(200, 200));
-		listScroll2.setMinimumSize(new Dimension(100, 100));
-
-		logOutput3.setEditable(false);
-		JScrollPane listScroll3 = new JScrollPane(logOutput3);
-		listScroll3.setPreferredSize(new Dimension(200, 200));
-		listScroll3.setMinimumSize(new Dimension(100, 100));
-
-		logOutput4.setEditable(false);
-		JScrollPane listScroll4 = new JScrollPane(logOutput4);
-		listScroll4.setPreferredSize(new Dimension(200, 200));
-		listScroll4.setMinimumSize(new Dimension(100, 100));
-		// Step 2: Set the properties of the components
-		stopButton.setText("Stop");
-		titleLog.setText("Simulation");
-		pumpLabel1.setText("Pump 1");
-		pumpLabel2.setText("Pump 2");
-		pumpLabel3.setText("Pump 3");
-		pumpLabel4.setText("Pump 4");
-
-		// Step 3: Create containers to hold the components
-		logFrame = new JFrame("Simulation");
-		logFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-		// Step 4: Specify LayoutManagers
-		logFrame.setLayout(new BorderLayout());
-		((JPanel) logFrame.getContentPane()).setBorder(new EmptyBorder(6, 6, 6, 6));
-
-		JPanel logPanel = new JPanel();
-		logPanel.setLayout(new BorderLayout());
-		logPanel.setBorder(new EmptyBorder(6, 6, 6, 6));
-
-		JPanel leftPanel = new JPanel();
-		leftPanel.setLayout(new BorderLayout());
-		leftPanel.setBorder(new EmptyBorder(6, 6, 6, 6));
-
-		JPanel rightPanel = new JPanel();
-		rightPanel.setLayout(new BorderLayout());
-		rightPanel.setBorder(new EmptyBorder(6, 6, 6, 6));
-
-		JPanel pump1Panel = new JPanel();
-		pump1Panel.setLayout(new BorderLayout());
-		pump1Panel.setBorder(new EmptyBorder(6, 6, 6, 6));
-
-		JPanel pump2Panel = new JPanel();
-		pump2Panel.setLayout(new BorderLayout());
-		pump2Panel.setBorder(new EmptyBorder(6, 6, 6, 6));
-
-		JPanel pump3Panel = new JPanel();
-		pump3Panel.setLayout(new BorderLayout());
-		pump3Panel.setBorder(new EmptyBorder(6, 6, 6, 6));
-
-		JPanel pump4Panel = new JPanel();
-		pump4Panel.setLayout(new BorderLayout());
-		pump4Panel.setBorder(new EmptyBorder(6, 6, 6, 6));
-
-		// Step 5: Add components to containers
-		pump1Panel.add(pumpLabel1, BorderLayout.NORTH);
-		pump1Panel.add(listScroll1, BorderLayout.SOUTH);
-
-		pump2Panel.add(pumpLabel2, BorderLayout.NORTH);
-		pump2Panel.add(listScroll2, BorderLayout.SOUTH);
-
-		leftPanel.add(pump1Panel, BorderLayout.NORTH);
-		leftPanel.add(pump2Panel, BorderLayout.SOUTH);
-
-		pump3Panel.add(pumpLabel3, BorderLayout.NORTH);
-		pump3Panel.add(listScroll3, BorderLayout.SOUTH);
-
-		pump4Panel.add(pumpLabel4, BorderLayout.NORTH);
-		pump4Panel.add(listScroll4, BorderLayout.SOUTH);
-
-		rightPanel.add(pump3Panel, BorderLayout.NORTH);
-		rightPanel.add(pump4Panel, BorderLayout.SOUTH);
-
-		logPanel.add(leftPanel, BorderLayout.WEST);
-		logPanel.add(rightPanel, BorderLayout.EAST);
-
-		logFrame.add(titleLog, BorderLayout.NORTH);
-		logFrame.add(logPanel, BorderLayout.NORTH);
-		logFrame.add(stopButton, BorderLayout.SOUTH);
-		// Step 6: Arrange to handle events in the user interface
-		logFrame.addWindowListener(new WindowAdapter() {
-			public void windowClosing(WindowEvent e) {
-				logFrame.dispose();
-			}
-		});
-
-		stopButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				// Logic to stop then
-				logFrame.dispose();
-			}
-		});
-
-		// Step 7: Display the GUI
-		logFrame.pack();
-		logFrame.setVisible(true);
-
-
-	}
+	 * This Displays the info to the Simulation GUI in parts
+	 * @param info
 	 */
+	public void display(String info){
+		//add code that splits "info" string into parts and displays them in the GUI output interface
+		String[] splitInfo = info.split(",");
+		System.out.println(info);
+		for(String details: splitInfo){
+			
+		}
+	}
 
 	/**
 	 * Makes the GUI Visible to the user
