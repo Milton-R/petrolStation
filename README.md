@@ -8,6 +8,14 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 - Milton R.
 - Jordan L.
 
+# CheckList:
+[] UML Diagram Design to finish
+[] Class Created
+[] GUI is to be Created
+[] Data Integreation
+	[] Console
+	[] GUI
+
 # Meetings:
 1. 7 March 2017
 	* Tristan created the GitHub repository created
@@ -65,11 +73,23 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 7. 28 March 2017
 	* Kelvin made GUI Visible for runGUI class
 	* Milton will be making changes to the UML Diagrams
-	* 
 	
 8. 4 April 2017
-	* 
-	 
-	
+	After the justification of jobs, the following people are doing these jobs:
+		* Kelvin is working on the GUI
+		* Tristan and Matas have finished printing the information to Console 
+		* Milton will
+
+9. 10 April 2017
+	* Kelvin identified a key error with the Information Passing to GUI
+	* Kelvin has finished the new GUI and has strict resizing for obvious window dragging reasons
+
+10. 11 April 2017
+	* Tristan called Kelvin to cross-check the GUI syntax
+		* Tristan has finished the back-end recoding for both console and GUI print
+		* Kelvin has added the additional information such as the Step Counter, Money gain and loss
+	* Kelvin called Milton to cross-check the progress on Truck Class
+		* Milton will work on it today
+
 # Advisory
 Used for Aston University Java Programme Development CS1410
