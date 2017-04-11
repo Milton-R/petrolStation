@@ -33,7 +33,7 @@ public class Pump {
 			}
 			else
 			{
-				//removeFrontVehicle();
+				removeFrontVehicle();
 				currentVehicle.createCustomer();
 			}
 		} 
@@ -69,6 +69,11 @@ public class Pump {
 	
 	public String textToString()
 	{
-		return name + ":\n" + currentQueue.toString();
+		return "\n" + name + ":\n" + currentQueue.toString();
+	}
+	
+	public String guiToString()
+	{
+		return (currentQueue.toGuiString());
 	}
 }

@@ -8,6 +8,7 @@ public class VehicleQueue {
 	private Queue<Vehicle> q;
 	private double queueSpace = Config.queueSize;
 	public double spaceTaken = 0;
+	private int numV = 0;
 	
 	//Constructor
 	public VehicleQueue()
@@ -26,6 +27,7 @@ public class VehicleQueue {
 		{
 			spaceTaken += v.getVehicleSize();
 			q.add(v);
+			numV++;
 			return true;
 		}
 		else
@@ -54,6 +56,7 @@ public class VehicleQueue {
 		if (v != null)
 		{
 			q.remove();
+			numV--;
 			spaceTaken -= v.getVehicleSize();
 		}
 	}
@@ -67,4 +70,22 @@ public class VehicleQueue {
 		}
 		return s;
 	}
+	
+	public String toGuiString()
+	{
+		String s = "";
+		for (Vehicle v : q)
+		{
+			s += v.guiToString() + ",";
+		}
+		
+		//add empty info if less cars
+		for (int i = 4; i > numV; i--)
+		{
+			s += "empty,";
+		}
+		//System.out.println(numV);
+		return s;
+	}
+	
 }

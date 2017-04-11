@@ -158,4 +158,9 @@ public abstract class Vehicle{
 		return name + ", Tank: " + currentTank + "/" + tank + ", Size: " + space;
 	}
 	
+	public String guiToString()
+	{
+		return name + ": " + currentTank + "/" + tank;
+	}
+	
 }

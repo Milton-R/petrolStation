@@ -22,7 +22,7 @@ public class TextView {
 		s.createPetrolStation();
 				
 		//run simulation
-		s.simulate(s.config.getNumSteps());
+		s.simulate(s.config.getNumSteps(),false);
 	}
 
 	

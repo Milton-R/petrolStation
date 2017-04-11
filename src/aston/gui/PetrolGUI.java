@@ -30,7 +30,7 @@ public class PetrolGUI {
 	//	JTextArea logOutput3 = new JTextArea();
 	//	JTextArea logOutput4 = new JTextArea();
 	// create simulation
-	Simulator s = new Simulator();
+	Simulator s = new Simulator(this);
 	private PetrolStation petrol;	
 
 	/**
@@ -738,7 +738,7 @@ public class PetrolGUI {
 		s.createPetrolStation();
 
 		// run simulation
-		s.simulate(s.config.getNumSteps());
+		s.simulate(s.config.getNumSteps(),true);
 
 		/*
 		 * Test System.out.println(s.config.getScProb());
@@ -749,6 +749,13 @@ public class PetrolGUI {
 		 * System.out.println(s.config.getNumSteps());
 		 * System.out.println(s.config.getPencePerGallon());
 		 */
+	}
+	
+	//displays information to GUI output
+	public void display(String info)
+	{
+		//add code that splits "info" string into parts and displays them in the GUI output interface
+		System.out.println(info);
 	}
 
 	/**
