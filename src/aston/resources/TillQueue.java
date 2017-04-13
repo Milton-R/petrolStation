@@ -2,29 +2,34 @@ package aston.resources;
 import aston.resources.*;
 import aston.vehicles.*;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 public class TillQueue {
 	
-	private ArrayList<Customer> tillQueue = new ArrayList<Customer>();
+	private Queue<Customer> t;
+	private int numC = 0;
 	
-	TillQueue()
+	public TillQueue()
 	{
-
+		t = new LinkedList<Customer>();
 	}
 	
-	private void addCustomer(Customer e)
+	private void addCustomer(Customer c)
 	{
-		tillQueue.add(e);
+		t.add(c);
+		numC++;
 	}
-	private void removeCustomer(Customer e)
+	private void removeCustomer(Customer c)
 	{
-		tillQueue.remove(e);
+		t.remove(c);
+		numC--;
 	}
+	
 	private void passTime()
 	{
-		for(Customer c : tillQueue)
+		for(Customer c : t)
 		{
-			int i= c.getShoppingTime();
-			i -= 10;
+			c.passTime();
 		}
 	}
 	
