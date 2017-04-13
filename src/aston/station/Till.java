@@ -5,6 +5,8 @@ import aston.vehicles.*;
 
 public class Till {
 	
-	private TillQueue tillQueue = new TillQueue();
+	private TillQueue curretnTillQueue = new TillQueue();
+	private String name;
+	
 	
 }

@@ -6,10 +6,10 @@ import aston.resources.*;
 public class Pump {
 	
 	int numGallons;
-	Vehicle currentVehicle;
-	VehicleQueue currentQueue = new VehicleQueue();
+	private Vehicle currentVehicle;
+	private VehicleQueue currentQueue = new VehicleQueue();
 	int pumpSpeed = Config.gallonPerTick;
-	String name;
+	private String name;
 	/**
 	 * Constructor
 	 * @param n Number of Pumps from the GUI
