@@ -103,14 +103,20 @@ public class PetrolStation {
 			}
 			
 		}
-			
-		for (int i = 4; i > pumps.length; i--)
+		
+		if (gui)
 		{
-			information += "empty,empty,empty,empty,";
+			for (int i = 4; i > pumps.length; i--)
+			{
+				information += "empty,empty,empty,empty,";
+			}
 		}
-		output.setNumGallons(totalPumped);
-		output.setFuelMoney((int) totalPumped*config.getPencePerGallon());
-		//System.out.println(output.getGallons());
+		else
+		{
+			output.setNumGallons(totalPumped);
+			output.setFuelMoney((int) totalPumped*config.getPencePerGallon());
+			//System.out.println(output.getGallons());
+		}
 		return information;
 	}
 	
