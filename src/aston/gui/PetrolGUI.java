@@ -318,52 +318,52 @@ public class PetrolGUI {
 			//Row 1
 		JLabel pumpLabel1 = new JLabel();
 
-		pumpFields[0] = new JTextField(10);
+		pumpFields[0] = new JTextField(12);
 		pumpFields[0].setEditable(false);
-		pumpFields[1] = new JTextField(10);
+		pumpFields[1] = new JTextField(12);
 		pumpFields[1].setEditable(false);
-		pumpFields[2] = new JTextField(10);
+		pumpFields[2] = new JTextField(12);
 		pumpFields[2].setEditable(false);
-		pumpFields[3] = new JTextField(10);
+		pumpFields[3] = new JTextField(12);
 		pumpFields[3].setEditable(false);
 		
 		JLabel pumpCost1 = new JLabel();
 			//Row 2
 		JLabel pumpLabel2 = new JLabel();
 
-		pumpFields[4] = new JTextField(10);
+		pumpFields[4] = new JTextField(12);
 		pumpFields[4].setEditable(false);
-		pumpFields[5] = new JTextField(10);
+		pumpFields[5] = new JTextField(12);
 		pumpFields[5].setEditable(false);
-		pumpFields[6] = new JTextField(10);
+		pumpFields[6] = new JTextField(12);
 		pumpFields[6].setEditable(false);
-		pumpFields[7] = new JTextField(10);
+		pumpFields[7] = new JTextField(12);
 		pumpFields[7].setEditable(false);
 		
 		JLabel pumpCost2 = new JLabel();
 			//Row 3
 		JLabel pumpLabel3 = new JLabel();
 		
-		pumpFields[8] = new JTextField(10);
+		pumpFields[8] = new JTextField(12);
 		pumpFields[8].setEditable(false);
-		pumpFields[9] = new JTextField(10);
+		pumpFields[9] = new JTextField(12);
 		pumpFields[9].setEditable(false);
-		pumpFields[10] = new JTextField(10);
+		pumpFields[10] = new JTextField(12);
 		pumpFields[10].setEditable(false);
-		pumpFields[11] = new JTextField(10);
+		pumpFields[11] = new JTextField(12);
 		pumpFields[11].setEditable(false);
 		
 		JLabel pumpCost3 = new JLabel();
 			//Row 4
 		JLabel pumpLabel4 = new JLabel();
 		
-		pumpFields[12] = new JTextField(10);
+		pumpFields[12] = new JTextField(12);
 		pumpFields[12].setEditable(false);
-		pumpFields[13] = new JTextField(10);
+		pumpFields[13] = new JTextField(12);
 		pumpFields[13].setEditable(false);
-		pumpFields[14] = new JTextField(10);
+		pumpFields[14] = new JTextField(12);
 		pumpFields[14].setEditable(false);
-		pumpFields[15] = new JTextField(10);
+		pumpFields[15] = new JTextField(12);
 		pumpFields[15].setEditable(false);
 		
 		JLabel pumpCost4 = new JLabel();
@@ -372,52 +372,52 @@ public class PetrolGUI {
 			//Row 1
 		JLabel tillLabel1 = new JLabel();
 	
-		tillFields[0] = new JTextField(10);
+		tillFields[0] = new JTextField(12);
 		tillFields[0].setEditable(false);
-		tillFields[1] = new JTextField(10);
+		tillFields[1] = new JTextField(12);
 		tillFields[1].setEditable(false);
-		tillFields[2] = new JTextField(10);
+		tillFields[2] = new JTextField(12);
 		tillFields[2].setEditable(false);
-		tillFields[3] = new JTextField(10);
+		tillFields[3] = new JTextField(12);
 		tillFields[3].setEditable(false);
 		
 		JLabel tillCost1 = new JLabel();
 			//Row 2
 		JLabel tillLabel2 = new JLabel();
 	
-		tillFields[4] = new JTextField(10);
+		tillFields[4] = new JTextField(12);
 		tillFields[4].setEditable(false);
-		tillFields[5] = new JTextField(10);
+		tillFields[5] = new JTextField(12);
 		tillFields[5].setEditable(false);
-		tillFields[6] = new JTextField(10);
+		tillFields[6] = new JTextField(12);
 		tillFields[6].setEditable(false);
-		tillFields[7] = new JTextField(10);
+		tillFields[7] = new JTextField(12);
 		tillFields[7].setEditable(false);
 		
 		JLabel tillCost2 = new JLabel();
 			//Row 3
 		JLabel tillLabel3 = new JLabel();
 		
-		tillFields[8] = new JTextField(10);
+		tillFields[8] = new JTextField(12);
 		tillFields[8].setEditable(false);
-		tillFields[9] = new JTextField(10);
+		tillFields[9] = new JTextField(12);
 		tillFields[9].setEditable(false);
-		tillFields[10] = new JTextField(10);
+		tillFields[10] = new JTextField(12);
 		tillFields[10].setEditable(false);
-		tillFields[11] = new JTextField(10);
+		tillFields[11] = new JTextField(12);
 		tillFields[11].setEditable(false);
 		
 		JLabel tillCost3 = new JLabel();
 			//Row 4
 		JLabel tillLabel4 = new JLabel();
 		
-		tillFields[12] = new JTextField(10);
+		tillFields[12] = new JTextField(12);
 		tillFields[12].setEditable(false);
-		tillFields[13] = new JTextField(10);
+		tillFields[13] = new JTextField(12);
 		tillFields[13].setEditable(false);
-		tillFields[14] = new JTextField(10);
+		tillFields[14] = new JTextField(12);
 		tillFields[14].setEditable(false);
-		tillFields[15] = new JTextField(10);
+		tillFields[15] = new JTextField(12);
 		tillFields[15].setEditable(false);
 		
 		JLabel tillCost4 = new JLabel();
