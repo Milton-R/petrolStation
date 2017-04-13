@@ -75,10 +75,10 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 	* Milton will be making changes to the UML Diagrams
 	
 8. 4 April 2017
-	After the justification of jobs, the following people are doing these jobs:
-		* Kelvin is working on the GUI
-		* Tristan and Matas have finished printing the information to Console 
-		* Milton will
+	* After the justification of jobs, the following people are doing these jobs:
+		- Kelvin is working on the GUI
+		- Tristan and Matas have finished printing the information to Console 
+		- Milton will work on the Truck Class
 
 9. 10 April 2017
 	* Kelvin identified a key error with the Information Passing to GUI
