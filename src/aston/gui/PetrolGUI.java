@@ -25,9 +25,12 @@ public class PetrolGUI {
 	private JTextField stepField;
 	private JTextField priceField;
 	private JCheckBox truckCheck;
+	private JLabel simMoney;
+	private JLabel simLoss;
 	
 	// JFrame for the Actual Simulation
 	private JFrame logFrame;
+	
 	private JLabel ticksStep;
 	
 	//Array of JTextFields instead 
@@ -37,7 +40,6 @@ public class PetrolGUI {
 	
 	// Class Declaration for Simulation
 	private Simulator s = new Simulator(this);
-	private PetrolStation petrol;	
 
 	/**
 	 * The GUI Simulation of the Petrol Pump Simulator
@@ -288,7 +290,6 @@ public class PetrolGUI {
 		mainFrame.setVisible(true);
 	}
 
-
 	/**
 	 * Closes the Program
 	 */
@@ -311,8 +312,8 @@ public class PetrolGUI {
 		JLabel titleLog = new JLabel();
 		
 		ticksStep = new JLabel();
-		JLabel simMoney = new JLabel();
-		JLabel simLoss = new JLabel();
+		simMoney = new JLabel();
+		simLoss = new JLabel();
 
 		//Pumps
 			//Row 1
@@ -320,6 +321,7 @@ public class PetrolGUI {
 
 		pumpFields[0] = new JTextField(12);
 		pumpFields[0].setEditable(false);
+		pumpFields[0].setBackground(new Color(218, 247, 166));
 		pumpFields[1] = new JTextField(12);
 		pumpFields[1].setEditable(false);
 		pumpFields[2] = new JTextField(12);
@@ -333,6 +335,7 @@ public class PetrolGUI {
 
 		pumpFields[4] = new JTextField(12);
 		pumpFields[4].setEditable(false);
+		pumpFields[4].setBackground(new Color(218, 247, 166));
 		pumpFields[5] = new JTextField(12);
 		pumpFields[5].setEditable(false);
 		pumpFields[6] = new JTextField(12);
@@ -346,6 +349,7 @@ public class PetrolGUI {
 		
 		pumpFields[8] = new JTextField(12);
 		pumpFields[8].setEditable(false);
+		pumpFields[8].setBackground(new Color(218, 247, 166));
 		pumpFields[9] = new JTextField(12);
 		pumpFields[9].setEditable(false);
 		pumpFields[10] = new JTextField(12);
@@ -359,6 +363,7 @@ public class PetrolGUI {
 		
 		pumpFields[12] = new JTextField(12);
 		pumpFields[12].setEditable(false);
+		pumpFields[12].setBackground(new Color(218, 247, 166));
 		pumpFields[13] = new JTextField(12);
 		pumpFields[13].setEditable(false);
 		pumpFields[14] = new JTextField(12);
@@ -374,6 +379,7 @@ public class PetrolGUI {
 	
 		tillFields[0] = new JTextField(12);
 		tillFields[0].setEditable(false);
+		tillFields[0].setBackground(new Color(218, 247, 166));
 		tillFields[1] = new JTextField(12);
 		tillFields[1].setEditable(false);
 		tillFields[2] = new JTextField(12);
@@ -387,6 +393,7 @@ public class PetrolGUI {
 	
 		tillFields[4] = new JTextField(12);
 		tillFields[4].setEditable(false);
+		tillFields[4].setBackground(new Color(218, 247, 166));
 		tillFields[5] = new JTextField(12);
 		tillFields[5].setEditable(false);
 		tillFields[6] = new JTextField(12);
@@ -400,6 +407,7 @@ public class PetrolGUI {
 		
 		tillFields[8] = new JTextField(12);
 		tillFields[8].setEditable(false);
+		tillFields[8].setBackground(new Color(218, 247, 166));
 		tillFields[9] = new JTextField(12);
 		tillFields[9].setEditable(false);
 		tillFields[10] = new JTextField(12);
@@ -413,6 +421,7 @@ public class PetrolGUI {
 		
 		tillFields[12] = new JTextField(12);
 		tillFields[12].setEditable(false);
+		tillFields[12].setBackground(new Color(218, 247, 166));
 		tillFields[13] = new JTextField(12);
 		tillFields[13].setEditable(false);
 		tillFields[14] = new JTextField(12);
@@ -796,11 +805,14 @@ public class PetrolGUI {
 		{
 			//Set the ticksStep JLabel to the current tick
 			ticksStep.setText("Step: " + splitInfo[0] + "\t");
-			if(i <= ((4 * Math.pow(2, pumpSlider.getValue())-1))){ 
+			//If the number of Pumps used based on the Pump Slider
+			if(i < ((4 * Math.pow(2, pumpSlider.getValue())))){ 
 				//Each pumpField is placed on its respective 
 				pumpFields[i].setText(splitInfo[i+1]);
 			} else {
+				//Pump states its not in use
 				pumpFields[i].setText("Pump not in use");
+				pumpFields[i].setBackground(Color.white);
 			}
 		}
 	}

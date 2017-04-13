@@ -90,6 +90,11 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 		* Kelvin has added the additional information such as the Step Counter, Money gain and loss
 	* Kelvin called Milton to cross-check the progress on Truck Class
 		* Milton will work on it today
+11. 13 April 2017
+	* Kelvin changed the orientation so its Pumps on left and Tills on Right
+	* Kelvin implemented a Disabled pump method to state which pumps is in use
+	* Tristan started to made the back-logic easier for both GUI and Console
+	* Kelvin color-coded the text field which states the in-use pump.
 
 # Advisory
 Used for Aston University Java Programme Development CS1410
