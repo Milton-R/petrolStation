@@ -800,7 +800,7 @@ public class PetrolGUI {
 				//Each pumpField is placed on its respective 
 				pumpFields[i].setText(splitInfo[i+1]);
 			} else {
-				pumpFields[i].setText("Pump Not in use");
+				pumpFields[i].setText("Pump not in use");
 			}
 		}
 	}
