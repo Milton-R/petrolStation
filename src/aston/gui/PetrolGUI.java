@@ -26,59 +26,16 @@ public class PetrolGUI {
 	private JTextField priceField;
 	private JCheckBox truckCheck;
 	
-	// JFrame for the Simulation in Action
+	// JFrame for the Actual Simulation
 	private JFrame logFrame;
+	private JLabel ticksStep;
 	
-	//array of JTextFields
+	//Array of JTextFields instead 
 	private JTextField pumpFields[];
 	private JTextField tillFields[];
 	
-	/*
-		//Pump Row 1
-	JTextField pump1Text11;
-	JTextField pump1Text12;
-	JTextField pump1Text13;
-	JTextField pump1Text14;
-		//Pump Row 2
-	JTextField pump1Text21;
-	JTextField pump1Text22;
-	JTextField pump1Text23;
-	JTextField pump1Text24;
-		//Pump Row 3
-	JTextField pump1Text31;
-	JTextField pump1Text32;
-	JTextField pump1Text33;
-	JTextField pump1Text34;
-		//Pump Row 4
-	JTextField pump1Text41;
-	JTextField pump1Text42;
-	JTextField pump1Text43;
-	JTextField pump1Text44;
-		//Till Row 1
-	JTextField till1Text11;
-	JTextField till1Text12;
-	JTextField till1Text13;
-	JTextField till1Text14;
-		//Till Row 2
-	JTextField till1Text21;
-	JTextField till1Text22;
-	JTextField till1Text23;
-	JTextField till1Text24;
 	
-		//Till Row 3
-	JTextField till1Text31;
-	JTextField till1Text32;
-	JTextField till1Text33;
-	JTextField till1Text34;
-		//Till Row 4
-	JTextField till1Text41;
-	JTextField till1Text42;
-	JTextField till1Text43;
-	JTextField till1Text44;
-	*/
-	
-	
-	// create simulation
+	// Class Declaration for Simulation
 	private Simulator s = new Simulator(this);
 	private PetrolStation petrol;	
 
@@ -87,7 +44,7 @@ public class PetrolGUI {
 	 */
 	public PetrolGUI() {
 		
-		//set up JTextField for output
+		//Set up JTextField for output
 		initJTxtFld();
 
 		// Step 1: Create the components
@@ -175,7 +132,7 @@ public class PetrolGUI {
 		truckCheck.setSelected(false);
 
 		// Step 3: Create containers to hold the components
-		mainFrame = new JFrame("Petrol Simulator");
+		mainFrame = new JFrame("Petrol Station Simulation Parameters");
 		mainFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 
 		// Step 4: Specify LayoutManagers
@@ -353,7 +310,7 @@ public class PetrolGUI {
 		JButton stopButton = new JButton();
 		JLabel titleLog = new JLabel();
 		
-		JLabel ticksStep = new JLabel();
+		ticksStep = new JLabel();
 		JLabel simMoney = new JLabel();
 		JLabel simLoss = new JLabel();
 
@@ -487,14 +444,15 @@ public class PetrolGUI {
 		tillCost3.setText("Cost: ");
 		tillCost4.setText("Cost: ");
 		
-		ticksStep.setText("Step: \t");
-		simMoney.setText("Amount of Money Gained: \t");
-		simLoss.setText("Money Missed: \t");
+		ticksStep.setText("Step:");
+		simMoney.setText("Amount of Money Gained:");
+		simMoney.setHorizontalAlignment(JLabel.CENTER);
+		simLoss.setText("Money Missed:");
 		
 		stopButton.setText("Close Current Simulation");
 		
 		// Step 3: Create containers to hold the components
-		logFrame = new JFrame("Station Simulation");
+		logFrame = new JFrame("Petrol Station Simulation");
 		logFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 		
 		// Step 4: Specify LayoutManagers
@@ -646,10 +604,10 @@ public class PetrolGUI {
 		// Step 5: Add components to containers
 			//Pumps
 				//Pump 1
-		leftSidePump1.add(pumpFields[0], BorderLayout.EAST);
-		leftSidePump1.add(pumpFields[1], BorderLayout.CENTER);
-		rightSidePump1.add(pumpFields[2], BorderLayout.EAST);
-		rightSidePump1.add(pumpFields[3], BorderLayout.CENTER);
+		leftSidePump1.add(pumpFields[0], BorderLayout.WEST);
+		leftSidePump1.add(pumpFields[1], BorderLayout.EAST);
+		rightSidePump1.add(pumpFields[2], BorderLayout.WEST);
+		rightSidePump1.add(pumpFields[3], BorderLayout.EAST);
 		
 				//Merge Left and Right Side
 			pump1.add(pumpLabel1, BorderLayout.NORTH);
@@ -658,10 +616,10 @@ public class PetrolGUI {
 			pump1.add(pumpCost1, BorderLayout.SOUTH);
 			
 				//Pump 2
-		leftSidePump2.add(pumpFields[4], BorderLayout.EAST);
-		leftSidePump2.add(pumpFields[5], BorderLayout.CENTER);
-		rightSidePump2.add(pumpFields[6], BorderLayout.EAST);
-		rightSidePump2.add(pumpFields[7], BorderLayout.CENTER);
+		leftSidePump2.add(pumpFields[4], BorderLayout.WEST);
+		leftSidePump2.add(pumpFields[5], BorderLayout.EAST);
+		rightSidePump2.add(pumpFields[6], BorderLayout.WEST);
+		rightSidePump2.add(pumpFields[7], BorderLayout.EAST);
 				//Merge Left and Right Side
 			pump2.add(pumpLabel2, BorderLayout.NORTH);
 			pump2.add(leftSidePump2, BorderLayout.WEST);
@@ -669,10 +627,10 @@ public class PetrolGUI {
 			pump2.add(pumpCost2, BorderLayout.SOUTH);
 		
 				//Pump 3
-		leftSidePump3.add(pumpFields[8], BorderLayout.EAST);
-		leftSidePump3.add(pumpFields[9], BorderLayout.CENTER);
-		rightSidePump3.add(pumpFields[10], BorderLayout.EAST);
-		rightSidePump3.add(pumpFields[11], BorderLayout.CENTER);
+		leftSidePump3.add(pumpFields[8], BorderLayout.WEST);
+		leftSidePump3.add(pumpFields[9], BorderLayout.EAST);
+		rightSidePump3.add(pumpFields[10], BorderLayout.WEST);
+		rightSidePump3.add(pumpFields[11], BorderLayout.EAST);
 				//Merge Left and Right Side
 			pump3.add(pumpLabel3, BorderLayout.NORTH);
 			pump3.add(leftSidePump3, BorderLayout.WEST);
@@ -680,10 +638,10 @@ public class PetrolGUI {
 			pump3.add(pumpCost3, BorderLayout.SOUTH);
 		
 				//Pump 4
-		leftSidePump4.add(pumpFields[12], BorderLayout.EAST);
-		leftSidePump4.add(pumpFields[13], BorderLayout.CENTER);
-		rightSidePump4.add(pumpFields[14], BorderLayout.EAST);
-		rightSidePump4.add(pumpFields[15], BorderLayout.CENTER);
+		leftSidePump4.add(pumpFields[12], BorderLayout.WEST);
+		leftSidePump4.add(pumpFields[13], BorderLayout.EAST);
+		rightSidePump4.add(pumpFields[14], BorderLayout.WEST);
+		rightSidePump4.add(pumpFields[15], BorderLayout.EAST);
 				//Merge Left and Right Side
 			pump4.add(pumpLabel4, BorderLayout.NORTH);
 			pump4.add(leftSidePump4, BorderLayout.WEST);
@@ -702,10 +660,10 @@ public class PetrolGUI {
 		
 		//Tills
 			//Till 1
-		leftSideTill1.add(tillFields[0], BorderLayout.EAST);
-		leftSideTill1.add(tillFields[1], BorderLayout.CENTER);
-		rightSideTill1.add(tillFields[2], BorderLayout.EAST);
-		rightSideTill1.add(tillFields[3], BorderLayout.CENTER);
+		leftSideTill1.add(tillFields[0], BorderLayout.WEST);
+		leftSideTill1.add(tillFields[1], BorderLayout.EAST);
+		rightSideTill1.add(tillFields[2], BorderLayout.WEST);
+		rightSideTill1.add(tillFields[3], BorderLayout.EAST);
 				//Merge Left and Right Side
 			till1.add(tillLabel1, BorderLayout.NORTH);
 			till1.add(leftSideTill1, BorderLayout.WEST);
@@ -713,10 +671,10 @@ public class PetrolGUI {
 			till1.add(tillCost1, BorderLayout.SOUTH);
 		
 			//Till 2
-		leftSideTill2.add(tillFields[4], BorderLayout.EAST);
-		leftSideTill2.add(tillFields[5], BorderLayout.CENTER);
-		rightSideTill2.add(tillFields[6], BorderLayout.EAST);
-		rightSideTill2.add(tillFields[7], BorderLayout.CENTER);
+		leftSideTill2.add(tillFields[4], BorderLayout.WEST);
+		leftSideTill2.add(tillFields[5], BorderLayout.EAST);
+		rightSideTill2.add(tillFields[6], BorderLayout.WEST);
+		rightSideTill2.add(tillFields[7], BorderLayout.EAST);
 			//Merge Left and Right Side
 			till2.add(tillLabel2, BorderLayout.NORTH);
 			till2.add(leftSideTill2, BorderLayout.WEST);
@@ -724,10 +682,10 @@ public class PetrolGUI {
 			till2.add(tillCost2, BorderLayout.SOUTH);
 			
 			//Till 3
-		leftSideTill3.add(tillFields[8], BorderLayout.EAST);
-		leftSideTill3.add(tillFields[9], BorderLayout.CENTER);
-		rightSideTill3.add(tillFields[10], BorderLayout.EAST);
-		rightSideTill3.add(tillFields[11], BorderLayout.CENTER);
+		leftSideTill3.add(tillFields[8], BorderLayout.WEST);
+		leftSideTill3.add(tillFields[9], BorderLayout.EAST);
+		rightSideTill3.add(tillFields[10], BorderLayout.WEST);
+		rightSideTill3.add(tillFields[11], BorderLayout.EAST);
 				//Merge Left and Right Side
 			till3.add(tillLabel3, BorderLayout.NORTH);
 			till3.add(leftSideTill3, BorderLayout.WEST);
@@ -735,10 +693,10 @@ public class PetrolGUI {
 			till3.add(tillCost3, BorderLayout.SOUTH);
 			
 			//Till 4
-		leftSideTill4.add(tillFields[12], BorderLayout.EAST);
-		leftSideTill4.add(tillFields[13], BorderLayout.CENTER);
-		rightSideTill4.add(tillFields[14], BorderLayout.EAST);
-		rightSideTill4.add(tillFields[15], BorderLayout.CENTER);
+		leftSideTill4.add(tillFields[12], BorderLayout.WEST);
+		leftSideTill4.add(tillFields[13], BorderLayout.EAST);
+		rightSideTill4.add(tillFields[14], BorderLayout.WEST);
+		rightSideTill4.add(tillFields[15], BorderLayout.EAST);
 			
 				//Merge Left and Right Side
 			till4.add(tillLabel4, BorderLayout.NORTH);
@@ -757,8 +715,8 @@ public class PetrolGUI {
 		tillsPanel.add(bottomTills, BorderLayout.SOUTH);
 		
 		//Merge Simulators
-		simPanel.add(pumpsPanel, BorderLayout.NORTH);
-		simPanel.add(tillsPanel, BorderLayout.SOUTH);
+		simPanel.add(pumpsPanel, BorderLayout.WEST);
+		simPanel.add(tillsPanel, BorderLayout.EAST);
 		
 		//Merge Title Panel Componenets
 		titlePanel.add(titleLog, BorderLayout.NORTH);
@@ -834,9 +792,9 @@ public class PetrolGUI {
 		System.out.println(info);
 		for (int i = 0; i < 16; i++)
 		{
+			ticksStep.setText("Step: " + splitInfo[0] + "\t");
 			pumpFields[i].setText(splitInfo[i+1]);
 		}
-		pumpFields[0].setText("1st");
 	}
 
 	/**
