@@ -783,17 +783,25 @@ public class PetrolGUI {
 	}
 	
 	/**
-	 * This Displays the info to the Simulation GUI in parts
+	 * This Displays the info to the Simulation GUI in parts to the JTextFields
 	 * @param info
 	 */
 	public void display(String info){
-		//add code that splits "info" string into parts and displays them in the GUI output interface
+		//Stores the delimited info String to a String Array
 		String[] splitInfo = info.split(",");
+		//Output the info String
 		System.out.println(info);
+		//Loop through the array
 		for (int i = 0; i < 16; i++)
 		{
+			//Set the ticksStep JLabel to the current tick
 			ticksStep.setText("Step: " + splitInfo[0] + "\t");
-			pumpFields[i].setText(splitInfo[i+1]);
+			if(i <= ((4 * Math.pow(2, pumpSlider.getValue())-1))){ 
+				//Each pumpField is placed on its respective 
+				pumpFields[i].setText(splitInfo[i+1]);
+			} else {
+				pumpFields[i].setText("Pump Not in use");
+			}
 		}
 	}
 
