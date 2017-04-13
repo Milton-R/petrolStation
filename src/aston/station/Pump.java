@@ -76,4 +76,9 @@ public class Pump {
 	{
 		return (currentQueue.toGuiString());
 	}
+	
+	public double getQueueSize()
+	{
+		return currentQueue.getSize();
+	}
 }

@@ -64,19 +64,21 @@ public class PetrolStation {
 		{
 			Vehicle v = generatedV;
 			boolean added = false;
+			double size = pumps[0].getQueueSize();
+			Pump shortestQueue = pumps[0];
 			for (Pump p : pumps)
 			{
-				if (p.addVehicleToQueue(v))
+				if (p.getQueueSize() < size)
 				{
-					added = true;
-					break;
+					shortestQueue = p;
 				}
-				else
-				{
-					//System.out.println("no space");
-				}
+	
 			}
-			if (!added)
+			if (shortestQueue.addVehicleToQueue(v))
+			{
+				added = true;
+			}
+			else
 			{
 				//System.out.println("vehicle leaves as no space at pump");
 			}
@@ -99,7 +101,9 @@ public class PetrolStation {
 			{
 				information += (p.guiToString());
 			}
+			
 		}
+			
 		for (int i = 4; i > pumps.length; i--)
 		{
 			information += "empty,empty,empty,empty,";

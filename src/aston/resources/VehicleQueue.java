@@ -61,6 +61,11 @@ public class VehicleQueue {
 		}
 	}
 	
+	public double getSize()
+	{
+		return spaceTaken;
+	}
+	
 	public String toString()
 	{
 		String s = "Space Taken: " + spaceTaken;
