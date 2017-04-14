@@ -26,6 +26,8 @@ public abstract class Vehicle{
 	protected int moneySpentShopping; 			//Minimum Value in Payment
 	//protected int moneySpentShoppingRange;	//Min + Random Value in Payment
 	//protected Random random;					//Random Class
+	protected Customer customer;
+	protected boolean hasCustomer = false;
 	
 	PetrolStation petrolStation;
 	
@@ -126,6 +128,7 @@ public abstract class Vehicle{
 	//creates the Customer object
 	public void createCustomer()
 	{
+		hasCustomer = true;
 		int shoppingTime = 0;
 		if (name.contains("SmallCar"))
 		{
@@ -133,14 +136,28 @@ public abstract class Vehicle{
 		}
 		else if (name.contains("Motorbike"))
 		{
+			System.out.println("testm1");
 			shoppingTime = Config.motorBikeTimeTakenShopping + petrolStation.rand.nextInt(Config.motorBikeTimeTakenShoppingRange);
+			System.out.println("testm2");
 		}
 		else if (name.contains("FamilySedan"))
 		{
 			shoppingTime = Config.familySedanTimeTakenShopping + petrolStation.rand.nextInt(Config.familySedanTimeTakenShoppingRange);
 		}
-		Customer customer = new Customer(this, shoppingTime);
+		System.out.println("testq");
+		customer = new Customer(this, shoppingTime);
+		System.out.println(customer.getName() + " goes into the store");
 		petrolStation.goToShop(customer);
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	
+	public boolean hasCustomer()
+	{
+		return hasCustomer;
 	}
 	
 	/**

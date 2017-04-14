@@ -14,23 +14,28 @@ public class TillQueue {
 		t = new LinkedList<Customer>();
 	}
 	
-	private void addCustomer(Customer c)
+	public void addCustomer(Customer c)
 	{
 		t.add(c);
 		numC++;
 	}
-	private void removeCustomer(Customer c)
+	public void removeCustomer(Customer c)
 	{
 		t.remove(c);
 		numC--;
 	}
 	
-	private void passTime()
+	public void passTime()
 	{
 		for(Customer c : t)
 		{
 			c.passTime();
 		}
+	}
+	
+	public int getNumberC()
+	{
+		return numC;
 	}
 	
 	

@@ -36,7 +36,6 @@ public class Shop {
 	
 	public void sendToTill(Customer c)
 	{
-		/*
 		int size = tills[0].getQueueSize();
 		Till shortestQueue = tills[0];
 		for (Till t: tills)
@@ -47,7 +46,6 @@ public class Shop {
 			}
 		}
 		shortestQueue.addCustomer(c);
-		*/
 	}
 
 }

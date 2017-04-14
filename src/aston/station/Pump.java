@@ -30,11 +30,21 @@ public class Pump {
 			if(currentVehicle.fillTank(pumpSpeed))
 			{
 				numGallons ++;
+				//System.out.println("FILLING TANK");
 			}
 			else
 			{
 				//removeFrontVehicle();
-				currentVehicle.createCustomer();
+				if (!currentVehicle.hasCustomer())
+				{
+					//System.out.println("made customer");
+					currentVehicle.createCustomer();
+				}
+				else
+				{
+					//wait here
+					System.out.println("waiting for owner");
+				}
 			}
 		} 
 		catch (Exception e)

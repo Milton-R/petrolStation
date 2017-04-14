@@ -5,14 +5,18 @@ import aston.station.*;
 
 public class Customer {
 	
-	Vehicle owndenVehicle;
-	int shoppingTime;
-	Shop shop;
+	private Vehicle owndenVehicle;
+	private String name;
+	private int shoppingTime;
+	private Shop shop;
 	
 	public Customer(Vehicle ov, int shoppingTime)
 	{
 		owndenVehicle = ov;
 		this.shoppingTime = shoppingTime;
+		String vName = ov.getName();
+		name = "Customer" + vName.substring(0) + vName.substring(vName.length()-1);
+		System.out.println(name);
 	}
 	
 	public int getShoppingTime()
@@ -32,5 +36,10 @@ public class Customer {
 		{
 			shop.sendToTill(this);
 		}
+	}
+	
+	public String getName()
+	{
+		return name;
 	}
 }
