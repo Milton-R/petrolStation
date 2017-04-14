@@ -15,8 +15,7 @@ public class Customer {
 		owndenVehicle = ov;
 		this.shoppingTime = shoppingTime;
 		String vName = ov.getName();
-		name = "Customer" + vName.substring(0) + vName.substring(vName.length()-1);
-		System.out.println(name);
+		name = "Customer" + vName.substring(0,1) + vName.substring(vName.length()-1);
 	}
 	
 	public int getShoppingTime()

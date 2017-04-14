@@ -129,16 +129,21 @@ public abstract class Vehicle{
 	public void createCustomer()
 	{
 		hasCustomer = true;
-		int shoppingTime = 0;
+		int shoppingTime = 20;
 		if (name.contains("SmallCar"))
 		{
 			shoppingTime = Config.smallCarTimeTakenShopping + petrolStation.rand.nextInt(Config.smallCarTimeTakenShoppingRange);
 		}
 		else if (name.contains("Motorbike"))
 		{
-			System.out.println("testm1");
-			shoppingTime = Config.motorBikeTimeTakenShopping + petrolStation.rand.nextInt(Config.motorBikeTimeTakenShoppingRange);
-			System.out.println("testm2");
+			if (Config.motorBikeTimeTakenShoppingRange > 0)
+			{
+				shoppingTime = Config.motorBikeTimeTakenShopping + petrolStation.rand.nextInt(Config.motorBikeTimeTakenShoppingRange);
+			}
+			else
+			{
+				shoppingTime = Config.motorBikeTimeTakenShopping;
+			}
 		}
 		else if (name.contains("FamilySedan"))
 		{
