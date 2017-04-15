@@ -24,7 +24,7 @@ public class Pump {
 	 */
 	public void pumpFuel()
 	{
-		try 
+		if (currentQueue.getSize() > 0)
 		{
 			currentVehicle = currentQueue.getFrontVehicle();
 			if(currentVehicle.fillTank(pumpSpeed))
@@ -47,11 +47,6 @@ public class Pump {
 				}
 			}
 		} 
-		catch (Exception e)
-		{
-			//do nothing
-			//System.out.println("queue empty");
-		}
 	}
 	
 	/**

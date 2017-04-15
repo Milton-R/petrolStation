@@ -54,11 +54,16 @@ public class PetrolStation {
 		{
 			information += (output.getNumSteps() + ",");
 		}
+		
+		//customers
+		shop.passTime();
+		
 		//make each Pump pump fuel
 		for (Pump p : pumps)
 		{
 			p.pumpFuel();
 		}
+		
 		//create a new vehicle
 		if (spawnVehicle())
 		{
@@ -117,9 +122,6 @@ public class PetrolStation {
 			output.setFuelMoney((int) totalPumped*config.getPencePerGallon());
 			//System.out.println(output.getGallons());
 		}
-		
-		//customers
-		shop.passTime();
 		
 		return information;
 	}
