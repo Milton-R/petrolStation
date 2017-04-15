@@ -27,17 +27,9 @@ public class TillQueue {
 	
 	public void removeFrontCustomer()
 	{
-		t.remove();
 		System.out.println(getFrontCustomer().getName() + " leaves Till");
+		t.remove();
 		numC--;
-	}
-	
-	public void passTime()
-	{
-		for(Customer c : t)
-		{
-			c.passTime();
-		}
 	}
 	
 	public int getNumberC()

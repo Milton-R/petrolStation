@@ -28,14 +28,19 @@ public class Customer {
 		shop = s;
 	}
 	
-	public void passTime()
+	public boolean passTime()
 	{
 		if (shoppingTime <= 0)
 		{
 			shop.sendToTill(this);
 			System.out.println(name + " goes to till");
+			return true;
 		}
-		shoppingTime -= Config.secondsPerTick;
+		else
+		{
+			shoppingTime -= Config.secondsPerTick;
+			return false;
+		}
 	}
 	
 	public void leave()

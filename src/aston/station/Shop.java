@@ -1,5 +1,6 @@
 package aston.station;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import aston.resources.*;
 import aston.vehicles.*;
@@ -35,7 +36,6 @@ public class Shop {
 	
 	public void sendToTill(Customer c)
 	{
-		shoppingCustomers.remove(c);
 		int size = tills[0].getQueueSize();
 		Till shortestQueue = tills[0];
 		for (Till t: tills)
@@ -54,9 +54,17 @@ public class Shop {
 		{
 			t.serveCustomers();
 		}
-		for (Customer c : shoppingCustomers)
+		if (shoppingCustomers.size() > 0)
 		{
-			c.passTime();
+			ArrayList<Customer> toRemove = new ArrayList<Customer>();
+			for (Customer c : shoppingCustomers)
+			{
+				if (c.passTime())
+				{
+					toRemove.add(c);
+				}
+			}
+			shoppingCustomers.removeAll(toRemove);
 		}
 	}
 

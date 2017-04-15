@@ -117,6 +117,10 @@ public class PetrolStation {
 			output.setFuelMoney((int) totalPumped*config.getPencePerGallon());
 			//System.out.println(output.getGallons());
 		}
+		
+		//customers
+		shop.passTime();
+		
 		return information;
 	}
 	
