@@ -18,5 +18,13 @@ public class Till {
 		return currentTillQueue.getNumberC();
 	}
 	
+	public void serveCustomers()
+	{
+		if (currentTillQueue.getNumberC() > 0)
+		{
+			currentTillQueue.getFrontCustomer().leave();
+			currentTillQueue.removeFrontCustomer();
+		}
+	}
 	
 }

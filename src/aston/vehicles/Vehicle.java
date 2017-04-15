@@ -28,6 +28,7 @@ public abstract class Vehicle{
 	//protected Random random;					//Random Class
 	protected Customer customer;
 	protected boolean hasCustomer = false;
+	protected VehicleQueue vQ;
 	
 	PetrolStation petrolStation;
 	
@@ -149,7 +150,6 @@ public abstract class Vehicle{
 		{
 			shoppingTime = Config.familySedanTimeTakenShopping + petrolStation.rand.nextInt(Config.familySedanTimeTakenShoppingRange);
 		}
-		System.out.println("testq");
 		customer = new Customer(this, shoppingTime);
 		System.out.println(customer.getName() + " goes into the store");
 		petrolStation.goToShop(customer);
@@ -163,6 +163,16 @@ public abstract class Vehicle{
 	public boolean hasCustomer()
 	{
 		return hasCustomer;
+	}
+	
+	public void setVehicleQueue(VehicleQueue vq)
+	{
+		vQ = vq;
+	}
+	
+	public void vLeave()
+	{
+		vQ.removeFrontVehicle();
 	}
 	
 	/**

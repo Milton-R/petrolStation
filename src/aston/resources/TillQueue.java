@@ -19,9 +19,16 @@ public class TillQueue {
 		t.add(c);
 		numC++;
 	}
-	public void removeCustomer(Customer c)
+	
+	public Customer getFrontCustomer()
 	{
-		t.remove(c);
+		return t.peek();
+	}
+	
+	public void removeFrontCustomer()
+	{
+		t.remove();
+		System.out.println(getFrontCustomer().getName() + " leaves Till");
 		numC--;
 	}
 	

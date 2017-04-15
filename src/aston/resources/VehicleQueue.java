@@ -28,6 +28,7 @@ public class VehicleQueue {
 			spaceTaken += v.getVehicleSize();
 			q.add(v);
 			numV++;
+			v.setVehicleQueue(this);
 			return true;
 		}
 		else

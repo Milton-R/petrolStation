@@ -8,7 +8,6 @@ public class Shop {
 	
 	private Till[] tills;
 	private ArrayList<Customer> shoppingCustomers = new ArrayList<Customer>();
-	//we need to create a customer queue to store our customers once they have finished browsing.
 	
 	//makes the tills
 	public Shop(int numTills)
@@ -36,6 +35,7 @@ public class Shop {
 	
 	public void sendToTill(Customer c)
 	{
+		shoppingCustomers.remove(c);
 		int size = tills[0].getQueueSize();
 		Till shortestQueue = tills[0];
 		for (Till t: tills)
@@ -46,6 +46,18 @@ public class Shop {
 			}
 		}
 		shortestQueue.addCustomer(c);
+	}
+	
+	public void passTime()
+	{
+		for (Till t : tills)
+		{
+			t.serveCustomers();
+		}
+		for (Customer c : shoppingCustomers)
+		{
+			c.passTime();
+		}
 	}
 
 }
