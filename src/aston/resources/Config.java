@@ -76,6 +76,24 @@ public class Config {
 		familySedan_probability = q;
 	}
 	
+	public static final int truck_tank = 30; //gallons
+	public static final int truck_tankRange = 10; //gallons
+	public static final int truck_space = 2; //space taken by truck
+	public static final double truck_probability = 0.02; // truck probability
+	public static final int truck_shoppingtime = 4; // truck shopping time
+	public static final int truck_shoppingtime_range = 2; // truck shopping range 
+	public static final int truck_money_spent = 1500 ; // money spent by truck
+	public static final int truck_money_spent_range = 1500; // money range
+	public static final double truck_badservice = 0.2; // bad satisfaction percentage drop
+	public static final double truck_goodservice = 0.05; // good satisfaction percentage increase
+	
+	public double getYtruckProb() {
+		return truck_probability;
+	}
+	
+	
+	
+	
 	//RandomSeed
 	public static final int randomSeed = 42;
 	
