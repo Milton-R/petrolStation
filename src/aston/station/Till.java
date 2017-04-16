@@ -1,19 +1,30 @@
 package aston.station;
 
+import aston.resources.*;
 import aston.vehicles.*;
-import java.util.ArrayList;
 
 public class Till {
 	
-	private ArrayList<Customer> shoppingCustomers = new ArrayList<Customer>();
+	private TillQueue currentTillQueue = new TillQueue();
+	private String name;
 	
 	public void addCustomer(Customer c)
 	{
-		shoppingCustomers.add(c);
+		currentTillQueue.addCustomer(c);
 	}
 	
-	public void removerCustomer(Customer c)
+	public int getQueueSize()
 	{
-		shoppingCustomers.remove(c);
+		return currentTillQueue.getNumberC();
 	}
+	
+	public void serveCustomers()
+	{
+		if (currentTillQueue.getNumberC() > 0)
+		{
+			currentTillQueue.getFrontCustomer().leave();
+			currentTillQueue.removeFrontCustomer();
+		}
+	}
+	
 }

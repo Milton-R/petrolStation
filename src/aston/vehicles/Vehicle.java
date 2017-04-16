@@ -26,6 +26,9 @@ public abstract class Vehicle{
 	protected int moneySpentShopping; 			//Minimum Value in Payment
 	//protected int moneySpentShoppingRange;	//Min + Random Value in Payment
 	//protected Random random;					//Random Class
+	protected Customer customer;
+	protected boolean hasCustomer = false;
+	protected VehicleQueue vQ;
 	
 	PetrolStation petrolStation;
 	
@@ -126,21 +129,50 @@ public abstract class Vehicle{
 	//creates the Customer object
 	public void createCustomer()
 	{
-		int shoppingTime = 0;
+		hasCustomer = true;
+		int shoppingTime = 20;
 		if (name.contains("SmallCar"))
 		{
 			shoppingTime = Config.smallCarTimeTakenShopping + petrolStation.rand.nextInt(Config.smallCarTimeTakenShoppingRange);
 		}
 		else if (name.contains("Motorbike"))
 		{
-			shoppingTime = Config.motorBikeTimeTakenShopping + petrolStation.rand.nextInt(Config.motorBikeTimeTakenShoppingRange);
+			if (Config.motorBikeTimeTakenShoppingRange > 0)
+			{
+				shoppingTime = Config.motorBikeTimeTakenShopping + petrolStation.rand.nextInt(Config.motorBikeTimeTakenShoppingRange);
+			}
+			else
+			{
+				shoppingTime = Config.motorBikeTimeTakenShopping;
+			}
 		}
 		else if (name.contains("FamilySedan"))
 		{
 			shoppingTime = Config.familySedanTimeTakenShopping + petrolStation.rand.nextInt(Config.familySedanTimeTakenShoppingRange);
 		}
-		Customer customer = new Customer(this, shoppingTime);
+		customer = new Customer(this, shoppingTime);
+		System.out.println(customer.getName() + " goes into the store");
 		petrolStation.goToShop(customer);
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	
+	public boolean hasCustomer()
+	{
+		return hasCustomer;
+	}
+	
+	public void setVehicleQueue(VehicleQueue vq)
+	{
+		vQ = vq;
+	}
+	
+	public void vLeave()
+	{
+		vQ.removeFrontVehicle();
 	}
 	
 	/**

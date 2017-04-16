@@ -6,10 +6,10 @@ import aston.resources.*;
 public class Pump {
 	
 	int numGallons;
-	Vehicle currentVehicle;
-	VehicleQueue currentQueue = new VehicleQueue();
+	private Vehicle currentVehicle;
+	private VehicleQueue currentQueue = new VehicleQueue();
 	int pumpSpeed = Config.gallonPerTick;
-	String name;
+	private String name;
 	/**
 	 * Constructor
 	 * @param n Number of Pumps from the GUI
@@ -24,24 +24,29 @@ public class Pump {
 	 */
 	public void pumpFuel()
 	{
-		try 
+		if (currentQueue.getSize() > 0)
 		{
 			currentVehicle = currentQueue.getFrontVehicle();
 			if(currentVehicle.fillTank(pumpSpeed))
 			{
 				numGallons ++;
+				//System.out.println("FILLING TANK");
 			}
 			else
 			{
-				removeFrontVehicle();
-				currentVehicle.createCustomer();
+				//removeFrontVehicle();
+				if (!currentVehicle.hasCustomer())
+				{
+					//System.out.println("made customer");
+					currentVehicle.createCustomer();
+				}
+				else
+				{
+					//wait here
+					System.out.println("waiting for owner");
+				}
 			}
 		} 
-		catch (Exception e)
-		{
-			//do nothing
-			//System.out.println("queue empty");
-		}
 	}
 	
 	/**
@@ -75,5 +80,10 @@ public class Pump {
 	public String guiToString()
 	{
 		return (currentQueue.toGuiString());
+	}
+	
+	public double getQueueSize()
+	{
+		return currentQueue.getSize();
 	}
 }
