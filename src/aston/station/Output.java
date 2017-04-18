@@ -5,7 +5,7 @@ import aston.resources.Config;
 public class Output {
 
 	
-	private int numSc, numM, numFs, numGallons, totalVSpwnd, currentStep = 0, fuelMoney;
+	private int numTruck, numSc, numM, numFs, numGallons, totalVSpwnd, currentStep = 0, fuelMoney;
 	
 	/*Things we need to keep track of:
 	 * #At the end of simulation
@@ -83,7 +83,11 @@ public class Output {
 		totalVSpwnd++;
 	}
 	
-	
+	public void addTruck()
+	{
+		numTruck++;
+		totalVSpwnd++;
+	}
 	//stores small car
 	public int getSC()
 	{
@@ -100,6 +104,11 @@ public class Output {
 	public int getFS()
 	{
 		return numFs;
+	}
+	
+	public int getTruck()
+	{
+		return numTruck;
 	}
 	
 	public int getNumSteps()

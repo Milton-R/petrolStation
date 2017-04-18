@@ -150,6 +150,13 @@ public abstract class Vehicle{
 		{
 			shoppingTime = Config.familySedanTimeTakenShopping + petrolStation.rand.nextInt(Config.familySedanTimeTakenShoppingRange);
 		}
+		else // creates customer truck
+		{
+			shoppingTime = Config.truck_shoppingtime + petrolStation.rand.nextInt(Config.truck_shoppingtime_range);
+		}
+		
+		
+		
 		customer = new Customer(this, shoppingTime);
 		System.out.println(customer.getName() + " goes into the store");
 		petrolStation.goToShop(customer);

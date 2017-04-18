@@ -6,7 +6,7 @@ import aston.station.PetrolStation;
 public class Truck extends Vehicle{
 
 
-public Truck(PetrolStation ps) {
+public Truck(String n, PetrolStation ps) {
 		super(ps);
 		
 		if (Config.truck_tankRange > 0)
@@ -16,6 +16,16 @@ public Truck(PetrolStation ps) {
 		else
 		{
 			tank = Config.truck_tank;}
+		
+		
+		space = Config.truck_space;
+		shopTimeLimit = Config.truck_shoppingtime_range;
+		shoppingProbability = 
+		timeTakenShopping = Config.truck_shoppingtime + petrolStation.rand.nextInt(Config.truck_shoppingtime_range);
+		moneySpentShopping = Config.truck_money_spent + petrolStation.rand.nextInt(Config. truck_money_spent_range);
+		currentTank = 0;
+		name = "Truck" + n;
+		 
 		
 }
 

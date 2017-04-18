@@ -160,7 +160,13 @@ public class PetrolStation {
 			generatedV = new FamilySedan(Integer.toString(output.getFS()),this);
 			return true;
 		}
-		else
+		else if (num < config.getTruckProb()  ){
+			
+			output.addTruck();
+			generatedV = new Truck(Integer.toString(output.getTruck()),this);
+			return true;
+		}
+		else	
 		{
 			return false;
 		}
