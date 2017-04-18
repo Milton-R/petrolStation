@@ -7,6 +7,9 @@ public class runText {
 	/**
 	 * Create a simulation and run it for a specified number of steps, based on lab5 simulator
 	 * takes arguements to change values for how simulator is run.
+	 * 
+	 * @author Tristan P. , Matas B., Kelvin M. and Milton R.
+	 * @version 10/04/2017
 	 */
 	public static void main(String[] args) {
 		int numSteps = 1;  // By default, run for 1 step

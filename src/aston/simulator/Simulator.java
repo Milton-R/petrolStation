@@ -4,27 +4,43 @@ import aston.resources.*;
 import aston.vehicles.*;
 import aston.gui.*;
 
+/**
+ * 
+ * The Simulator Class is the logic behind the program and details what information to the
+ * console and GUI. 
+ * 
+ * @author Tristan P., Matas B., Kelvin M. and Milton R.
+ * @version 03/04/2017
+ *
+ */
 public class Simulator {
 	
-	//Constructor for GUI
-	PetrolGUI pgui;
+	private PetrolGUI pgui;
+	private PetrolStation petrolStation;
+	public Config config = new Config();
+	private String info = "";
+	private int step;
+	
+	//Constructors
+		//Constructor for GUI Usage
 	public Simulator(PetrolGUI petrolGUI)
 	{
 		pgui = petrolGUI;
 	}
-	//constructor for text
+	
+		//Constructor for Text Usage
 	public Simulator()
 	{
 		//empty
 	}
-	//instances
-	PetrolStation petrolStation;
-	public Config config = new Config();
-	String info = "";
 	
-	//variables
-	private int step;
-	
+	//Methods	
+	/**
+	 * Simulate the Station in a Tick
+	 * 
+	 * @param numSteps - Current Step
+	 * @param gui - Boolean to state if the GUI is present or not
+	 */
 	public void simulate(int numSteps, boolean gui)
 	{
 		for(int step = 0; step <= numSteps-1; step++) {
@@ -41,6 +57,13 @@ public class Simulator {
 		}
 	}
 	
+	/**
+	 * This simulates a step tick and presents the output.
+	 * 
+	 * @version 2.1 
+	 * @param gui - Boolean to state if the GUI is in use or not
+	 * @return info
+	 */
 	public String simulateStep(boolean gui)
 	{
 		petrolStation.output.incStep();
@@ -55,11 +78,20 @@ public class Simulator {
 
 	}
 	
+	/**
+	 * This creates an instance of a Petrol Station
+	 */
 	public void createPetrolStation()
 	{
 		petrolStation = new PetrolStation(config);
 	}
 	
+	/**
+	 * toString Method to give the information out.
+	 * 
+	 * @param gui - State if the GUI is true or false
+	 * @return Petrol Station Run Method
+	 */
 	public String toString(boolean gui){
 		return petrolStation.run(gui);
 	}

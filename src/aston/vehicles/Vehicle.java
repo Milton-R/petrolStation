@@ -30,7 +30,7 @@ public abstract class Vehicle{
 	protected boolean hasCustomer = false;
 	protected VehicleQueue vQ;
 	
-	PetrolStation petrolStation;
+	public PetrolStation petrolStation;
 	
 	//Methods
 		//Constructors

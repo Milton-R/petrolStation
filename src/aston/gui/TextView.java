@@ -2,6 +2,13 @@ package aston.gui;
 
 import aston.simulator.Simulator;
 
+/**
+ * The TextView ...
+ * 
+ * @author Tristan P., Matas B., Kelvin M. and Milton R.
+ * @version 03/04/2017
+ *
+ */
 public class TextView {
 	
 	public TextView(int steps, double p, double q, int pumps, int tills, int gallonPrice)

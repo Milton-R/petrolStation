@@ -13,38 +13,50 @@ import aston.resources.*;
 import aston.simulator.*;
 import aston.station.*;
 
+/**
+ * The Simulation as a Graphical Interface. This first creates the Parameter GUI that sets
+ * the information, from probability to the number of tills and pumps. This runs a
+ * simulation based on the given informaiton from the Parameter GUI
+ * 
+ * @author Tristan P., Matas B., Kelvin M. and Milton R.
+ * @version 19/04/2017
+ *
+ */
 public class PetrolGUI {
 
 	// JFrame for the Parameter Setting
-	private JFrame mainFrame;
+	private JFrame mainParameterFrame;
 	
-	private JSlider pSlider;
-	private JSlider qSlider;
-	private JSlider pumpSlider;
-	private JSlider tillSlider;
-	private JTextField stepField;
-	private JTextField priceField;
-	private JCheckBox truckCheck;
-	private JLabel simMoney;
-	private JLabel simLoss;
+	private JSlider pSlider;			//Probability of P
+	private JSlider qSlider;			//Probability of Q
+	private JSlider pumpSlider;			//Number of Pumps
+	private JSlider tillSlider;			//Number of Tills
+	private JTextField stepField;		//Simulation Steps
+	private JTextField priceField;		//Price per Gallon
+	private JCheckBox truckCheck;		//L1: With/Without Trucks
 	
 	// JFrame for the Actual Simulation
-	private JFrame logFrame;
+	private JFrame simulationFrame;
 	
-	private JLabel ticksStep;
+	private JLabel ticksStep;			//Simulation Step Tracker
+	private JLabel simMoney;			//Overall Total Amount of Money from Current Simulation
+	private JLabel simLoss;				//Overall Total Amount of Money Loss from Current Simulation
 	
-	//Array of JTextFields instead 
-	private JTextField pumpFields[];
-	private JTextField tillFields[];
+	// Array of JTextFields instead of declaring each JTextField one by one
+	private JTextField pumpFields[];	//Array of JTextFields for Pumps
+	private JTextField tillFields[];	//Array of JTextFields for Tills
 	
 	
 	// Class Declaration for Simulation
-	private Simulator s = new Simulator(this);
+	private Simulator s;
 
 	/**
 	 * The GUI Simulation of the Petrol Pump Simulator
 	 */
 	public PetrolGUI() {
+
+		// Instantiate the Simulator
+		s = new Simulator(this);
 		
 		//Set up JTextField for output
 		initJTxtFld();
@@ -89,7 +101,8 @@ public class PetrolGUI {
 		label5.setText("Number of Pumps:");
 		label6.setText("Number of Tills:");
 		label7.setText("With/Without Trucks:");
-		// probabilityQ slider
+		
+			// probabilityQ slider
 		qSlider.setMinimum(1);
 		qSlider.setMaximum(5);
 		qSlider.setValue(0);
@@ -97,7 +110,8 @@ public class PetrolGUI {
 		qSlider.setToolTipText("Probability of Q");
 		qSlider.setPaintTicks(true);
 		slideQNum.setText("0.01");
-		//// probabilityP slider
+		
+			// probabilityP slider
 		pSlider.setMinimum(1);
 		pSlider.setMaximum(5);
 		pSlider.setValue(0);
@@ -105,7 +119,8 @@ public class PetrolGUI {
 		pSlider.setToolTipText("Probability of P");
 		pSlider.setPaintTicks(true);
 		slidePNum.setText("0.01");
-		// numPump slider
+		
+			// numPump slider
 		pumpSlider.setMinimum(0);
 		pumpSlider.setMaximum(2);
 		pumpSlider.setValue(0);
@@ -113,7 +128,8 @@ public class PetrolGUI {
 		pumpSlider.setPaintTicks(true);
 		pumpSlider.setToolTipText("Number of Pumps");
 		pumpSlideNum.setText("1");
-		// numTill Slider
+		
+			// numTill Slider
 		tillSlider.setMinimum(0);
 		tillSlider.setMaximum(2);
 		tillSlider.setValue(0);
@@ -121,25 +137,29 @@ public class PetrolGUI {
 		tillSlider.setPaintTicks(true);
 		tillSlider.setToolTipText("Number of Tills");
 		tillSlideNum.setText("1");
-		// Step Field
-		stepField.setText("10");
-		// Price Field
+		
+			// Step Field
+		stepField.setText("1000");
+			
+			// Price Field
 		priceField.setText("1.20");
-		// Button
+		
+			// Button
 		runButton.setText("Run Simulation");
 		runButton.setToolTipText("Start the Simulation");
 		quitButton.setText("Quit Simulation");
 		quitButton.setToolTipText("Quit the Program");
-		// Checkbox
+		
+			// Checkbox
 		truckCheck.setSelected(false);
 
 		// Step 3: Create containers to hold the components
-		mainFrame = new JFrame("Petrol Station Simulation Parameters");
-		mainFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+		mainParameterFrame = new JFrame("Petrol Station Simulation Parameters");
+		mainParameterFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 
 		// Step 4: Specify LayoutManagers
-		mainFrame.setLayout(new BorderLayout());
-		((JPanel) mainFrame.getContentPane()).setBorder(new EmptyBorder(6, 6, 6, 6));
+		mainParameterFrame.setLayout(new BorderLayout());
+		((JPanel) mainParameterFrame.getContentPane()).setBorder(new EmptyBorder(6, 6, 6, 6));
 
 		JPanel pPanel = new JPanel();
 		pPanel.setLayout(new BorderLayout());
@@ -226,31 +246,33 @@ public class PetrolGUI {
 		paramPanel.add(paramBotPanel, BorderLayout.CENTER);
 		paramPanel.add(truckPanel, BorderLayout.SOUTH);
 
-		mainFrame.add(title, BorderLayout.NORTH);
-		mainFrame.add(paramPanel, BorderLayout.CENTER);
-		mainFrame.add(buttonPanel, BorderLayout.SOUTH);
+		mainParameterFrame.add(title, BorderLayout.NORTH);
+		mainParameterFrame.add(paramPanel, BorderLayout.CENTER);
+		mainParameterFrame.add(buttonPanel, BorderLayout.SOUTH);
 
 		// Step 6: Arrange to handle events in the user interface
-		mainFrame.addWindowListener(new WindowAdapter() {
+			//When the red close button is clicked
+		mainParameterFrame.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
 				exitApp();
 			}
 		});
-
+		
+			//When the Quit Button is clicked
 		quitButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				exitApp();
 			}
 		});
-
+		
+			//When the Run Button is clicked
 		runButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//oldSimulation();
 				newSimulation();
 			}
-
 		});
 
+			//When the Probability of P is moved
 		pSlider.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent e) {
 				int value = ((JSlider) e.getSource()).getValue();
@@ -259,6 +281,7 @@ public class PetrolGUI {
 			}
 		});
 
+			//When the Probability of Q is moved
 		qSlider.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent e) {
 				int value = ((JSlider) e.getSource()).getValue();
@@ -267,6 +290,7 @@ public class PetrolGUI {
 			}
 		});
 
+			//When the Number of Pump Slider is moved
 		pumpSlider.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent e) {
 				int value = ((JSlider) e.getSource()).getValue();
@@ -276,6 +300,7 @@ public class PetrolGUI {
 			}
 		});
 
+			//When the Number of Tills Slider is moved
 		tillSlider.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent e) {
 				int value = ((JSlider) e.getSource()).getValue();
@@ -286,25 +311,13 @@ public class PetrolGUI {
 		});
 
 		// Step 7: Display the GUI
-		mainFrame.pack();
-		mainFrame.setVisible(true);
+		mainParameterFrame.pack();
+		mainParameterFrame.setVisible(true);
 	}
 
 	/**
-	 * Closes the Program
-	 */
-	private void exitApp() {
-		// Display confirmation dialog before exiting application
-		int response = JOptionPane.showConfirmDialog(mainFrame, "Do you really want to quit?", "Quit?",
-				JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-		if (response == JOptionPane.YES_OPTION) {
-			System.exit(0);
-		}
-		// Don't quit
-	}
-
-	/**
-	 * New GUI Simulation presenting the Pump's/Till's queue
+	 * New GUI Simulation presenting the Pump's/Till's queue.
+	 * This is created based on the parameters given
 	 */
 	private void newSimulation() {
 		// Step 1: Create the components
@@ -461,12 +474,15 @@ public class PetrolGUI {
 		stopButton.setText("Close Current Simulation");
 		
 		// Step 3: Create containers to hold the components
-		logFrame = new JFrame("Petrol Station Simulation");
-		logFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
+			
+		simulationFrame = new JFrame("Petrol Station Simulation");
+			//Make sure that the red close button doesn't close
+		simulationFrame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 		
 		// Step 4: Specify LayoutManagers
-		logFrame.setLayout(new BorderLayout());
-		((JPanel) logFrame.getContentPane()).setBorder(new EmptyBorder(12, 12, 12, 12));
+			//Simulation Frame 
+		simulationFrame.setLayout(new BorderLayout());
+		((JPanel) simulationFrame.getContentPane()).setBorder(new EmptyBorder(12, 12, 12, 12));
 
 			//Title Info Panel
 		JPanel titlePanel = new JPanel();
@@ -509,11 +525,11 @@ public class PetrolGUI {
 		JPanel pump2 = new JPanel();
 		pump2.setLayout(new BorderLayout());
 		pump2.setBorder(new EmptyBorder(6, 6, 6, 6));
-		
+			//Left Pump 2
 		JPanel leftSidePump2 = new JPanel();
 		leftSidePump2.setLayout(new BorderLayout());
 		leftSidePump2.setBorder(new EmptyBorder(6, 6, 6, 6));
-		
+			//Right Pump 2
 		JPanel rightSidePump2 = new JPanel();
 		rightSidePump2.setLayout(new BorderLayout());
 		rightSidePump2.setBorder(new EmptyBorder(6, 6, 6, 6));
@@ -522,11 +538,11 @@ public class PetrolGUI {
 		JPanel pump3 = new JPanel();
 		pump3.setLayout(new BorderLayout());
 		pump3.setBorder(new EmptyBorder(6, 6, 6, 6));
-		
+			//Left Pump 3
 		JPanel leftSidePump3 = new JPanel();
 		leftSidePump3.setLayout(new BorderLayout());
 		leftSidePump3.setBorder(new EmptyBorder(6, 6, 6, 6));
-		
+			//Right Pump 3
 		JPanel rightSidePump3 = new JPanel();
 		rightSidePump3.setLayout(new BorderLayout());
 		rightSidePump3.setBorder(new EmptyBorder(6, 6, 6, 6));
@@ -734,33 +750,49 @@ public class PetrolGUI {
 		titlePanel.add(simLoss, BorderLayout.EAST);
 
 		//Stuff To Present
-		logFrame.add(titlePanel, BorderLayout.NORTH);
-		logFrame.add(simPanel, BorderLayout.CENTER);
-		logFrame.add(stopButton, BorderLayout.SOUTH);
+		simulationFrame.add(titlePanel, BorderLayout.NORTH);
+		simulationFrame.add(simPanel, BorderLayout.CENTER);
+		simulationFrame.add(stopButton, BorderLayout.SOUTH);
 		
 		// Step 6: Arrange to handle events in the user interface
-		logFrame.addWindowListener(new WindowAdapter() {
+			//When the red close button is clicked
+		simulationFrame.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
-				logFrame.dispose();
+				simulationFrame.dispose();
 			}
 		});
-
+			//When the Stop Button is Pressed
 		stopButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// Logic to stop
-				logFrame.dispose();
+				simulationFrame.dispose();
 			}
 		});
 		
 		// Step 7: Display the GUI
-		logFrame.pack();
-		logFrame.setResizable(false);
-		logFrame.setVisible(true);
+		simulationFrame.pack();
+		simulationFrame.setResizable(false);
+		simulationFrame.setVisible(true);
 		
+		//Call method to grab the parameter values from the Paramter GUI
 		getDetails();
 		
 	}
 
+	/**
+	 * Closes the Program.
+	 * <br>This is only used within the parameter GUI.
+	 */
+	private void exitApp() {
+		// Display confirmation dialog before exiting application
+		int response = JOptionPane.showConfirmDialog(mainParameterFrame, "Do you really want to quit?", "Quit?",
+				JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+		if (response == JOptionPane.YES_OPTION) {
+			System.exit(0);
+		}
+		// Don't quit
+	}
+	
 	/**
 	 * Gets the details from the Main GUI Parameter Checker
 	 */
@@ -792,47 +824,68 @@ public class PetrolGUI {
 	}
 	
 	/**
-	 * This Displays the info to the Simulation GUI in parts to the JTextFields
-	 * @param info
+	 * This Displays the info to the Simulation GUI in parts to the JTextFields.
+	 * <br>The information is split using a comma delimiter. 
+	 * 
+	 * @param info - The Queue Information.
+	 * 			 	<br>This is split for the GUI to
+	 * 				accommodate the JTextFields. 
 	 */
 	public void display(String info){
-		//Stores the delimited info String to a String Array
+		//Stores the delimited info String to a String Array named 'splitInfo'
 		String[] splitInfo = info.split(",");
-		//Output the info String
+		//Output the info String to the Console
 		System.out.println(info);
-		//Loop through the array
+		//Loop through the splitInfo array
 		for (int i = 0; i < 16; i++)
 		{
 			//Set the ticksStep JLabel to the current tick
 			ticksStep.setText("Step: " + splitInfo[0] + "\t");
-			//If the number of Pumps used based on the Pump Slider
+			
+			//If the number of Pumps are in used based on the Pump Slider value in Parameter GUI
 			if(i < ((4 * Math.pow(2, pumpSlider.getValue())))){ 
-				//Each pumpField is placed on its respective 
+				//Each pumpField is placed on its respective TextField
 				pumpFields[i].setText(splitInfo[i+1]);
+				//Each tillField is placed on its respective TextField
+				//tillFields[].setText();
 			} else {
 				//Pump states its not in use
 				pumpFields[i].setText("Pump not in use");
 				pumpFields[i].setBackground(Color.white);
 			}
+			
+			//If the number of tills are in used based on the Pump Slider value in Parameter GUI
+			if(i < ((4 * Math.pow(2, tillSlider.getValue())))){ 
+				//Each tillField is placed on its respective TextField
+				tillFields[i].setText("Sample");
+				//tillFields[i].setText(splitInfo[i+1]);
+			} else {
+				//Till states its not in use
+				tillFields[i].setText("Till not in use");
+				tillFields[i].setBackground(Color.white);
+			}
 		}
 	}
 
 	/**
-	 * Makes the GUI Visible to the user
+	 * Makes the GUI Visible to the user.
 	 */
 	public void guiVisible() {
-		mainFrame.setVisible(true);
+		mainParameterFrame.setVisible(true);
 	}
 	
 	/**
-	 * Initialises all the JTextFields and stores them in an array
+	 * Initialises all the JTextFields and stores them in an array.
 	 */
 	private void initJTxtFld()
 	{
+		//Create JTextField arrays with a text width of 16
 		pumpFields = new JTextField[16];
 		tillFields = new JTextField[16];
+		//Loop
 		for (int i = 0; i < 16; i++)
 		{
+			//Create the new JTextFields, based on info from arrays
 			pumpFields[i] = new JTextField();
 			tillFields[i] = new JTextField();
 		}
