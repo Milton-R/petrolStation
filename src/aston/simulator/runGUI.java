@@ -5,7 +5,8 @@ import aston.gui.PetrolGUI;
  * This is the starting class of the GUI.
  * <br> This what runs the PetrolGUI class.
  * 
- * @author Tristan P., Kelvin M.
+ * @author Tristan P.
+ * @author Kelvin M.
  * @version 12/04/2017
  *
  */

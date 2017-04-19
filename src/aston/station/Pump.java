@@ -3,6 +3,16 @@ package aston.station;
 import aston.vehicles.*;
 import aston.resources.*;
 
+/**
+ * This is the information about
+ * 
+ * @author Kelvin M.
+ * @author Tristan P.
+ * @author Matas B.
+ * 
+ * @version 19/04/2017
+ *
+ */
 public class Pump {
 	
 	int numGallons;

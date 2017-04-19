@@ -96,5 +96,16 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 	* Tristan started to made the back-logic easier for both GUI and Console
 	* Kelvin color-coded the text field which states the in-use pump.
 
+12. 14 April 2017
+	* Tristan has made the Customer class work to go in the Shop.
+		* Till to follow soon
+		
+13. 16 April 2017
+	* Milton has finished the Truck Class
+
+14. 19 April 2017
+	* Kelvin will made additional JavaDoc Comments on each class
+	
 # Advisory
-Used for Aston University Java Programme Development CS1410
+Used for Aston University CS1410: Java Programming Development
+All Rights Reserved ©

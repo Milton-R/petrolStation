@@ -5,7 +5,9 @@ import aston.simulator.Simulator;
 /**
  * The TextView ...
  * 
- * @author Tristan P., Matas B., Kelvin M. and Milton R.
+ * @author Tristan P.
+ * @author Matas B.
+ * @author Kelvin M.
  * @version 03/04/2017
  *
  */

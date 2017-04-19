@@ -9,7 +9,9 @@ import aston.gui.*;
  * The Simulator Class is the logic behind the program and details what information to the
  * console and GUI. 
  * 
- * @author Tristan P., Matas B., Kelvin M. and Milton R.
+ * @author Tristan P.
+ * @author Matas B.
+ * 
  * @version 03/04/2017
  *
  */

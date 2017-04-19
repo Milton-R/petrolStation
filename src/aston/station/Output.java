@@ -2,6 +2,14 @@ package aston.station;
 
 import aston.resources.Config;
 
+/**
+ * 
+ * This presents the information with the amount of information required to present to user.
+ * 
+ * @author Tristan P.
+ * @version 19/04/2017
+ */
+
 public class Output {
 
 	

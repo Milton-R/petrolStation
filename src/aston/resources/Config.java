@@ -2,8 +2,8 @@ package aston.resources;
 /**
  * This is a class file which contains all the modifiable variables.
  * 
- * @author Bartosem
- * @author Ramalhom
+ * @author Matas B.
+ * @author Milton R.
  *
  */
 public class Config {

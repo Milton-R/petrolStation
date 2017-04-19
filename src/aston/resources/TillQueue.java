@@ -4,6 +4,16 @@ import aston.vehicles.*;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
+
+/** 
+ * This presents with the Information about the till's queue line length.
+ * 
+ * @author Tristan P.
+ * @author Matas B.
+ * 
+ * @version 19/04/2017
+ *
+ */
 public class TillQueue {
 	
 	private Queue<Customer> t;

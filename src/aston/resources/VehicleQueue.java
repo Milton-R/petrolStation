@@ -3,6 +3,16 @@ import java.util.*;
 import aston.vehicles.*;
 import aston.station.*;
 
+/**
+ * 
+ * This presents with the Information about the Vehicles in line.
+ * 
+ * @author Tristan P.
+ * @author Matas B.
+ * 
+ * @version 19/04/2017
+ *
+ */
 public class VehicleQueue {
 	
 	private Queue<Vehicle> q;

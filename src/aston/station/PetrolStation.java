@@ -5,13 +5,13 @@ import aston.resources.*;
 import aston.vehicles.*;
 
 /**
+ * This creates the current utilized GUI that the user will simulate 
  * 
- * @author Kelvin M.
  * @author Tristan P
  * @author Matas B.
- * @author Milton R.
  * @author Jordan L.
- * @version 0.1
+ * 
+ * @version 19/04/2017
  *
  */
 

@@ -18,7 +18,9 @@ import aston.station.*;
  * the information, from probability to the number of tills and pumps. This runs a
  * simulation based on the given informaiton from the Parameter GUI
  * 
- * @author Tristan P., Matas B., Kelvin M. and Milton R.
+ * @author Kelvin M.
+ * @author Tristan P.
+ * 
  * @version 19/04/2017
  *
  */
@@ -46,12 +48,12 @@ public class PetrolGUI {
 	private JTextField pumpFields[];	//Array of JTextFields for Pumps
 	private JTextField tillFields[];	//Array of JTextFields for Tills
 	
-	
 	// Class Declaration for Simulation
 	private Simulator s;
 
 	/**
-	 * The GUI Simulation of the Petrol Pump Simulator
+	 * Petrol GUI Constructor.<br>
+	 * The GUI Simulation of the Petrol Pump Simulator.
 	 */
 	public PetrolGUI() {
 
@@ -787,10 +789,10 @@ public class PetrolGUI {
 		// Display confirmation dialog before exiting application
 		int response = JOptionPane.showConfirmDialog(mainParameterFrame, "Do you really want to quit?", "Quit?",
 				JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+		
 		if (response == JOptionPane.YES_OPTION) {
-			System.exit(0);
+			System.exit(0);		//Quit
 		}
-		// Don't quit
 	}
 	
 	/**
