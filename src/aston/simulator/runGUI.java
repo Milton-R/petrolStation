@@ -5,7 +5,7 @@ import aston.gui.PetrolGUI;
  * This is the starting class of the GUI.
  * <br> This what runs the PetrolGUI class.
  * 
- * @author Tristan P., Matas B., Kelvin M. and Milton R.
+ * @author Tristan P., Kelvin M.
  * @version 12/04/2017
  *
  */
@@ -15,7 +15,7 @@ public class runGUI {
 	
 	/**
 	 * Create a simulation and run it for a specified number of steps.
-	 * <br> This is based on simulator from Lab5
+	 * <br> This is based on simulator from Lab5.
 	 */
 	public static void main(String[] args) {
 		//Make the GUI Visible

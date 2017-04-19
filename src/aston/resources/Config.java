@@ -1,6 +1,7 @@
 package aston.resources;
 /**
  * This is a class file which contains all the modifiable variables.
+ * 
  * @author Bartosem
  * @author Ramalhom
  *
@@ -49,6 +50,7 @@ public class Config {
 	{
 		return motorBike_probability;
 	}
+	
 	public void setMProb(double p)
 	{
 		motorBike_probability = p;

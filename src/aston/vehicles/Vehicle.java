@@ -8,7 +8,7 @@ import aston.simulator.*;
  * A superclass for vehicles, extended by Family Sedan, Motorbike, Small Car.  
  * The vehicle takes up a certain amount of space and it has a tank that needs to be filled.
  *
- * @author Tristan P. , Matas B., Kelvin M. and Milton R.
+ * @author Tristan P., Kelvin M.
  * @version 27/03/2017
  * 
  */
@@ -37,6 +37,7 @@ public abstract class Vehicle{
 	/**
 	 * Constructor of the Vehicle
 	 * 
+	 * @param ps - Petrol Station
 	 */
 	public Vehicle(PetrolStation ps){
 		petrolStation = ps;
@@ -52,6 +53,7 @@ public abstract class Vehicle{
 	
 	/**
 	 * Fill the Vehicle's Tank 
+	 * 
 	 * @param pumpSpd
 	 */
 	public boolean fillTank(int pumpSpd)
@@ -70,7 +72,8 @@ public abstract class Vehicle{
 	}
 	
 	/**
-	 * Gets the money that has been spent by the customers belonging to the Vehicle. 
+	 * Gets the money that has been spent by the customers belonging to the Vehicle.
+	 * 
 	 * @return Money spent by the customers.
 	 */
 	public int getMoneySpentShopping()
@@ -126,7 +129,9 @@ public abstract class Vehicle{
 		return space;
 	}
 	
-	//creates the Customer object
+	/**
+	 * Create a Customer
+	 */
 	public void createCustomer()
 	{
 		hasCustomer = true;
@@ -190,13 +195,22 @@ public abstract class Vehicle{
 	{
 		return "tank: "+tank+", space: "+space+", shop time limit: " + shopTimeLimit + ", shopping probability: " + shoppingProbability + ", time taken shopping: " + timeTakenShopping + ", moneySpentShopping: " + moneySpentShopping ;
 	}
-	
-	//returns info for text view
+
+	/**
+	 * Returns info for text view
+	 * 
+	 * @return String Representation for Console
+	 */
 	public String textToString()
 	{
 		return name + ", Tank: " + currentTank + "/" + tank + ", Size: " + space;
 	}
 	
+	/**
+	 * Returns info for GUI view
+	 * 
+	 * @return String Representation for GUI
+	 */
 	public String guiToString()
 	{
 		return name + ": " + currentTank + "/" + tank;
