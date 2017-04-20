@@ -41,6 +41,7 @@ public class Output {
 		
 	}
 	
+	
 	public void setNumGallons(int i)
 	{
 		numGallons = i;

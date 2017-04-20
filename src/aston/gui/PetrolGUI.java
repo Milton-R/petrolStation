@@ -53,7 +53,7 @@ public class PetrolGUI {
 
 	/**
 	 * Petrol GUI Constructor.<br>
-	 * The GUI Simulation of the Petrol Pump Simulator.
+	 * The GUI Simulation of the Petrol Pump Simulator to set the Parameters
 	 */
 	public PetrolGUI() {
 
@@ -318,7 +318,7 @@ public class PetrolGUI {
 	}
 
 	/**
-	 * New GUI Simulation presenting the Pump's/Till's queue.
+	 * GUI Simulation presenting the Pump's/Till's queue.
 	 * This is created based on the parameters given
 	 */
 	private void newSimulation() {

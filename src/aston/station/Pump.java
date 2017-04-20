@@ -4,7 +4,9 @@ import aston.vehicles.*;
 import aston.resources.*;
 
 /**
- * This is the information about
+ * Pump Information.
+ * <br>This allows to get information about the type of car passing and
+ * the 
  * 
  * @author Kelvin M.
  * @author Tristan P.
@@ -20,9 +22,11 @@ public class Pump {
 	private VehicleQueue currentQueue = new VehicleQueue();
 	int pumpSpeed = Config.gallonPerTick;
 	private String name;
+	
 	/**
 	 * Constructor
-	 * @param n Number of Pumps from the GUI
+	 * 
+	 * @param n - Number of Pumps from the GUI
 	 */
 	public Pump(int n)
 	{
@@ -30,7 +34,8 @@ public class Pump {
 	}
 	
 	/**
-	 * sets current vehicle to the vehicle in the fronst of the queue, checks if it's null, pumps fuel into the current vehicle
+	 * Set the current vehicle to the vehicle in the front of the queue.
+	 * <br>Checks if it's null, pumps fuel into the current vehicle
 	 */
 	public void pumpFuel()
 	{
@@ -60,7 +65,10 @@ public class Pump {
 	}
 	
 	/**
-	 * adds Vehicle to queue
+	 * Add the Vehicle to the queue
+	 * 
+	 * @param v - The Vehicle Object
+	 * @return The selected queue with the vehicle added
 	 */
 	public boolean addVehicleToQueue(Vehicle v)
 	{
@@ -75,23 +83,42 @@ public class Pump {
 		currentQueue.removeFrontVehicle();
 	}
 
-	
+	/**
+	 * Get the Amount of Gallons in the Pump
+	 * 
+	 * @return The amount of gallons in the pump
+	 */
 	public int getNumOfGallons()
 	{
 		return numGallons;
 		
 	}
 	
+	/**
+	 * Print out the Information as a String
+	 * 
+	 * @return A String with the Pump Name and the queue
+	 */
 	public String textToString()
 	{
 		return "\n" + name + ":\n" + currentQueue.toString();
 	}
 	
+	/**
+	 * Print out the information to the GUI
+	 * 
+	 * @return A method from the queue Object Class 
+	 */
 	public String guiToString()
 	{
 		return (currentQueue.toGuiString());
 	}
 	
+	/**
+	 * Get the current Queue's size
+	 * 
+	 * @return The current queue's size
+	 */
 	public double getQueueSize()
 	{
 		return currentQueue.getSize();

@@ -8,7 +8,9 @@ import aston.simulator.*;
  * A superclass for vehicles, extended by Family Sedan, Motorbike, Small Car.  
  * The vehicle takes up a certain amount of space and it has a tank that needs to be filled.
  *
- * @author Tristan P., Kelvin M.
+ * @author Kelvin M.
+ * @author Tristan P.
+ * 
  * @version 27/03/2017
  * 
  */
@@ -159,9 +161,6 @@ public abstract class Vehicle{
 		{
 			shoppingTime = Config.truck_shoppingtime + petrolStation.rand.nextInt(Config.truck_shoppingtime_range);
 		}
-		
-		
-		
 		customer = new Customer(this, shoppingTime);
 		System.out.println(customer.getName() + " goes into the store");
 		petrolStation.goToShop(customer);

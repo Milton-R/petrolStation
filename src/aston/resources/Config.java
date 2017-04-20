@@ -7,6 +7,8 @@ package aston.resources;
  *
  */
 public class Config {
+	//Number of steps to run
+	public int numSteps = 1;
 	
 	//Tick
 	public static final int secondsPerTick = 10;
@@ -23,16 +25,6 @@ public class Config {
 	public static final int smallCarMoneySpent = 500; //pence
 	public static final int smallCarMoneySpentRange = 500; //pence
 	
-	//SC Get/Set methods
-	public double getScProb()
-	{
-		return smallCar_probability;
-	}
-	public void setScProb(double p)
-	{
-		smallCar_probability = p;
-	}
-	
 	//Motorbike
 	public static final int motorBike_tank = 5;//gallons
 	public static final int motorBike_tankRange = 0;//gallons
@@ -44,18 +36,7 @@ public class Config {
 	public static final int motorBikeTimeTakenShoppingRange = 0;//ticks
 	public static final int motorBikeMoneySpent = 0; //pence
 	public static final int motorBikeMoneySpentRange = 0; //pence
-	
-	//M Get/Set methods
-	public double getMProb()
-	{
-		return motorBike_probability;
-	}
-	
-	public void setMProb(double p)
-	{
-		motorBike_probability = p;
-	}
-	
+
 	//FamilySedan
 	public static final int familySedan_tank = 12;//gallons
 	public static final int familySedan_tankRange = 6;//gallons
@@ -67,51 +48,7 @@ public class Config {
 	public static final int familySedanTimeTakenShoppingRange = 18;//ticks
 	public static final int familySedanMoneySpent = 800; //pence
 	public static final int familySedanMoneySpentRange = 800; //pence
-	
-	//FS Get/Set methods
-	public double getFsProb()
-	{
-		return familySedan_probability;
-	}
-	public void setFsProb(double q)
-	{
-		familySedan_probability = q;
-	}
-	
-	public static final int truck_tank = 30; //gallons
-	public static final int truck_tankRange = 10; //gallons
-	public static final int truck_space = 2; //space taken by truck
-	public double truck_probability = 0.02; // truck probability
-	public static final int truck_shoppingtime = 4; // truck shopping time
-	public static final int truck_shoppingtime_range = 2; // truck shopping range 
-	public static final int truck_money_spent = 1500 ; // money spent by truck
-	public static final int truck_money_spent_range = 1500; // money range
-	public static final double truck_badservice = 0.2; // bad satisfaction percentage drop
-	public static final double truck_goodservice = 0.05; // good satisfaction percentage increase
-	
-	public double getTruckProb() {
-		return truck_probability;
-	}
-	public void setTruckprob(double t){
 		
-		truck_probability = t;
-	}
-	
-	
-	//RandomSeed
-	public static final int randomSeed = 42;
-	
-	//Number of steps to run for
-	public int numSteps = 1;
-	public void setNumSteps(int i)
-	{
-		numSteps = i;
-	}
-	public int getNumSteps()
-	{
-		return numSteps;
-	}
-	
 	//Queue
 	public static final int queueSize = 3;
 	
@@ -123,7 +60,75 @@ public class Config {
 	//Tills
 	private int numberOftills = 4;
 	
-	//Pump and Tills Get/Set
+	//RandomSeed
+	public static final int randomSeed = 42;
+	
+	//SC Encapsulations
+	public double getScProb()
+	{
+		return smallCar_probability;
+	}
+	public void setScProb(double p)
+	{
+		smallCar_probability = p;
+	}
+	
+	//M Encapsulations
+	public double getMProb()
+	{
+		return motorBike_probability;
+	}
+	
+	public void setMProb(double p)
+	{
+		motorBike_probability = p;
+	}
+	
+	
+	
+	//FS Encapsulations
+	public double getFsProb()
+	{
+		return familySedan_probability;
+	}
+	public void setFsProb(double q)
+	{
+		familySedan_probability = q;
+	}
+	
+	//Truck
+	public static final int truck_tank = 30; //gallons
+	public static final int truck_tankRange = 10; //gallons
+	public static final int truck_space = 2; //space taken by truck
+	public double truck_probability = 0.02; // truck probability
+	public static final int truck_shoppingtime = 4; // truck shopping time
+	public static final int truck_shoppingtime_range = 2; // truck shopping range 
+	public static final int truck_money_spent = 1500 ; // money spent by truck
+	public static final int truck_money_spent_range = 1500; // money range
+	public static final double truck_badservice = 0.2; // bad satisfaction percentage drop
+	public static final double truck_goodservice = 0.05; // good satisfaction percentage increase
+	
+	//Truck Encapsulations
+	public double getTruckProb() {
+		return truck_probability;
+	}
+	public void setTruckprob(double t){
+		
+		truck_probability = t;
+	}
+	
+	//numStep Encapsulation
+	public void setNumSteps(int i)
+	{
+		numSteps = i;
+	}
+	public int getNumSteps()
+	{
+		return numSteps;
+	}
+
+	
+	//Pump and Tills Encapsulation
 	public int getNumPumps()
 	{
 		return numberOfPumps;
