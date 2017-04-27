@@ -9,13 +9,14 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 - Jordan L.
 
 # CheckList:
-[x] Initial UML Diagram Design
-[x] Class Created
-[x] GUI Wireframe created
-[x] GUI is to be Created
-[ ] Data Integreation
-	[x] Console
-	[ ] GUI
+- [x] Initial UML Diagram Design
+- [x] Class Created
+- [x] GUI Wireframe created
+- [x] GUI is to be Created
+- [x] Console Data Integreation for Pump
+- [ ] Console Data Integreation for Till
+- [x] GUI Data Integration for Pump
+- [ ] GUI Data Integration for Till
 
 # Meetings:
 1. 7 March 2017
