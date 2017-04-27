@@ -48,7 +48,19 @@ public class Config {
 	public static final int familySedanTimeTakenShoppingRange = 18;//ticks
 	public static final int familySedanMoneySpent = 800; //pence
 	public static final int familySedanMoneySpentRange = 800; //pence
-		
+	
+	//Truck
+	public static final int truck_tank = 30; //gallons
+	public static final int truck_tankRange = 10; //gallons
+	public static final int truck_space = 2; //space taken by truck
+	public double truck_probability = 0.02; // truck probability
+	public static final int truck_shoppingtime = 4; // truck shopping time
+	public static final int truck_shoppingtime_range = 2; // truck shopping range 
+	public static final int truck_money_spent = 1500 ; // money spent by truck
+	public static final int truck_money_spent_range = 1500; // money range
+	public static final double truck_badservice = 0.2; // bad satisfaction percentage drop
+	public static final double truck_goodservice = 0.05; // good satisfaction percentage increase
+	
 	//Queue
 	public static final int queueSize = 3;
 	
@@ -63,97 +75,149 @@ public class Config {
 	//RandomSeed
 	public static final int randomSeed = 42;
 	
-	//SC Encapsulations
+	/**
+	 * This allows to get the value correspondent to a Small Car
+	 * @return The initial probability value of the small car
+	 */
 	public double getScProb()
 	{
 		return smallCar_probability;
 	}
+	
+	/**
+	 * This sets the probability of the Small Cars
+	 * 
+	 * @param p Double Data Type
+	 */
 	public void setScProb(double p)
 	{
 		smallCar_probability = p;
 	}
 	
-	//M Encapsulations
+	/**
+	 * This allows to get the value correspondent to a Motorbike
+	 * @return The initial probability value of the Motobike
+	 */
 	public double getMProb()
 	{
 		return motorBike_probability;
 	}
 	
+	/**
+	 * This sets the probability of the Motorbike
+	 * 
+	 * @param p Double Data Type
+	 */
 	public void setMProb(double p)
 	{
 		motorBike_probability = p;
 	}
 	
-	
-	
-	//FS Encapsulations
+	/**
+	 * This allows to get the value correspondent to a Sedan
+	 * @return The initial probability value of the Sedan
+	 */
 	public double getFsProb()
 	{
 		return familySedan_probability;
 	}
+	
+	/**
+	 * This sets the probability of the Sedan
+	 * 
+	 * @param q Double Data Type
+	 */
 	public void setFsProb(double q)
 	{
 		familySedan_probability = q;
 	}
 	
-	//Truck
-	public static final int truck_tank = 30; //gallons
-	public static final int truck_tankRange = 10; //gallons
-	public static final int truck_space = 2; //space taken by truck
-	public double truck_probability = 0.02; // truck probability
-	public static final int truck_shoppingtime = 4; // truck shopping time
-	public static final int truck_shoppingtime_range = 2; // truck shopping range 
-	public static final int truck_money_spent = 1500 ; // money spent by truck
-	public static final int truck_money_spent_range = 1500; // money range
-	public static final double truck_badservice = 0.2; // bad satisfaction percentage drop
-	public static final double truck_goodservice = 0.05; // good satisfaction percentage increase
-	
-	//Truck Encapsulations
+	/**
+	 * This allows to get the value correspondent to a Truck
+	 * @return The initial probability value of the Truck
+	 */
 	public double getTruckProb() {
 		return truck_probability;
 	}
+	/**
+	 * This sets the probability of the Truck
+	 * 
+	 * @param t Double Data Type
+	 */
 	public void setTruckprob(double t){
 		
 		truck_probability = t;
 	}
 	
-	//numStep Encapsulation
+	/**
+	 * This sets the current number of step
+	 * @param i Integer Data Type
+	 */
 	public void setNumSteps(int i)
 	{
 		numSteps = i;
 	}
+	/**
+	 * This allows to get the current value of the current step
+	 * @return numSteps: The current Step
+	 */
 	public int getNumSteps()
 	{
 		return numSteps;
 	}
 
 	
-	//Pump and Tills Encapsulation
+	/**
+	 * Get the current number of pumps, based on the passed parameter from the GUI's getDetail method
+	 * 
+	 * @return numberOfPumps
+	 */
 	public int getNumPumps()
 	{
 		return numberOfPumps;
 	}
+	
+	/**
+	 * Set the current number of pumps, based on the passed parameter from the GUI's getDetail method
+	 * @param i Integer Data Type
+	 */
 	public void setNumPumps(int i)
 	{
 		numberOfPumps = i;
 	}
+	
+	/**
+	 * Get the price of gallon in pence
+	 * @return pencePerGallon
+	 */
 	public int getPencePerGallon()
 	{
 		return pencePerGallon;
 	}
+	
+	/**
+	 * Set the price of gallons in pence
+	 * @param i Integer Parameter 
+	 */
 	public void setPencePerGallon(int i)
 	{
 		pencePerGallon = i;
 	}
+	
+	/**
+	 * Get the current number of Tills, based on the passed parameter from the GUI's getDetail method
+	 * @return numberOfTills
+	 */
 	public int getNumTills()
 	{
 		return numberOftills;
 	}
+	/**
+	 * Set the current number of pumps, based on the passed parameter from the GUI's getDetail method
+	 * @param i Integer Value
+	 */
 	public void setNumTills(int i)
 	{
 		numberOftills = i;
 	}
-	
-	
 }
-

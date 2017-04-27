@@ -23,14 +23,20 @@ public class Simulator {
 	private String info = "";
 	private int step;
 	
-	//Constructors
-		//Constructor for GUI Usage
+	/**
+	 * GUI Constructor<br>
+	 * This is the constructor to create the simulator created
+	 * 
+	 * @param petrolGUI GUI Simulation Class
+	 */
 	public Simulator(PetrolGUI petrolGUI)
 	{
 		pgui = petrolGUI;
 	}
 	
-		//Constructor for Text Usage
+	/**
+	 * Empty Simulator Constructor
+	 */
 	public Simulator()
 	{
 		//empty
@@ -97,6 +103,4 @@ public class Simulator {
 	public String toString(boolean gui){
 		return petrolStation.run(gui);
 	}
-
-	
 }

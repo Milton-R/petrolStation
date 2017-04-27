@@ -36,18 +36,29 @@ public class Output {
 	 * - truck probability?
 	 */
 	
-	Output(){ 
+	/**
+	 * Output Consructor
+	 */
+	public Output(){ 
 		
 		
 	}
 	
-	
+	/**
+	 * Set the number of Gallons
+	 * 
+	 * @param i Integer Data Type
+	 */
 	public void setNumGallons(int i)
 	{
 		numGallons = i;
 	}
 		
-
+	/**
+	 * Set the Gallon size 
+	 * 
+	 * @return numGallons
+	 */
 	public int getGallons()
 	{
 		return numGallons;
@@ -65,19 +76,27 @@ public class Output {
 		
 	}
    
-	
+	/**
+	 * Get the total Vehicles 
+	 * @return totalVSpwnd the total amount of Vehicles spawned in the 
+	 */
 	public int getTotalVehicles()
 	{
 		return totalVSpwnd;
 	}
 	
+	/**
+	 * Store Small Car
+	 */
 	public void addSC()
 	{
 		numSc++;
 		totalVSpwnd++;
 	}
 	
-	//stores number of motorcycles
+	/**
+	 * Store number of motorcycles
+	 */
 	public void addM()
 	{
 		numM++;
@@ -85,56 +104,94 @@ public class Output {
 	}
 	
 	
-	// stores family sudans
+	/**
+	 * Store family sudans
+	 */
 	public void addFS()
 	{
 		numFs++;
 		totalVSpwnd++;
 	}
 	
+	/**
+	 * Add a Truck to the 
+	 */
 	public void addTruck()
 	{
 		numTruck++;
 		totalVSpwnd++;
 	}
-	//stores small car
+	
+	/**
+	 * Store the Small Car
+	 * @return numSc
+	 */
 	public int getSC()
 	{
 		return numSc;
 	}
 	
 	
-	//gets motorcycle
+	/**
+	 * Get M
+	 * @return numM
+	 */
 	public int getM()
 	{
 		return numM;
 	}
 	
+	/**
+	 * Get FS
+	 * @return numFS
+	 */
 	public int getFS()
 	{
 		return numFs;
 	}
 	
+	/**
+	 * Get Truck Vehicle Objects 
+	 * @return numTrucks
+	 */
 	public int getTruck()
 	{
 		return numTruck;
 	}
 	
+	/**
+	 * Get the current Number of Steps
+	 * 
+	 * @return currentStep Step Counter
+	 */
 	public int getNumSteps()
 	{
 		return currentStep;
 	}
 	
+	/**
+	 * Increment Step Method<br>
+	 * This increase the current step counter by 1
+	 */
 	public void incStep()
 	{
 		currentStep++;
 	}
 	
+	/**
+	 * Set the Fuel Money
+	 * 
+	 * @param m Integer Data Type Parameter
+	 */
 	public void setFuelMoney(int m)
 	{
 		fuelMoney = m;
 	}
 	
+	/**
+	 * Get the Fuel Money 
+	 * @return fuelMoney
+	 */
 	public int getFuelMoney()
 	{
 		return fuelMoney;

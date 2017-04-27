@@ -20,13 +20,16 @@ public class VehicleQueue {
 	public double spaceTaken = 0;
 	private int numV = 0;
 	
-	//Constructor
+	/**
+	 * Constructor<br>
+	 * This creates a brand new LinkedList Array that stores in Vehicle Objects
+	 */
 	public VehicleQueue()
 	{
 		q = new LinkedList<Vehicle>();
 	}
 	
-	/*
+	/**
 	 * Adds a vehicle to the queue if there is enough space for it to fit, adds the size of the vehicle to the space taken
 	 * 
 	 * @return boolean true if vehicle is added, otherwise false
@@ -47,7 +50,7 @@ public class VehicleQueue {
 		}
 	}
 	
-	/*
+	/**
 	 * Gets the vehicle at the front of the queue
 	 * 
 	 * @return Vehicle The vehicle at the front
@@ -58,7 +61,7 @@ public class VehicleQueue {
 		return v;
 	}
 	
-	/*
+	/**
 	 * Removes a vehicle from the front of the queue and changes the ammount of space taken in the queue
 	 */
 	public void removeFrontVehicle()
@@ -72,11 +75,20 @@ public class VehicleQueue {
 		}
 	}
 	
+	/**
+	 * Get the size of the queue
+	 * 
+	 * @return spaceTaken
+	 */
 	public double getSize()
 	{
 		return spaceTaken;
 	}
 	
+	/**
+	 * This outputs the string information to the console
+	 * @return s String concatination
+	 */
 	public String toString()
 	{
 		String s = "Space Taken: " + spaceTaken;
@@ -86,7 +98,10 @@ public class VehicleQueue {
 		}
 		return s;
 	}
-	
+	/**
+	 * This prints the string information to the GUI 
+	 * @return s String Concatination
+	 */
 	public String toGuiString()
 	{
 		String s = "";

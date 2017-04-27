@@ -4,9 +4,7 @@ import aston.resources.Config;
 import aston.station.PetrolStation;
 
 public class SmallCar extends Vehicle{
-	
-	//Methods
-		//Constructors
+
 	/**
 	 * SmallCar Constructor that is calling the super-class: Vehicle
 	 */

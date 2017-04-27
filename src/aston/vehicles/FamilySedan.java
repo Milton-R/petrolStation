@@ -5,9 +5,6 @@ import aston.station.*;
 import aston.simulator.*;
 
 public class FamilySedan extends Vehicle{
-
-	//Methods
-		//Constructors
 	/**
 	 * Motorbike Constructor that is calling the super-class: Vehicle
 	 */

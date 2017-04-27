@@ -5,8 +5,6 @@ import aston.station.PetrolStation;
 
 public class Motorbike extends Vehicle{
 	
-	//Methods
-		//Constructors
 	/**
 	 * Motorbike Constructor that is calling the super-class: Vehicle
 	 */

@@ -318,8 +318,8 @@ public class PetrolGUI {
 	}
 
 	/**
-	 * GUI Simulation presenting the Pump's/Till's queue.
-	 * This is created based on the parameters given
+	 * GUI Simulation presenting the Pump's/Till's queue.<br>
+	 * This is created based on the parameters given from the Main GUI Frame
 	 */
 	private void newSimulation() {
 		// Step 1: Create the components

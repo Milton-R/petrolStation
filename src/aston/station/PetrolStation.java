@@ -28,7 +28,11 @@ public class PetrolStation {
 	public Output output = new Output();
 	
 	
-	//constructor
+	/**
+	 * Constructor<br>
+	 * This creates the inital Petrol Station of the Simulation 
+	 * @param c Configuration class
+	 */
 	public PetrolStation(Config c)
 	{
 		config = c;
@@ -42,7 +46,9 @@ public class PetrolStation {
 		shop = new Shop(config.getNumTills());
 	}
 	
-	//Main run method, runs every step/tick.
+	/**
+	 * Main run method, runs every step/tick.
+	 */
 	public String run(boolean gui)
 	{
 		String information = "";
@@ -126,15 +132,19 @@ public class PetrolStation {
 		return information;
 	}
 	
-	//send customer to the store
+	/**
+	 * Send the customer to the store
+	 * @param c Customer Class
+	 */
 	public void goToShop(Customer c)
 	{
 		shop.enter(c);
 	}
 	
 	/**
-	 * creates one random subclass of the vehicle class, based on probabilities in config.
-	 * @return Vehicle
+	 * Creates one random subclass of the vehicle class, based on probabilities in config.
+	 * 
+	 * @return true if the number is equivalent to the probablities or false if its greater.
 	 */
 	private boolean spawnVehicle()
 	{
