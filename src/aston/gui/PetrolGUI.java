@@ -343,8 +343,7 @@ public class PetrolGUI {
 		pumpFields[2].setEditable(false);
 		pumpFields[3] = new JTextField(12);
 		pumpFields[3].setEditable(false);
-		
-		JLabel pumpCost1 = new JLabel();
+
 			//Row 2
 		JLabel pumpLabel2 = new JLabel();
 
@@ -357,8 +356,7 @@ public class PetrolGUI {
 		pumpFields[6].setEditable(false);
 		pumpFields[7] = new JTextField(12);
 		pumpFields[7].setEditable(false);
-		
-		JLabel pumpCost2 = new JLabel();
+
 			//Row 3
 		JLabel pumpLabel3 = new JLabel();
 		
@@ -371,8 +369,7 @@ public class PetrolGUI {
 		pumpFields[10].setEditable(false);
 		pumpFields[11] = new JTextField(12);
 		pumpFields[11].setEditable(false);
-		
-		JLabel pumpCost3 = new JLabel();
+
 			//Row 4
 		JLabel pumpLabel4 = new JLabel();
 		
@@ -385,9 +382,7 @@ public class PetrolGUI {
 		pumpFields[14].setEditable(false);
 		pumpFields[15] = new JTextField(12);
 		pumpFields[15].setEditable(false);
-		
-		JLabel pumpCost4 = new JLabel();
-		
+
 		//Tills
 			//Row 1
 		JLabel tillLabel1 = new JLabel();
@@ -401,8 +396,7 @@ public class PetrolGUI {
 		tillFields[2].setEditable(false);
 		tillFields[3] = new JTextField(12);
 		tillFields[3].setEditable(false);
-		
-		JLabel tillCost1 = new JLabel();
+
 			//Row 2
 		JLabel tillLabel2 = new JLabel();
 	
@@ -416,7 +410,6 @@ public class PetrolGUI {
 		tillFields[7] = new JTextField(12);
 		tillFields[7].setEditable(false);
 		
-		JLabel tillCost2 = new JLabel();
 			//Row 3
 		JLabel tillLabel3 = new JLabel();
 		
@@ -429,8 +422,7 @@ public class PetrolGUI {
 		tillFields[10].setEditable(false);
 		tillFields[11] = new JTextField(12);
 		tillFields[11].setEditable(false);
-		
-		JLabel tillCost3 = new JLabel();
+
 			//Row 4
 		JLabel tillLabel4 = new JLabel();
 		
@@ -444,8 +436,6 @@ public class PetrolGUI {
 		tillFields[15] = new JTextField(12);
 		tillFields[15].setEditable(false);
 		
-		JLabel tillCost4 = new JLabel();
-		
 		// Step 2: Set the properties of the components
 		titleLog.setText("Petrol Station Simulation");
 		pumpLabel1.setText("Pump: 1");
@@ -453,20 +443,10 @@ public class PetrolGUI {
 		pumpLabel3.setText("Pump: 3");
 		pumpLabel4.setText("Pump: 4");
 		
-		pumpCost1.setText("Cost: ");
-		pumpCost2.setText("Cost: ");
-		pumpCost3.setText("Cost: ");
-		pumpCost4.setText("Cost: ");
-		
 		tillLabel1.setText("Till: 1");
 		tillLabel2.setText("Till: 2");
 		tillLabel3.setText("Till: 3");
 		tillLabel4.setText("Till: 4");
-		
-		tillCost1.setText("Cost: ");
-		tillCost2.setText("Cost: ");
-		tillCost3.setText("Cost: ");
-		tillCost4.setText("Cost: ");
 		
 		ticksStep.setText("Step:");
 		simMoney.setText("Amount of Money Gained:");
@@ -640,7 +620,6 @@ public class PetrolGUI {
 			pump1.add(pumpLabel1, BorderLayout.NORTH);
 			pump1.add(leftSidePump1, BorderLayout.WEST);
 			pump1.add(rightSidePump1, BorderLayout.EAST);
-			pump1.add(pumpCost1, BorderLayout.SOUTH);
 			
 				//Pump 2
 		leftSidePump2.add(pumpFields[4], BorderLayout.WEST);
@@ -651,7 +630,6 @@ public class PetrolGUI {
 			pump2.add(pumpLabel2, BorderLayout.NORTH);
 			pump2.add(leftSidePump2, BorderLayout.WEST);
 			pump2.add(rightSidePump2, BorderLayout.EAST);
-			pump2.add(pumpCost2, BorderLayout.SOUTH);
 		
 				//Pump 3
 		leftSidePump3.add(pumpFields[8], BorderLayout.WEST);
@@ -662,7 +640,6 @@ public class PetrolGUI {
 			pump3.add(pumpLabel3, BorderLayout.NORTH);
 			pump3.add(leftSidePump3, BorderLayout.WEST);
 			pump3.add(rightSidePump3, BorderLayout.EAST);
-			pump3.add(pumpCost3, BorderLayout.SOUTH);
 		
 				//Pump 4
 		leftSidePump4.add(pumpFields[12], BorderLayout.WEST);
@@ -673,17 +650,16 @@ public class PetrolGUI {
 			pump4.add(pumpLabel4, BorderLayout.NORTH);
 			pump4.add(leftSidePump4, BorderLayout.WEST);
 			pump4.add(rightSidePump4, BorderLayout.EAST);
-			pump4.add(pumpCost4, BorderLayout.SOUTH);
 		
 			//Merge Both sides
 		topPumps.add(pump1, BorderLayout.NORTH);
-		topPumps.add(pump2, BorderLayout.SOUTH);
+		topPumps.add(pump2, BorderLayout.CENTER);
 		bottomPumps.add(pump3, BorderLayout.NORTH);
-		bottomPumps.add(pump4, BorderLayout.SOUTH);
+		bottomPumps.add(pump4, BorderLayout.CENTER);
 		
 			//Merge Pumps Together
 		pumpsPanel.add(topPumps, BorderLayout.NORTH);
-		pumpsPanel.add(bottomPumps, BorderLayout.SOUTH);
+		pumpsPanel.add(bottomPumps, BorderLayout.CENTER);
 		
 		//Tills
 			//Till 1
@@ -695,7 +671,6 @@ public class PetrolGUI {
 			till1.add(tillLabel1, BorderLayout.NORTH);
 			till1.add(leftSideTill1, BorderLayout.WEST);
 			till1.add(rightSideTill1, BorderLayout.EAST);
-			till1.add(tillCost1, BorderLayout.SOUTH);
 		
 			//Till 2
 		leftSideTill2.add(tillFields[4], BorderLayout.WEST);
@@ -706,7 +681,6 @@ public class PetrolGUI {
 			till2.add(tillLabel2, BorderLayout.NORTH);
 			till2.add(leftSideTill2, BorderLayout.WEST);
 			till2.add(rightSideTill2, BorderLayout.EAST);
-			till2.add(tillCost2, BorderLayout.SOUTH);
 			
 			//Till 3
 		leftSideTill3.add(tillFields[8], BorderLayout.WEST);
@@ -717,7 +691,6 @@ public class PetrolGUI {
 			till3.add(tillLabel3, BorderLayout.NORTH);
 			till3.add(leftSideTill3, BorderLayout.WEST);
 			till3.add(rightSideTill3, BorderLayout.EAST);
-			till3.add(tillCost3, BorderLayout.SOUTH);
 			
 			//Till 4
 		leftSideTill4.add(tillFields[12], BorderLayout.WEST);
@@ -729,17 +702,16 @@ public class PetrolGUI {
 			till4.add(tillLabel4, BorderLayout.NORTH);
 			till4.add(leftSideTill4, BorderLayout.WEST);
 			till4.add(rightSideTill4, BorderLayout.EAST);
-			till4.add(tillCost4, BorderLayout.SOUTH);
 		
 			//Merge Both sides
 		topTills.add(till1, BorderLayout.NORTH);
-		topTills.add(till2, BorderLayout.SOUTH);
+		topTills.add(till2, BorderLayout.CENTER);
 		bottomTills.add(till3, BorderLayout.NORTH);
-		bottomTills.add(till4, BorderLayout.SOUTH);
+		bottomTills.add(till4, BorderLayout.CENTER);
 		
 			//Merge Pumps Together
 		tillsPanel.add(topTills, BorderLayout.NORTH);
-		tillsPanel.add(bottomTills, BorderLayout.SOUTH);
+		tillsPanel.add(bottomTills, BorderLayout.CENTER);
 		
 		//Merge Simulators
 		simPanel.add(pumpsPanel, BorderLayout.WEST);
