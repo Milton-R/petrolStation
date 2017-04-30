@@ -16,7 +16,7 @@ import java.util.*;
  */
 public class Shop {
 	
-	private Till[] tills;
+	public Till[] tills;
 	private ArrayList<Customer> shoppingCustomers = new ArrayList<Customer>();
 	
 	/**
@@ -29,7 +29,7 @@ public class Shop {
 		tills = new Till[numTills];
 		for (int i = 0; i < numTills; i++)
 		{
-			Till t = new Till();
+			Till t = new Till(i+1);
 			tills[i] = t;
 		}	
 	}

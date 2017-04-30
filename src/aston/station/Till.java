@@ -14,6 +14,11 @@ public class Till {
 	private TillQueue currentTillQueue = new TillQueue();
 	private String name;
 	
+	public Till(int n)
+	{
+		name = "Till"+n;
+	}
+	
 	/**
 	 * This adds a customer to the current queue of the till 
 	 * @param c
@@ -44,4 +49,13 @@ public class Till {
 		}
 	}
 	
+	public String textToString()
+	{
+		return "\n" + name + ":\n" + currentTillQueue.toTextString();
+	}
+	
+	public String guiToString()
+	{
+		return (currentTillQueue.toGuiString());
+	}
 }

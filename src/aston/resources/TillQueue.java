@@ -46,5 +46,38 @@ public class TillQueue {
 		return numC;
 	}
 	
+	/**
+	 * This outputs the string information to the console
+	 * @return s String concatination
+	 */
+	public String toTextString()
+	{
+		String s = "Space Taken: " + numC;
+		for (Customer c : t)
+		{
+			s += ", (" + c.getName() + ")";
+		}
+		return s;
+	}
+	/**
+	 * This prints the string information to the GUI 
+	 * @return s String Concatination
+	 */
+	public String toGuiString()
+	{
+		String s = "";
+		for (Customer c : t)
+		{
+			s += c.getName() + ",";
+		}
+		
+		//add empty info if less cars
+		for (int i = 4; i > numC; i--)
+		{
+			s += "empty,";
+		}
+		return s;
+	}
+	
 	
 }

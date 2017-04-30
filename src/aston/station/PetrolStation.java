@@ -99,7 +99,7 @@ public class PetrolStation {
 			//System.out.println("no v");
 		}
 		
-		//update output and print info
+		//update output and print Pump info
 		int totalPumped = 0;
 		for (Pump p : pumps)
 		{
@@ -111,6 +111,20 @@ public class PetrolStation {
 			else
 			{
 				information += (p.guiToString());
+			}
+			
+		}
+		
+		//update output and print Till info
+		for (Till t : shop.tills)
+		{
+			if (!gui)
+			{
+				information += (t.textToString());
+			}
+			else
+			{
+				information += (t.guiToString());
 			}
 			
 		}
