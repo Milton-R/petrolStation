@@ -58,7 +58,7 @@ public class Pump {
 				else
 				{
 					//wait here
-					System.out.println("waiting for owner");
+					//System.out.println("waiting for owner");
 				}
 			}
 		} 

@@ -37,7 +37,6 @@ public class TillQueue {
 	
 	public void removeFrontCustomer()
 	{
-		System.out.println(getFrontCustomer().getName() + " leaves Till");
 		t.remove();
 		numC--;
 	}
