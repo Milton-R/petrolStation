@@ -16,7 +16,7 @@ import aston.station.*;
 /**
  * The Simulation as a Graphical Interface. This first creates the Parameter GUI that sets
  * the information, from probability to the number of tills and pumps. This runs a
- * simulation based on the given informaiton from the Parameter GUI
+ * simulation b ased on the given informaiton from the Parameter GUI
  * 
  * @author Kelvin M.
  * @author Tristan P.
