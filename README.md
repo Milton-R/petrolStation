@@ -102,11 +102,18 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 	* Tristan has made the Customer class work to go in the Shop.
 		* Till to follow soon
 		
-13. 16 April 2017
+13. 18 April 2017
 	* Milton has finished the Truck Class
 
 14. 19 April 2017
 	* Kelvin will made additional JavaDoc Comments on each class
+
+15. 27 April 2017
+	* Kelvin added the Report Document but no changes have been made as of yet.
+
+16. 1 May 2017
+	* Tristan has Till has been printed to TextView
+	* Kelvin has started redoing the original 
 	
 # Advisory
 Used for Aston University CS1410: Java Programming Development
