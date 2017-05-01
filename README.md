@@ -113,7 +113,7 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 
 16. 1 May 2017
 	* Tristan has Till has been printed to TextView
-	* Kelvin has started redoing the original 
+	* Kelvin has started redoing the original UML diagram
 	
 # Advisory
 Used for Aston University CS1410: Java Programming Development
