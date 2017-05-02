@@ -14,7 +14,7 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 - [x] GUI Wireframe created
 - [x] GUI is to be Created
 - [x] Console Data Integreation for Pump
-- [ ] Console Data Integreation for Till
+- [v] Console Data Integreation for Till
 - [x] GUI Data Integration for Pump
 - [ ] GUI Data Integration for Till
 
@@ -113,7 +113,8 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 
 16. 1 May 2017
 	* Tristan has Till has been printed to TextView
-	* Kelvin has started redoing the original UML diagram
+	* Kelvin has finished redoing the original UML diagram
+	* Kelvin has made the class hierarchy
 	
 # Advisory
 Used for Aston University CS1410: Java Programming Development
