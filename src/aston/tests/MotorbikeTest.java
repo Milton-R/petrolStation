@@ -1,6 +1,5 @@
 package aston.tests;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -28,32 +27,32 @@ public class MotorbikeTest {
 	@Test
 public void testGetTankSize()
 {
-	assertEquals("the tank size must be between 0.5", (0.5 == testcar.getTankSize()));
+	assertTrue("Motorbike's the tank size must be 5", (5 == testcar.getTankSize()));
 }
 	@Test
 public void testGetVehicleSize()
 {
-	assertTrue("small car's size must be 0.75",( 0.75 == testcar.getVehicleSize()));
+	assertTrue("Motorbike's size must be 0.75",( 0.75 == testcar.getVehicleSize()));
 }
 	@Test
 public void getShopTimeLimit()
 {
-	assertTrue("small car's shop time limit bust be 0", (0 == testcar.getShopTimeLimit()));
+	assertTrue("Motorbike's shop time limit bust be 0", (0 == testcar.getShopTimeLimit()));
 }
 	@Test
 public void getShoppingProbability()
 {
-	assertTrue("small car's shopping probability must be 0.5 ", (0.5== testcar.getShoppingProbability()));
+	assertTrue("Motorbike's shopping probability must be 0 ", (0 == testcar.getShoppingProbability()));
 }
 	@Test
 public void getTimeTakenShopping()
 {
-	assertTrue("small car's time taken must be 0",  (0 == testcar.getTimeTakenShopping()));
+	assertTrue("Motorbike's time taken must be 0",  (0 == testcar.getTimeTakenShopping()));
 }
 	@Test
 public void getMoneySpentShopping()
 {
-	assertTrue("small car's money spent must be betweeen 0 pence", (0 == testcar.getMoneySpentShopping()));
+	assertTrue("Motorbike's money spent must be betweeen 0 pence", (0 == testcar.getMoneySpentShopping()));
 }
 
 }
