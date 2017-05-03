@@ -185,7 +185,7 @@ public class Output {
 	 */
 	public void setFuelMoney(int m)
 	{
-		fuelMoney = m;
+		fuelMoney += m;
 	}
 	
 	/**

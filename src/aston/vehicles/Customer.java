@@ -100,7 +100,9 @@ public class Customer {
 	 */
 	public void leave()
 	{
-		ownedVehicle.petrolStation.output.addAdditionalMoney(additionalMoney);
+		PetrolStation ps = ownedVehicle.petrolStation;
+		ps.output.addAdditionalMoney(additionalMoney);
+		ps.output.setFuelMoney(ownedVehicle.getTankSize()*ps.getConfig().getPencePerGallon());
 		ownedVehicle.vLeave();
 		System.out.println(name + " drives away");
 	}
