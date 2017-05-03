@@ -124,7 +124,8 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 
 18. 3 May 2017 (LAST RECORD OF WORK)
 	* Kelvin has worked on the _"Multiple types of fuel with different prices"_ Subsection of the report
-	*  
+	* Matas and Milton doing the Test Classes
+	* Matas and Milton have finished the Truck Class
 	
 # Advisory
 Used for Aston University CS1410: Java Programming Development

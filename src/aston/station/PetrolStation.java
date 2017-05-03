@@ -153,7 +153,7 @@ public class PetrolStation {
 		shop.enter(c);
 	}
 	
-	public Config getConfig()s
+	public Config getConfig()
 	{
 		return config;
 	}

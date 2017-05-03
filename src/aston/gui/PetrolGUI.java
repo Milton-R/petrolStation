@@ -43,7 +43,8 @@ public class PetrolGUI {
 	
 	// Array of JTextFields instead of declaring each JTextField one by one
 	private JTextField pumpFields[];	//Array of JTextFields for Pumps
-	private JTextField tillFields[];	//Array of JTextFields for Tills
+	// Text Areas
+	private JTextArea tillFields[];
 	
 	// Class Declaration for Simulation
 	private Simulator s;
@@ -56,9 +57,6 @@ public class PetrolGUI {
 
 		// Instantiate the Simulator
 		s = new Simulator(this);
-		
-		//Set up JTextField for output
-		initJTxtFld();
 
 		// Step 1: Create the components
 		JLabel title = new JLabel();
@@ -326,6 +324,10 @@ public class PetrolGUI {
 	 * This is created based on the parameters given from the Main GUI Frame
 	 */
 	private void newSimulation() {
+		
+		//Set up JTextField for output
+		initJTxtFld();
+		
 		// Step 1: Create the components
 		JButton stopButton = new JButton();
 		JLabel titleLog = new JLabel();
@@ -391,54 +393,26 @@ public class PetrolGUI {
 			//Row 1
 		JLabel tillLabel1 = new JLabel();
 	
-		tillFields[0] = new JTextField(12);
+		tillFields[0] = new JTextArea(6,12);
 		tillFields[0].setEditable(false);
-		tillFields[0].setBackground(new Color(218, 247, 166));
-		tillFields[1] = new JTextField(12);
-		tillFields[1].setEditable(false);
-		tillFields[2] = new JTextField(12);
-		tillFields[2].setEditable(false);
-		tillFields[3] = new JTextField(12);
-		tillFields[3].setEditable(false);
 
 			//Row 2
 		JLabel tillLabel2 = new JLabel();
 	
-		tillFields[4] = new JTextField(12);
-		tillFields[4].setEditable(false);
-		tillFields[4].setBackground(new Color(218, 247, 166));
-		tillFields[5] = new JTextField(12);
-		tillFields[5].setEditable(false);
-		tillFields[6] = new JTextField(12);
-		tillFields[6].setEditable(false);
-		tillFields[7] = new JTextField(12);
-		tillFields[7].setEditable(false);
+		tillFields[1] = new JTextArea(6,12);
+		tillFields[1].setEditable(false);
 		
 			//Row 3
 		JLabel tillLabel3 = new JLabel();
 		
-		tillFields[8] = new JTextField(12);
-		tillFields[8].setEditable(false);
-		tillFields[8].setBackground(new Color(218, 247, 166));
-		tillFields[9] = new JTextField(12);
-		tillFields[9].setEditable(false);
-		tillFields[10] = new JTextField(12);
-		tillFields[10].setEditable(false);
-		tillFields[11] = new JTextField(12);
-		tillFields[11].setEditable(false);
+		tillFields[2] = new JTextArea(6,12);
+		tillFields[2].setEditable(false);
 
 			//Row 4
 		JLabel tillLabel4 = new JLabel();
 		
-		tillFields[12] = new JTextField(12);
-		tillFields[12].setEditable(false);
-		tillFields[12].setBackground(new Color(218, 247, 166));
-		tillFields[13] = new JTextField(12);
-		tillFields[13].setEditable(false);
-		tillFields[14] = new JTextField(12);
-		tillFields[14].setEditable(false);
-		tillFields[15] = new JTextField(12);
-		tillFields[15].setEditable(false);
+		tillFields[3] = new JTextArea(6,12);
+		tillFields[3].setEditable(false);
 		
 		// Step 2: Set the properties of the components
 		titleLog.setText("Petrol Station Simulation");
@@ -564,53 +538,21 @@ public class PetrolGUI {
 		JPanel till1 = new JPanel();
 		till1.setLayout(new BorderLayout());
 		till1.setBorder(new EmptyBorder(6, 6, 6, 6));
-			//Left Till 1
-		JPanel leftSideTill1 = new JPanel();
-		leftSideTill1.setLayout(new BorderLayout());
-		leftSideTill1.setBorder(new EmptyBorder(6, 6, 6, 6));
-			//Right Till 1
-		JPanel rightSideTill1 = new JPanel();
-		rightSideTill1.setLayout(new BorderLayout());
-		rightSideTill1.setBorder(new EmptyBorder(6, 6, 6, 6));
-		
+
 			//Till 2
 		JPanel till2 = new JPanel();
 		till2.setLayout(new BorderLayout());
 		till2.setBorder(new EmptyBorder(6, 6, 6, 6));
 		
-		JPanel leftSideTill2 = new JPanel();
-		leftSideTill2.setLayout(new BorderLayout());
-		leftSideTill2.setBorder(new EmptyBorder(6, 6, 6, 6));
-		
-		JPanel rightSideTill2 = new JPanel();
-		rightSideTill2.setLayout(new BorderLayout());
-		rightSideTill2.setBorder(new EmptyBorder(6, 6, 6, 6));
-		
 			//Till 3
 		JPanel till3 = new JPanel();
 		till3.setLayout(new BorderLayout());
 		till3.setBorder(new EmptyBorder(6, 6, 6, 6));
-				
-		JPanel leftSideTill3 = new JPanel();
-		leftSideTill3.setLayout(new BorderLayout());
-		leftSideTill3.setBorder(new EmptyBorder(6, 6, 6, 6));
-		
-		JPanel rightSideTill3 = new JPanel();
-		rightSideTill3.setLayout(new BorderLayout());
-		rightSideTill3.setBorder(new EmptyBorder(6, 6, 6, 6));
 		
 		//Till 4
 		JPanel till4 = new JPanel();
 		till4.setLayout(new BorderLayout());
 		till4.setBorder(new EmptyBorder(6, 6, 6, 6));
-		
-		JPanel leftSideTill4 = new JPanel();
-		leftSideTill4.setLayout(new BorderLayout());
-		leftSideTill4.setBorder(new EmptyBorder(6, 6, 6, 6));
-		
-		JPanel rightSideTill4 = new JPanel();
-		rightSideTill4.setLayout(new BorderLayout());
-		rightSideTill4.setBorder(new EmptyBorder(6, 6, 6, 6));
 		
 		// Step 5: Add components to containers
 			//Pumps
@@ -657,65 +599,41 @@ public class PetrolGUI {
 		
 			//Merge Both sides
 		topPumps.add(pump1, BorderLayout.NORTH);
-		topPumps.add(pump2, BorderLayout.CENTER);
+		topPumps.add(pump2, BorderLayout.SOUTH);
 		bottomPumps.add(pump3, BorderLayout.NORTH);
-		bottomPumps.add(pump4, BorderLayout.CENTER);
+		bottomPumps.add(pump4, BorderLayout.SOUTH);
 		
 			//Merge Pumps Together
 		pumpsPanel.add(topPumps, BorderLayout.NORTH);
-		pumpsPanel.add(bottomPumps, BorderLayout.CENTER);
+		pumpsPanel.add(bottomPumps, BorderLayout.SOUTH);
 		
 		//Tills
 			//Till 1
-		leftSideTill1.add(tillFields[0], BorderLayout.WEST);
-		leftSideTill1.add(tillFields[1], BorderLayout.EAST);
-		rightSideTill1.add(tillFields[2], BorderLayout.WEST);
-		rightSideTill1.add(tillFields[3], BorderLayout.EAST);
-				//Merge Left and Right Side
 			till1.add(tillLabel1, BorderLayout.NORTH);
-			till1.add(leftSideTill1, BorderLayout.WEST);
-			till1.add(rightSideTill1, BorderLayout.EAST);
+			till1.add(tillFields[0], BorderLayout.CENTER);
 		
 			//Till 2
-		leftSideTill2.add(tillFields[4], BorderLayout.WEST);
-		leftSideTill2.add(tillFields[5], BorderLayout.EAST);
-		rightSideTill2.add(tillFields[6], BorderLayout.WEST);
-		rightSideTill2.add(tillFields[7], BorderLayout.EAST);
-			//Merge Left and Right Side
 			till2.add(tillLabel2, BorderLayout.NORTH);
-			till2.add(leftSideTill2, BorderLayout.WEST);
-			till2.add(rightSideTill2, BorderLayout.EAST);
+			till2.add(tillFields[1], BorderLayout.CENTER);
 			
 			//Till 3
-		leftSideTill3.add(tillFields[8], BorderLayout.WEST);
-		leftSideTill3.add(tillFields[9], BorderLayout.EAST);
-		rightSideTill3.add(tillFields[10], BorderLayout.WEST);
-		rightSideTill3.add(tillFields[11], BorderLayout.EAST);
 				//Merge Left and Right Side
 			till3.add(tillLabel3, BorderLayout.NORTH);
-			till3.add(leftSideTill3, BorderLayout.WEST);
-			till3.add(rightSideTill3, BorderLayout.EAST);
+			till3.add(tillFields[2], BorderLayout.CENTER);
 			
 			//Till 4
-		leftSideTill4.add(tillFields[12], BorderLayout.WEST);
-		leftSideTill4.add(tillFields[13], BorderLayout.EAST);
-		rightSideTill4.add(tillFields[14], BorderLayout.WEST);
-		rightSideTill4.add(tillFields[15], BorderLayout.EAST);
-			
-				//Merge Left and Right Side
 			till4.add(tillLabel4, BorderLayout.NORTH);
-			till4.add(leftSideTill4, BorderLayout.WEST);
-			till4.add(rightSideTill4, BorderLayout.EAST);
+			till4.add(tillFields[3], BorderLayout.WEST);
 		
 			//Merge Both sides
-		topTills.add(till1, BorderLayout.NORTH);
-		topTills.add(till2, BorderLayout.CENTER);
-		bottomTills.add(till3, BorderLayout.NORTH);
-		bottomTills.add(till4, BorderLayout.CENTER);
+		topTills.add(till1, BorderLayout.WEST);
+		topTills.add(till2, BorderLayout.EAST);
+		bottomTills.add(till3, BorderLayout.WEST);
+		bottomTills.add(till4, BorderLayout.EAST);
 		
 			//Merge Pumps Together
 		tillsPanel.add(topTills, BorderLayout.NORTH);
-		tillsPanel.add(bottomTills, BorderLayout.CENTER);
+		tillsPanel.add(bottomTills, BorderLayout.SOUTH);
 		
 		//Merge Simulators
 		simPanel.add(pumpsPanel, BorderLayout.WEST);
@@ -789,16 +707,6 @@ public class PetrolGUI {
 
 		// run simulation
 		s.simulate(s.config.getNumSteps(),true);
-
-		/*
-		 * Test System.out.println(s.config.getScProb());
-		 * System.out.println(s.config.getMProb());
-		 * System.out.println(s.config.getFsProb());
-		 * System.out.println(s.config.getNumPumps());
-		 * System.out.println(s.config.getNumTills());
-		 * System.out.println(s.config.getNumSteps());
-		 * System.out.println(s.config.getPencePerGallon());
-		 */
 	}
 	
 	/**
@@ -857,13 +765,15 @@ public class PetrolGUI {
 	{
 		//Create JTextField arrays with a text width of 16
 		pumpFields = new JTextField[16];
-		tillFields = new JTextField[16];
+		tillFields = new JTextArea[16];
 		//Loop
 		for (int i = 0; i < 16; i++)
 		{
-			//Create the new JTextFields, based on info from arrays
+			//Create the new JTextField, based on info from arrays
 			pumpFields[i] = new JTextField();
-			tillFields[i] = new JTextField();
+			if(i >= tillSlider.getValue()){
+				tillFields[i] = new JTextArea();
+			}
 		}
 	}
 }
