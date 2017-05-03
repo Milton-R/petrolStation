@@ -8,8 +8,8 @@ public class SmallCar extends Vehicle{
 	/**
 	 * SmallCar Constructor that is calling the super-class: Vehicle
 	 */
-	public SmallCar(String n, PetrolStation ps){
-		super(ps);
+	public SmallCar(String n, PetrolStation ps, int steps){
+		super(ps,steps);
 		if (Config.smallCar_tankRange > 0)
 		{
 			tank = Config.smallCar_tank + petrolStation.rand.nextInt(Config.smallCar_tankRange);

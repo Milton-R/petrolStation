@@ -8,8 +8,8 @@ public class Motorbike extends Vehicle{
 	/**
 	 * Motorbike Constructor that is calling the super-class: Vehicle
 	 */
-	public Motorbike(String n, PetrolStation ps){
-		super(ps);
+	public Motorbike(String n, PetrolStation ps, int steps){
+		super(ps, steps);
 		tank = Config.motorBike_tank;
 
 		space = Config.motorBike_space;

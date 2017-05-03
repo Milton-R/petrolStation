@@ -167,25 +167,25 @@ public class PetrolStation {
 		if (num < config.getScProb())
 		{
 			output.addSC();
-			generatedV = new SmallCar(Integer.toString(output.getSC()),this);
+			generatedV = new SmallCar(Integer.toString(output.getSC()),this, output.getNumSteps());
 			return true;
 		}
 		else if (num < (config.getScProb() + config.getMProb()))
 		{
 			output.addM();
-			generatedV = new Motorbike(Integer.toString(output.getM()),this);
+			generatedV = new Motorbike(Integer.toString(output.getM()),this, output.getNumSteps());
 			return true;
 		}
 		else if (num < (config.getScProb() + config.getMProb() + config.getFsProb()))
 		{
 			output.addFS();
-			generatedV = new FamilySedan(Integer.toString(output.getFS()),this);
+			generatedV = new FamilySedan(Integer.toString(output.getFS()),this,output.getNumSteps());
 			return true;
 		}
 		else if (num < config.getTruckProb()  ){
 			
 			output.addTruck();
-			generatedV = new Truck(Integer.toString(output.getTruck()),this);
+			generatedV = new Truck(Integer.toString(output.getTruck()),this, output.getNumSteps());
 			return true;
 		}
 		else	

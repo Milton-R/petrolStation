@@ -14,6 +14,7 @@ import aston.resources.*;
  */
 public abstract class Vehicle{
 	//Variables
+	protected int steps;
 	protected String name;
 	protected int tank;							//Vehicle's Tank Size
 	protected double space;						//How much space the vehicle uses in queue
@@ -39,11 +40,12 @@ public abstract class Vehicle{
 	 * 
 	 * @param ps - Petrol Station
 	 */
-	public Vehicle(PetrolStation ps){
+	public Vehicle(PetrolStation ps, int steps){
 		petrolStation = ps;
 		
 		tank = 0;
 		space = 0;
+		this.steps = steps;
 		currentTank = 0;
 		shopTimeLimit = 2;
 		shoppingProbability = 0.02;

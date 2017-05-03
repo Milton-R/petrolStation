@@ -14,8 +14,9 @@ public class SmallCarTest {
 	public void testSmallCar()
 	{
 		String n = "3";
+		int steps= 30;
 		PetrolStation ps = new PetrolStation(new Config());
-		SmallCar testcar = new SmallCar(n, ps);
+		SmallCar testcar = new SmallCar(n, ps, steps);
 		assertEquals("small car's fuel tank must be between 7 and 9", 7, ((Vehicle) testcar).getTankSize(), 2 );
 		assertEquals("small car's size must be 1", 1.0, ((Vehicle) testcar).getVehicleSize());
 		assertEquals("small car's shop time limit bust be 30", 30, ((Vehicle) testcar).getShopTimeLimit());

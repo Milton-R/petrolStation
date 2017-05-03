@@ -7,8 +7,8 @@ public class FamilySedan extends Vehicle{
 	/**
 	 * Motorbike Constructor that is calling the super-class: Vehicle
 	 */
-	public FamilySedan(String n, PetrolStation ps){
-		super(ps);
+	public FamilySedan(String n, PetrolStation ps, int steps){
+		super(ps,steps);
 
 		tank = Config.familySedan_tank;
 		
