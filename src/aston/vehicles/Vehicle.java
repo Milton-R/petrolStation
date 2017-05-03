@@ -147,7 +147,8 @@ public abstract class Vehicle{
 		int shoppingTime = 20;
 		if (name.contains("SmallCar"))
 		{
-			shoppingTime = Config.smallCarTimeTakenShopping + petrolStation.rand.nextInt(Config.smallCarTimeTakenShoppingRange);
+			shoppingTime = Config.smallCarTimeTakenShopping 
+					+ petrolStation.rand.nextInt(Config.smallCarTimeTakenShoppingRange);
 		}
 		else if (name.contains("Motorbike"))
 		{
@@ -155,11 +156,13 @@ public abstract class Vehicle{
 		}
 		else if (name.contains("FamilySedan"))
 		{
-			shoppingTime = Config.familySedanTimeTakenShopping + petrolStation.rand.nextInt(Config.familySedanTimeTakenShoppingRange);
+			shoppingTime = Config.familySedanTimeTakenShopping 
+					+ petrolStation.rand.nextInt(Config.familySedanTimeTakenShoppingRange);
 		}
 		else // creates customer truck
 		{
-			shoppingTime = Config.truck_timeTakenShopping + petrolStation.rand.nextInt(Config.truck_timeTakenShoppingRange);
+			shoppingTime = Config.truck_timeTakenShopping 
+					+ petrolStation.rand.nextInt(Config.truck_timeTakenShoppingRange);
 		}
 		customer = new Customer(this, shoppingTime,	getHappy());
 		System.out.println(customer.getName() + " goes into the store");
@@ -203,7 +206,10 @@ public abstract class Vehicle{
 	 */
 	public String toString()
 	{
-		return "tank: "+tank+", space: "+space+", shop time limit: " + shopTimeLimit + ", shopping probability: " + shoppingProbability + ", time taken shopping: " + timeTakenShopping + ", moneySpentShopping: " + moneySpentShopping ;
+		return "tank: "+tank+", space: "+space+", shop time limit: " 
+	+ shopTimeLimit + ", shopping probability: " 
+				+ shoppingProbability + ", time taken shopping: " 
+	+ timeTakenShopping + ", moneySpentShopping: " + moneySpentShopping ;
 	}
 
 	/**
