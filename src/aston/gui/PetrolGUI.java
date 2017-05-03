@@ -267,7 +267,11 @@ public class PetrolGUI {
 			//When the Run Button is clicked
 		runButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				newSimulation();
+				if(truckCheck.isSelected() == true){
+					newSimulation();
+				} else {
+					newSimulation();
+				}
 			}
 		});
 
