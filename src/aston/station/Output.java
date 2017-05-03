@@ -195,4 +195,12 @@ public class Output {
 		return fuelMoney;
 	}
 
+	public int getLostMoney() {
+		return lostMoney;
+	}
+
+	public void addLostMoney(int lostMoney) {
+		this.lostMoney += lostMoney;
+	}
+
 }

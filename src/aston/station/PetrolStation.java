@@ -91,7 +91,7 @@ public class PetrolStation {
 			else
 			{
 				//System.out.println("vehicle leaves as no space at pump");
-				
+				output.addLostMoney(v.getTankSize()*config.getPencePerGallon());
 			}
 		}
 		else
