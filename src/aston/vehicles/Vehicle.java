@@ -108,8 +108,14 @@ public abstract class Vehicle{
 	public int getShopTimeLimit()
 	{
 		return shopTimeLimit;
-		
 	}
+	public int getTankSize()
+	{
+		return tank;
+	}
+	
+	
+	
 	
 	/**
 	 * Gets the current amount of fuel in the vehicles tank. 
