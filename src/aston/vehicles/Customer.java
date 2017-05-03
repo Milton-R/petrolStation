@@ -16,6 +16,7 @@ public class Customer {
 	private Shop shop;
 	private int fuelMoney;
 	private int additionalMoney;
+	private int tillTime = 13;	//min time in till queue + 1
 
 	
 	/**
@@ -69,14 +70,28 @@ public class Customer {
 	{
 		if (shoppingTime <= 0)
 		{
+			tillTime += ownedVehicle.petrolStation.rand.nextInt(6);
 			shop.sendToTill(this);
 			System.out.println(name + " goes to till");
 			return true;
 		}
 		else
 		{
-			shoppingTime -= Config.secondsPerTick;
+			shoppingTime--;
 			return false;
+		}
+	}
+	
+	public boolean paid()
+	{
+		tillTime--;
+		if (tillTime > 0)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
 		}
 	}
 	

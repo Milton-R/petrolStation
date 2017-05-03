@@ -49,8 +49,11 @@ public class Till {
 	{
 		if (currentTillQueue.getNumberC() > 0)
 		{
-			currentTillQueue.getFrontCustomer().leave();
-			currentTillQueue.removeFrontCustomer();
+			if (currentTillQueue.getFrontCustomer().paid())
+			{
+				currentTillQueue.getFrontCustomer().leave();
+				currentTillQueue.removeFrontCustomer();
+			}
 		}
 	}
 	
