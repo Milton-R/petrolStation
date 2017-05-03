@@ -168,7 +168,13 @@ public abstract class Vehicle{
 	
 	private boolean getHappy()
 	{
-		return false;
+		int currentStep = petrolStation.output.getNumSteps();
+		currentStep = currentStep - steps;
+		if (currentStep < Config.truck_waiting_time_range)
+		{
+			return false;
+		}
+		else return true;
 	}
 	
 	public String getName()
