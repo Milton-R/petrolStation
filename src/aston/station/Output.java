@@ -11,7 +11,7 @@ package aston.station;
 public class Output {
 
 	
-	private int numTruck, numSc, numM, numFs, numGallons, totalVSpwnd, currentStep = 0, fuelMoney;
+	private int numTruck, numSc, numM, numFs, numGallons, totalVSpwnd, currentStep = 0, fuelMoney, lostMoney;
 	
 	/*Things we need to keep track of:
 	 * #At the end of simulation

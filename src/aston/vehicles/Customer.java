@@ -73,7 +73,7 @@ public class Customer {
 		}
 		else
 		{
-			shoppingTime -= Config.secondsPerTick;
+			shoppingTime--;
 			return false;
 		}
 	}

@@ -86,10 +86,12 @@ public class PetrolStation {
 			}
 			if (shortestQueue.addVehicleToQueue(v))
 			{
+				//vehicle goes into a pump queue
 			}
 			else
 			{
 				//System.out.println("vehicle leaves as no space at pump");
+				
 			}
 		}
 		else
