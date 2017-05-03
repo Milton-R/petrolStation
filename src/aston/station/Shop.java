@@ -39,6 +39,12 @@ public class Shop {
 		c.setShop(this);
 		shoppingCustomers.add(c);
 	}
+	
+	public void tillEnter(Customer c)
+	{
+		c.setShop(this);
+		sendToTill(c);
+	}
 
 	/**
 	 * Remove the customer from the array
@@ -67,6 +73,7 @@ public class Shop {
 		}
 		shortestQueue.addCustomer(c);
 	}
+	
 	/**
 	 * This allows the current customer to pass time inside the shop
 	 * based on a probability

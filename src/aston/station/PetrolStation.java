@@ -148,9 +148,17 @@ public class PetrolStation {
 	 * Send the customer to the store
 	 * @param c Customer Class
 	 */
-	public void goToShop(Customer c)
+	public void goToShop(Customer c, int i)
 	{
-		shop.enter(c);
+		if (i == 0)
+		{
+			shop.enter(c);
+		}
+		else
+		{
+			shop.tillEnter(c);
+			output.addLostMoney(c.getAdditionalMoney());
+		}
 	}
 	
 	public Config getConfig()

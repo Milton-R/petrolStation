@@ -26,9 +26,9 @@ public class Customer {
 	 * @param ov Current Vehicle
 	 * @param shoppingTime
 	 */
-	public Customer(Vehicle ov, int shoppingTime, boolean happy)
+	public Customer(Vehicle ov, int shoppingTime, boolean happy, int shopMoney)
 	{
-		additionalMoney = 
+		setAdditionalMoney(shopMoney);
 		fuelMoney= 0; 
 		ownedVehicle = ov;
 		this.shoppingTime = shoppingTime;
@@ -110,5 +110,13 @@ public class Customer {
 	public String getName()
 	{
 		return name;
+	}
+
+	public int getAdditionalMoney() {
+		return additionalMoney;
+	}
+
+	public void setAdditionalMoney(int additionalMoney) {
+		this.additionalMoney = additionalMoney;
 	}
 }

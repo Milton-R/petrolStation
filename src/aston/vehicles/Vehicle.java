@@ -163,13 +163,17 @@ public abstract class Vehicle{
 			shoppingTime = Config.truck_timeTakenShopping 
 					+ petrolStation.rand.nextInt(Config.truck_timeTakenShoppingRange);
 		}
+		customer = new Customer(this, shoppingTime,	getHappy(), moneySpentShopping);
 		if (!(petrolStation.rand.nextDouble() <= shoppingProbability))
 		{
-			shoppingTime = 0;
+			petrolStation.goToShop(customer,0);
+			System.out.println(customer.getName() + " goes into the store");
 		}
-		customer = new Customer(this, shoppingTime,	getHappy());
-		System.out.println(customer.getName() + " goes into the store");
-		petrolStation.goToShop(customer);
+		else
+		{
+			petrolStation.goToShop(customer,1);
+			System.out.println(customer.getName() + " goes straight to the till");
+		}
 	}
 	
 	private boolean getHappy()
