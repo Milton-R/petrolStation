@@ -102,6 +102,7 @@ public abstract class Vehicle{
 		return shoppingProbability;
 	}
 	
+	
 	/**
 	 * Gets the maximum amount of time that a customer belonging to the vehicle will spend shopping. 
 	 * @return The the time limit.
