@@ -14,16 +14,16 @@ public class Config {
 	public static final int secondsPerTick = 10;
 	
 	//SmallCar
-	public static final int smallCar_tank = 7;//gallons
-	public static final int smallCar_tankRange = 2;//gallons
-	public static final double smallCar_space = 1;//u
-	private double smallCar_probability = 0.03;
-	public static final int smallCarShoppingTimeLimit = 30;//ticks
-	public static final double smallCarShoppingProbability = 0.3;
-	public static final int smallCarTimeTakenShopping = 12;//ticks
-	public static final int smallCarTimeTakenShoppingRange = 12;//ticks
-	public static final int smallCarMoneySpent = 500; //pence
-	public static final int smallCarMoneySpentRange = 500; //pence
+	public static final int smallCar_tank = 7;//gallons, tank minimum size
+	public static final int smallCar_tankRange = 2;//gallons, tank, size range
+	public static final double smallCar_space = 1;//u, size of vehicle in queue
+	private double smallCar_probability = 0.03;//probability of vehicle spawning
+	public static final int smallCarShoppingTimeLimit = 30;//ticks, max time in queue that allows shopping
+	public static final double smallCarShoppingProbability = 0.3;//how likely a car is to shop if allowed
+	public static final int smallCarTimeTakenShopping = 12;//ticks, minimum amount of time it will shop for
+	public static final int smallCarTimeTakenShoppingRange = 12;//ticks, range of time it wll shop for
+	public static final int smallCarMoneySpent = 500; //pence, minimum amount of money spent while shopping
+	public static final int smallCarMoneySpentRange = 500; //pence, range of money spent while shopping
 	
 	//Motorbike
 	public static final int motorBike_tank = 5;//gallons
@@ -50,15 +50,16 @@ public class Config {
 	public static final int familySedanMoneySpentRange = 800; //pence
 	
 	//Truck
-	public static final int truck_tank = 30; //gallons
-	public static final int truck_tankRange = 10; //gallons
+	public static final int truck_tank = 30; //gallons, tank minimum size
+	public static final int truck_tankRange = 10; //gallons, tank, size range
 	public static final int truck_space = 2; //space taken by truck
-	public double truck_probability = 0.02; // truck probability
-	public static final int truck_shoppingtime = 4; // truck shopping time
-	public static final int truck_shoppingtime_range = 2; // truck shopping range
-	public static final int truck_shopping_time_limit = 48; // truck waiting in queues range in ticks
+	public double truck_probability = 0.02; // truck probability of spawning
+	public static final int truck_shoppingTimeLimit = 48; // truck shopping time
+	public static final double truck_ShoppingProbability = 1;//how likely a truck is to shop if allowed
+	public static final int truck_timeTakenShopping = 24; // truck waiting in queues range in ticks
+	public static final int truck_timeTakenShoppingRange = 12; // truck shopping range
 	public static final int truck_money_spent = 1500 ; // money spent by truck
-	public static final int truck_money_spent_range = 1500; // money range
+	public static final int truck_money_spent_range = 500; // money range
 	public static final double truck_badservice = 0.2; // bad satisfaction percentage drop
 	public static final double truck_goodservice = 0.05; // good satisfaction percentage increase
 	
