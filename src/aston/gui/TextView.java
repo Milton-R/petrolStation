@@ -34,10 +34,4 @@ public class TextView {
 		s.simulate(s.config.getNumSteps(),false);
 	}
 
-	
-	public void showStatus()
-	{
-		
-	}
-
 }

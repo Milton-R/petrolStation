@@ -54,11 +54,11 @@ public class PetrolStation {
 		String information = "";
 		if (!gui)
 		{
-			information += ("\nStep: " + output.getNumSteps());
+			information += ("\nStep: " + output.getNumSteps() + ", Lost Money: " + output.getLostMoney() + ", Additional Money: " + output.getAdditionalMoney() + ", Fuel Money: " + output.getFuelMoney());
 		}
 		else
 		{
-			information += (output.getNumSteps() + ",");
+			information += (output.getNumSteps());	// + "," + output.getLostMoney() + "," + output.getAdditionalMoney() + "," + output.getFuelMoney() + ","
 		}
 		
 		//customers
@@ -90,7 +90,7 @@ public class PetrolStation {
 			}
 			else
 			{
-				//System.out.println("vehicle leaves as no space at pump");
+				System.out.println(v.getName() + " leaves as no space at pump");
 				output.addLostMoney(v.getTankSize()*config.getPencePerGallon());
 			}
 		}
@@ -100,10 +100,8 @@ public class PetrolStation {
 		}
 		
 		//update output and print Pump info
-		int totalPumped = 0;
 		for (Pump p : pumps)
 		{
-			totalPumped += p.getNumOfGallons();
 			if (!gui)
 			{
 				information += (p.textToString());
@@ -132,15 +130,7 @@ public class PetrolStation {
 				}
 			}
 			
-		}
-		
-		if (!gui)
-		{
-			output.setNumGallons(totalPumped);
-			output.setFuelMoney((int) totalPumped*config.getPencePerGallon());
-			//System.out.println(output.getGallons());
-		}
-		
+		}	
 		return information;
 	}
 	
