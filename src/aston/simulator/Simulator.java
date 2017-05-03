@@ -58,11 +58,6 @@ public class Simulator {
 				pgui.display(info);
 			}
 		}
-		if (!gui)
-		{
-			System.out.println("Total Fuel Pumped: " + petrolStation.output.getGallons() + " gallons");
-			System.out.println("Money From Fuel: " + petrolStation.output.getFuelMoney() + "p");
-		}
 	}
 	
 	/**
