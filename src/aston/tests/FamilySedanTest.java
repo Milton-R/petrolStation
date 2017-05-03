@@ -7,12 +7,12 @@ import org.junit.Test;
 import aston.resources.Config;
 import aston.station.PetrolStation;
 import aston.vehicles.FamilySedan;
-import aston.vehicles.Vehicle;
+
 
 	
 public class FamilySedanTest {
 	
-	String n = "3";
+	String n = "2";
 	int steps= 30;
 	PetrolStation ps = new PetrolStation(new Config());
 	FamilySedan testcar = new FamilySedan(n, ps, steps);
@@ -29,31 +29,31 @@ public class FamilySedanTest {
 	@Test
 public void testGetTankSize()
 {
-	assertEquals("the tank size must be between 12-18", 12.0 ,testcar.getTankSize(), 6.0);
+	assertEquals("the tank size must be between 12", 12 ,testcar.getTankSize(), 6);
 }
 	@Test
 public void testGetVehicleSize()
 {
-	assertTrue("small car's size must be 1",( 1.5 == testcar.getVehicleSize()));
+	assertTrue("Family Sedan's size must be 1.5",( 1.5 == testcar.getVehicleSize()));
 }
 	@Test
 public void getShopTimeLimit()
 {
-	assertEquals("small car's shop time limit bust be 60", 60, ((Vehicle) testcar).getShopTimeLimit());
+	assertEquals("Family Sedan's shop time limit bust be 60", 60, ( testcar.getShopTimeLimit()));
 }
 	@Test
 public void getShoppingProbability()
 {
-	assertTrue("small car's shopping probability must be 0.5 ", (0.5== ((Vehicle) testcar).getShoppingProbability()));
+	assertTrue("Family Sedan's shopping probability must be 0.5 ", (0.5== testcar.getShoppingProbability()));
 }
 	@Test
 public void getTimeTakenShopping()
 {
-	assertEquals("small car's time taken must be between 12 and 24",  12, ((Vehicle) testcar).getTimeTakenShopping(), 12 );
+	assertEquals("Family Sedan's time taken must be between 12 and 24",  12, testcar.getTimeTakenShopping(), 12 );
 }
 	@Test
 public void getMoneySpentShopping()
 {
-	assertEquals("small car's money spent must be betweeen 800 to 800 pence", 800, ((Vehicle) testcar).getMoneySpentShopping(), 800 );
+	assertEquals("Family Sedan's money spent must be betweeen 800 to 800 pence", 800, testcar.getMoneySpentShopping(), 800 );
 }
 }
