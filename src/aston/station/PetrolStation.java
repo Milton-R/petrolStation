@@ -81,8 +81,8 @@ public class PetrolStation {
 				if (p.getQueueSize() < size)
 				{
 					shortestQueue = p;
+					size = p.getQueueSize();
 				}
-	
 			}
 			if (shortestQueue.addVehicleToQueue(v))
 			{
@@ -116,13 +116,13 @@ public class PetrolStation {
 		//update output and print Till info
 		for (Till t : shop.tills)
 		{
-			information += (t.getName()+",");
 			if (!gui)
 			{
 				information += (t.textToString());
 			}
 			else
 			{
+				information += (t.getName()+",");
 				information += (t.guiToString());
 				if (t.getQueueSize() == 0)
 				{

@@ -78,7 +78,7 @@ public class Pump {
 	/**
 	 * Removes the vehicle at the front of the queue
 	 */
-	private void removeFrontVehicle()
+	public void removeFrontVehicle()
 	{
 		currentQueue.removeFrontVehicle();
 	}
