@@ -110,6 +110,7 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 
 15. 27 April 2017
 	* Kelvin added the Report Document but no changes have been made as of yet.
+	* Matas has started making JUnit Test Classes
 
 16. 1 May 2017
 	* Tristan has Till has been printed to TextView
