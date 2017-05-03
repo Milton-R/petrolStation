@@ -9,14 +9,7 @@ public class Truck extends Vehicle{
 	public Truck(String n, PetrolStation ps) {
 		super(ps);
 
-		if (Config.truck_tankRange > 0)
-		{
-			tank = Config.truck_tank + petrolStation.rand.nextInt(Config.truck_tankRange);
-		}
-		else
-		{
-			tank = Config.truck_tank;}
-
+		tank = Config.truck_tank + petrolStation.rand.nextInt(Config.truck_tankRange);
 
 		space = Config.truck_space;
 		shopTimeLimit = Config.truck_shoppingtime_range;

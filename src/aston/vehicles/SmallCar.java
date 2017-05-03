@@ -14,10 +14,7 @@ public class SmallCar extends Vehicle{
 		{
 			tank = Config.smallCar_tank + petrolStation.rand.nextInt(Config.smallCar_tankRange);
 		}
-		else
-		{
-			tank = Config.smallCar_tank;
-		}
+
 		space = Config.smallCar_space;
 		shopTimeLimit = Config.smallCarShoppingTimeLimit;
 		shoppingProbability = Config.smallCarShoppingProbability;

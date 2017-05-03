@@ -1,10 +1,6 @@
 package aston.station;
 import java.util.ArrayList;
-import java.util.Iterator;
-
-import aston.resources.*;
 import aston.vehicles.*;
-import java.util.*;
 
 /**
  * This is the Shop Class which allows to create Shop Simulator 

@@ -74,7 +74,6 @@ public class PetrolStation {
 		if (spawnVehicle())
 		{
 			Vehicle v = generatedV;
-			boolean added = false;
 			double size = pumps[0].getQueueSize();
 			Pump shortestQueue = pumps[0];
 			for (Pump p : pumps)
@@ -87,7 +86,6 @@ public class PetrolStation {
 			}
 			if (shortestQueue.addVehicleToQueue(v))
 			{
-				added = true;
 			}
 			else
 			{

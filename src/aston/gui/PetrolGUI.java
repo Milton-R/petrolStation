@@ -8,10 +8,7 @@ import javax.swing.border.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import aston.gui.*;
-import aston.resources.*;
 import aston.simulator.*;
-import aston.station.*;
 
 /**
  * The Simulation as a Graphical Interface. This first creates the Parameter GUI that sets
@@ -820,8 +817,6 @@ public class PetrolGUI {
 			if(i < ((4 * Math.pow(2, pumpSlider.getValue())))){ 
 				//Each pumpField is placed on its respective TextField
 				pumpFields[i].setText(splitInfo[i+1]);
-				//Each tillField is placed on its respective TextField
-				//tillFields[].setText();
 			} else {
 				//Pump states its not in use
 				pumpFields[i].setText("Pump not in use");

@@ -1,7 +1,6 @@
 package aston.simulator;
 import aston.station.*;
 import aston.resources.*;
-import aston.vehicles.*;
 import aston.gui.*;
 
 /**
@@ -51,10 +50,11 @@ public class Simulator {
 	 */
 	public void simulate(int numSteps, boolean gui)
 	{
-		for(int step = 0; step <= numSteps-1; step++) {
+		for(step = 0; step <= numSteps-1; step++) {
 			info = simulateStep(gui);
 			if (gui)
 			{
+				//Display to the GUI
 				pgui.display(info);
 			}
 		}
@@ -76,7 +76,6 @@ public class Simulator {
 	{
 		petrolStation.output.incStep();
 		String info = "";
-		//return petrolStation.run(); //Possible Error for Duplication
 		info = toString(gui);
 		if (!gui)
 		{
