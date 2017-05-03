@@ -14,7 +14,7 @@ public class Truck extends Vehicle{
 		space = Config.truck_space;
 		shopTimeLimit = Config.truck_shoppingtime_range;
 		shoppingProbability = 
-				timeTakenShopping = Config.truck_shoppingtime + petrolStation.rand.nextInt(Config.truck_shoppingtime_range);
+		timeTakenShopping = Config.truck_shoppingtime + petrolStation.rand.nextInt(Config.truck_shoppingtime_range);
 		moneySpentShopping = Config.truck_money_spent + petrolStation.rand.nextInt(Config. truck_money_spent_range);
 		currentTank = 0;
 		name = "Truck" + n;
