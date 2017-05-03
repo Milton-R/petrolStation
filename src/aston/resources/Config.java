@@ -56,7 +56,7 @@ public class Config {
 	public double truck_probability = 0.02; // truck probability
 	public static final int truck_shoppingtime = 4; // truck shopping time
 	public static final int truck_shoppingtime_range = 2; // truck shopping range
-	public static final int truck_waiting_time_range = 480; // truck waiting in queues range in ticks
+	public static final int truck_shopping_time_limit = 48; // truck waiting in queues range in ticks
 	public static final int truck_money_spent = 1500 ; // money spent by truck
 	public static final int truck_money_spent_range = 1500; // money range
 	public static final double truck_badservice = 0.2; // bad satisfaction percentage drop

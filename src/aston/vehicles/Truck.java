@@ -4,10 +4,11 @@ import aston.resources.Config;
 import aston.station.PetrolStation;
 
 public class Truck extends Vehicle{
-
+	protected int waitingTickLimit;
 
 	public Truck(String n, PetrolStation ps, int steps) {
 		super(ps, steps);
+		waitingTickLimit = Config.truck_waiting_time_range;
 		tank = Config.truck_tank + petrolStation.rand.nextInt(Config.truck_tankRange);
 		space = Config.truck_space;
 		shopTimeLimit = Config.truck_shoppingtime_range;

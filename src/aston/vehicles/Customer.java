@@ -22,7 +22,7 @@ public class Customer {
 	 * @param ov Current Vehicle
 	 * @param shoppingTime
 	 */
-	public Customer(Vehicle ov, int shoppingTime)
+	public Customer(Vehicle ov, int shoppingTime, boolean happy)
 	{
 		ownedVehicle = ov;
 		this.shoppingTime = shoppingTime;

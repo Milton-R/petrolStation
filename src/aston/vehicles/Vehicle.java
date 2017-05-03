@@ -161,9 +161,14 @@ public abstract class Vehicle{
 		{
 			shoppingTime = Config.truck_shoppingtime + petrolStation.rand.nextInt(Config.truck_shoppingtime_range);
 		}
-		customer = new Customer(this, shoppingTime);
+		customer = new Customer(this, shoppingTime,	getHappy());
 		System.out.println(customer.getName() + " goes into the store");
 		petrolStation.goToShop(customer);
+	}
+	
+	private boolean getHappy()
+	{
+		return false;
 	}
 	
 	public String getName()
