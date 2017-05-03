@@ -739,7 +739,7 @@ public class PetrolGUI {
 			}
 			
 			//If the number of tills are in used based on the Pump Slider value in Parameter GUI
-			if(i < ((4 * Math.pow(2, tillSlider.getValue())))){ 
+			if(i <= tillSlider.getValue()){ 
 				//Each tillField is placed on its respective TextField
 				tillFields[i].setText("Sample");
 				//tillFields[i].setText(splitInfo[i+1]);
