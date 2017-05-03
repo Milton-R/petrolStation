@@ -14,6 +14,8 @@ public class Customer {
 	private String name;
 	private int shoppingTime;
 	private Shop shop;
+	private int fuelMoney;
+	private int additionalMoney;
 
 	
 	/**
@@ -25,6 +27,8 @@ public class Customer {
 	 */
 	public Customer(Vehicle ov, int shoppingTime, boolean happy)
 	{
+		additionalMoney = 
+		fuelMoney= 0; 
 		ownedVehicle = ov;
 		this.shoppingTime = shoppingTime;
 		String vName = ov.getName();
