@@ -71,6 +71,9 @@ public class Config {
 	private int numberOfPumps = 2;
 	private int pencePerGallon = 120;//pence
 	
+	//truck
+	private boolean isChecked = false;
+	
 	//Tills
 	private int numberOftills = 4;
 	
@@ -81,6 +84,21 @@ public class Config {
 	 * This allows to get the value correspondent to a Small Car
 	 * @return The initial probability value of the small car
 	 */
+	public boolean getisChecked()
+	{
+		return isChecked;
+	}
+	
+	/**
+	 * This sets the probability of the Small Cars
+	 * 
+	 * @param p Double Data Type
+	 */
+	public void setIsChecked(boolean b)
+	{
+		isChecked = b;
+	}
+	
 	public double getScProb()
 	{
 		return smallCar_probability;

@@ -195,7 +195,7 @@ public class PetrolStation {
 			generatedV = new FamilySedan(Integer.toString(output.getFS()),this,output.getNumSteps());
 			return true;
 		}
-		else if (num < (config.getTruckProb() + config.getScProb() + config.getMProb() + config.getFsProb())) {
+		else if (num < (config.getTruckProb() + config.getScProb() + config.getMProb() + config.getFsProb()) && (config.getisChecked())) {
 			
 			output.addTruck();
 			generatedV = new Truck(Integer.toString(output.getTruck()),this, output.getNumSteps());

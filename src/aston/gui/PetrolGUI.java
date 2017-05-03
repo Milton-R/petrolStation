@@ -701,6 +701,7 @@ public class PetrolGUI {
 		s.config.setNumTills((int) Math.pow(2, tillSlider.getValue()));
 		s.config.setNumSteps(Integer.parseInt(stepField.getText()));
 		s.config.setPencePerGallon((int) (Double.parseDouble(priceField.getText()) * 100));
+		s.config.setIsChecked(truckCheck.isSelected());
 
 		// create PetrolStation
 		s.createPetrolStation();
