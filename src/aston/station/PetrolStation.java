@@ -116,6 +116,7 @@ public class PetrolStation {
 		//update output and print Till info
 		for (Till t : shop.tills)
 		{
+			information += (t.getName().replaceAll("\\D+",""));
 			if (!gui)
 			{
 				information += (t.textToString());

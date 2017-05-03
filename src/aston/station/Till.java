@@ -19,6 +19,11 @@ public class Till {
 		name = "Till"+n;
 	}
 	
+	public String getName()
+	{
+		return name;
+	}
+	
 	/**
 	 * This adds a customer to the current queue of the till 
 	 * @param c
