@@ -11,7 +11,7 @@ package aston.station;
 public class Output {
 
 	
-	private int numTruck, numSc, numM, numFs, numGallons, totalVSpwnd, currentStep = 0, fuelMoney, lostMoney;
+	private int numTruck, numSc, numM, numFs, numGallons, totalVSpwnd, currentStep = 0, fuelMoney, lostMoney, additionalMoney;
 	
 	/*Things we need to keep track of:
 	 * #At the end of simulation
@@ -40,7 +40,9 @@ public class Output {
 	public Output(){ 
 		
 		
+		
 	}
+	
 	
 	/**
 	 * Set the number of Gallons
@@ -201,6 +203,16 @@ public class Output {
 
 	public void addLostMoney(int lostMoney) {
 		this.lostMoney += lostMoney;
+	}
+
+
+	public int getAdditionalMoney() {
+		return additionalMoney;
+	}
+
+
+	public void addAdditionalMoney(int additionalMoney) {
+		this.additionalMoney += additionalMoney;
 	}
 
 }
