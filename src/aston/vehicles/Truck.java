@@ -5,26 +5,22 @@ import aston.station.PetrolStation;
 
 public class Truck extends Vehicle{
 	protected int waitingTickLimit;
+	protected double arrivalProbability;
 
 	public Truck(String n, PetrolStation ps, int steps) {
 		super(ps, steps);
-		waitingTickLimit = Config.truck_waiting_time_range;
+		waitingTickLimit = Config.truck_shoppingTimeLimit;
 		tank = Config.truck_tank + petrolStation.rand.nextInt(Config.truck_tankRange);
 		space = Config.truck_space;
-		shopTimeLimit = Config.truck_shoppingtime_range;
-		shoppingProbability = 
-		timeTakenShopping = Config.truck_shoppingtime + petrolStation.rand.nextInt(Config.truck_shoppingtime_range);
-		moneySpentShopping = Config.truck_money_spent + petrolStation.rand.nextInt(Config. truck_money_spent_range);
+		shopTimeLimit = Config.truck_shoppingTimeLimit;
+		shoppingProbability = Config.truck_ShoppingProbability;
+		timeTakenShopping = Config.truck_timeTakenShopping + petrolStation.rand.nextInt(Config.truck_timeTakenShoppingRange);
+		moneySpentShopping = Config.truck_money_spent + petrolStation.rand.nextInt(Config.truck_money_spent_range);
 		currentTank = 0;
 		name = "Truck" + n;
-
-
-	}
-	// Unhappy(Config.getProp)
-	{
 		
+
 	}
-	
 	
 
 }

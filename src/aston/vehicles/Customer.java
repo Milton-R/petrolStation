@@ -14,7 +14,7 @@ public class Customer {
 	private String name;
 	private int shoppingTime;
 	private Shop shop;
-	private boolean happy;
+
 	
 	/**
 	 * Constructor<br>
@@ -25,11 +25,14 @@ public class Customer {
 	 */
 	public Customer(Vehicle ov, int shoppingTime, boolean happy)
 	{
-		this.happy = happy;
 		ownedVehicle = ov;
 		this.shoppingTime = shoppingTime;
 		String vName = ov.getName();
 		name = "Customer" + vName.substring(0,1) + vName.substring(vName.length()-1);
+		if(vName.equals("Truck"))
+		{
+		ov.petrolStation.getConfig().Service(happy);
+		}	
 	}
 	
 	/**

@@ -159,7 +159,7 @@ public abstract class Vehicle{
 		}
 		else // creates customer truck
 		{
-			shoppingTime = Config.truck_shoppingtime + petrolStation.rand.nextInt(Config.truck_shoppingtime_range);
+			shoppingTime = Config.truck_timeTakenShopping + petrolStation.rand.nextInt(Config.truck_timeTakenShoppingRange);
 		}
 		customer = new Customer(this, shoppingTime,	getHappy());
 		System.out.println(customer.getName() + " goes into the store");
@@ -169,12 +169,12 @@ public abstract class Vehicle{
 	private boolean getHappy()
 	{
 		int currentStep = petrolStation.output.getNumSteps();
-		currentStep = currentStep - steps;
-		if (currentStep < Config.truck_waiting_time_range)
+		currentStep = steps - currentStep;
+		if (currentStep < Config.truck_shoppingTimeLimit)
 		{
-			return false;
+			return true;
 		}
-		else return true;
+		else return false;
 	}
 	
 	public String getName()

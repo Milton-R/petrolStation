@@ -153,6 +153,11 @@ public class PetrolStation {
 		shop.enter(c);
 	}
 	
+	public Config getConfig()s
+	{
+		return config;
+	}
+	
 	/**
 	 * Creates one random subclass of the vehicle class, based on probabilities in config.
 	 * 

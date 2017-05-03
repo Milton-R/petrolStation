@@ -222,4 +222,16 @@ public class Config {
 	{
 		numberOftills = i;
 	}
+	public void Service(boolean happy)
+	{
+		if(happy)
+		{
+			truck_probability = truck_probability * 1.05;
+		}
+		else
+		{
+			truck_probability = truck_probability * 0.8;
+		}
+	}
+	
 }
