@@ -117,11 +117,12 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 	* Kelvin has made the Class hierarchy
 	
 17. 2 May 2017
-	* Kelvin has finished the _"Instructions on how to build and run the program"_ Section of the Report.
+	* Kelvin has finished the _"Building and Running the Code"_ Section of the Report.
 	* Milton to redo the Wireframe by tonight
 		* Keep the original as sample of GUI changes. 
 
 18. 3 May 2017 (LAST RECORD OF WORK)
+	* Kelvin has worked on the _"Multiple types of fuel with different prices"_ Subsection of the report
 	*  
 	
 # Advisory
