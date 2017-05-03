@@ -141,9 +141,8 @@ public abstract class Vehicle{
 	 */
 	public void createCustomer()
 	{
-		double i;
 		hasCustomer = true;
-		int shoppingTime = 20;
+		int shoppingTime = 0;
 		if (name.contains("SmallCar"))
 		{
 			shoppingTime = Config.smallCarTimeTakenShopping 
@@ -158,7 +157,7 @@ public abstract class Vehicle{
 			shoppingTime = Config.familySedanTimeTakenShopping 
 					+ petrolStation.rand.nextInt(Config.familySedanTimeTakenShoppingRange);
 		}
-		else // creates customer truck
+		else if (name.contains("Truck")) // creates customer truck
 		{
 			shoppingTime = Config.truck_timeTakenShopping 
 					+ petrolStation.rand.nextInt(Config.truck_timeTakenShoppingRange);
