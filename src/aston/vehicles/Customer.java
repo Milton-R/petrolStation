@@ -28,10 +28,10 @@ public class Customer {
 		ownedVehicle = ov;
 		this.shoppingTime = shoppingTime;
 		String vName = ov.getName();
-		name = "Customer" + vName.substring(0,1) + vName.substring(vName.length()-1);
+		name = "Customer" + vName.substring(0,1) + vName.replaceAll("\\D+","");
 		if(vName.equals("Truck"))
 		{
-		ov.petrolStation.getConfig().Service(happy);
+			ov.petrolStation.getConfig().Service(happy);
 		}	
 	}
 	
