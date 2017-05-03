@@ -61,7 +61,21 @@ public class runText {
 			gallonPrice = Integer.parseInt(args[5]);
 		}
 		
-		TextView textView = new TextView(numSteps, pValue, qValue, numPumps, numTills, gallonPrice);
+		boolean trucks = true;
+		if (args.length >= 7)
+		{
+			int i = Integer.parseInt(args[6]);
+			if (i == 1)
+			{
+				trucks = true;
+			}
+			else
+			{
+				trucks = false;
+			}
+		}
+		
+		TextView textView = new TextView(numSteps, pValue, qValue, numPumps, numTills, gallonPrice, trucks);
 	}
 
 }

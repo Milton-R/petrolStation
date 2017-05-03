@@ -13,7 +13,7 @@ import aston.simulator.Simulator;
  */
 public class TextView {
 	
-	public TextView(int steps, double p, double q, int pumps, int tills, int gallonPrice)
+	public TextView(int steps, double p, double q, int pumps, int tills, int gallonPrice, boolean trucks)
 	{
 		//create simulation
 		Simulator s = new Simulator();
@@ -26,6 +26,7 @@ public class TextView {
 		s.config.setNumTills(tills);
 		s.config.setNumSteps(steps);
 		s.config.setPencePerGallon(gallonPrice);
+		s.config.setIsChecked(trucks);
 				
 		//create PetrolStation
 		s.createPetrolStation();
