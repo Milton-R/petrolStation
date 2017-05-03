@@ -14,7 +14,7 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 - [x] GUI Wireframe created
 - [x] GUI is to be Created
 - [x] Console Data Integreation for Pump
-- [ ] Console Data Integreation for Till
+- [v] Console Data Integreation for Till
 - [x] GUI Data Integration for Pump
 - [ ] GUI Data Integration for Till
 
@@ -102,11 +102,28 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 	* Tristan has made the Customer class work to go in the Shop.
 		* Till to follow soon
 		
-13. 16 April 2017
+13. 18 April 2017
 	* Milton has finished the Truck Class
 
 14. 19 April 2017
 	* Kelvin will made additional JavaDoc Comments on each class
+
+15. 27 April 2017
+	* Kelvin added the Report Document but no changes have been made as of yet.
+
+16. 1 May 2017
+	* Tristan has Till has been printed to TextView
+	* Milton has finished redoing the original UML diagram
+	* Kelvin has made the Class hierarchy
+	
+17. 2 May 2017
+	* Kelvin has finished the _"Building and Running the Code"_ Section of the Report.
+	* Milton to redo the Wireframe by tonight
+		* Keep the original as sample of GUI changes. 
+
+18. 3 May 2017 (LAST RECORD OF WORK)
+	* Kelvin has worked on the _"Multiple types of fuel with different prices"_ Subsection of the report
+	*  
 	
 # Advisory
 Used for Aston University CS1410: Java Programming Development

@@ -1,9 +1,7 @@
 package aston.vehicles;
 
-import java.util.Random;
 import aston.station.*;
 import aston.resources.*;
-import aston.simulator.*;
 /**
  * A superclass for vehicles, extended by Family Sedan, Motorbike, Small Car.  
  * The vehicle takes up a certain amount of space and it has a tank that needs to be filled.
@@ -145,14 +143,7 @@ public abstract class Vehicle{
 		}
 		else if (name.contains("Motorbike"))
 		{
-			if (Config.motorBikeTimeTakenShoppingRange > 0)
-			{
-				shoppingTime = Config.motorBikeTimeTakenShopping + petrolStation.rand.nextInt(Config.motorBikeTimeTakenShoppingRange);
-			}
-			else
-			{
 				shoppingTime = Config.motorBikeTimeTakenShopping;
-			}
 		}
 		else if (name.contains("FamilySedan"))
 		{

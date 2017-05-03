@@ -17,6 +17,7 @@ public class runText {
 	
 	public static void main(String[] args) {
 		int numSteps = 1;  // By default, run for 1 step
+		
 		if (args.length >= 1) {
 			numSteps = Integer.parseInt(args[0]);
 		}
