@@ -116,7 +116,7 @@ public class PetrolStation {
 		//update output and print Till info
 		for (Till t : shop.tills)
 		{
-			information += (t.getName().replaceAll("\\D+",""));
+			information += (t.getName()+",");
 			if (!gui)
 			{
 				information += (t.textToString());
@@ -124,18 +124,15 @@ public class PetrolStation {
 			else
 			{
 				information += (t.guiToString());
+				if (t.getQueueSize() == 0)
+				{
+					information += "empty,";
+				}
 			}
 			
 		}
 		
-		if (gui)
-		{
-			for (int i = 4; i > pumps.length; i--)
-			{
-				information += "empty,empty,empty,empty,";
-			}
-		}
-		else
+		if (!gui)
 		{
 			output.setNumGallons(totalPumped);
 			output.setFuelMoney((int) totalPumped*config.getPencePerGallon());

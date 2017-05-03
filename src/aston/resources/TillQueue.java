@@ -69,11 +69,6 @@ public class TillQueue {
 			s += c.getName() + ",";
 		}
 		
-		//add empty info if less cars
-		for (int i = 4; i > numC; i--)
-		{
-			s += "empty,";
-		}
 		return s;
 	}
 	
