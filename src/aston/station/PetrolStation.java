@@ -81,8 +81,8 @@ public class PetrolStation {
 				if (p.getQueueSize() < size)
 				{
 					shortestQueue = p;
+					size = p.getQueueSize();
 				}
-	
 			}
 			if (shortestQueue.addVehicleToQueue(v))
 			{
@@ -116,26 +116,23 @@ public class PetrolStation {
 		//update output and print Till info
 		for (Till t : shop.tills)
 		{
-			information += (t.getName().replaceAll("\\D+",""));
 			if (!gui)
 			{
 				information += (t.textToString());
 			}
 			else
 			{
+				information += (t.getName()+",");
 				information += (t.guiToString());
+				if (t.getQueueSize() == 0)
+				{
+					information += "empty,";
+				}
 			}
 			
 		}
 		
-		if (gui)
-		{
-			for (int i = 4; i > pumps.length; i--)
-			{
-				information += "empty,empty,empty,empty,";
-			}
-		}
-		else
+		if (!gui)
 		{
 			output.setNumGallons(totalPumped);
 			output.setFuelMoney((int) totalPumped*config.getPencePerGallon());

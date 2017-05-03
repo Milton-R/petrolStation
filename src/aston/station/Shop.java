@@ -62,6 +62,7 @@ public class Shop {
 			if (t.getQueueSize() < size)
 			{
 				shortestQueue = t;
+				size = t.getQueueSize();
 			}
 		}
 		shortestQueue.addCustomer(c);
