@@ -8,7 +8,6 @@ import org.junit.Test;
 import aston.resources.Config;
 import aston.station.PetrolStation;
 import aston.vehicles.Truck;
-import aston.vehicles.Vehicle;
 
 public class TruckTestClass {
 

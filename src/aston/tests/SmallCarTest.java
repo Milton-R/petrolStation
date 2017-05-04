@@ -1,11 +1,12 @@
 package aston.tests;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
 import aston.station.PetrolStation;
 import aston.vehicles.SmallCar;
 import aston.vehicles.Vehicle;
 import aston.resources.*;
 
-import static org.junit.Assert.*;
-import org.junit.Test;
 public class SmallCarTest {
 
 	String n = "3";
