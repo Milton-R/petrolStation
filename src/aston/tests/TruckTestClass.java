@@ -54,12 +54,4 @@ public class TruckTestClass {
 		assertEquals("Trucks's money spent must be betweeen 500 to 1000 pence", 1500, testcar.getMoneySpentShopping(), 500 );
 	}
 
-
-
-
-
-
-
-
-
 }
