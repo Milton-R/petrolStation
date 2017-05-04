@@ -136,7 +136,7 @@ public class PetrolGUI {
 		tillSlideNum.setText("1");
 		
 			// Step Field
-		stepField.setText("100");
+		stepField.setText("1440");
 			
 			// Price Field
 		priceField.setText("1.20");
@@ -148,7 +148,7 @@ public class PetrolGUI {
 		quitButton.setToolTipText("Quit the Program");
 		
 			// Checkbox
-		truckCheck.setSelected(false);
+		truckCheck.setSelected(true);
 
 		// Step 3: Create containers to hold the components
 		mainParameterFrame = new JFrame("Petrol Station Simulation Parameters");
@@ -811,8 +811,8 @@ public class PetrolGUI {
 			
 		}
 		
-		simMoney.setText("Gained Money: " + splitInfo[2]);
-		simLoss.setText("Missed Money: " + splitInfo[1]);
+		simMoney.setText("Gained Money: £" + Double.parseDouble(splitInfo[2])/100 +"p");
+		simLoss.setText("Missed Money: £" + Double.parseDouble(splitInfo[1])/100 + "p");
 	}
 
 	/**
