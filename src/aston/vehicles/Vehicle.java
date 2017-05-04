@@ -178,8 +178,8 @@ public abstract class Vehicle{
 	private boolean getHappy()
 	{
 		int currentStep = petrolStation.output.getNumSteps();
-		currentStep = steps - currentStep;
-		if (currentStep < Config.truck_shoppingTimeLimit)
+		currentStep -= steps;
+		if (currentStep <= shopTimeLimit)
 		{
 			return true;
 		}
