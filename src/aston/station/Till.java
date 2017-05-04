@@ -27,7 +27,7 @@ public class Till {
 	
 	/**
 	 * Accessor Method of the Name of the Till
-	 * @return
+	 * @return name the name of the till
 	 */
 	public String getName()
 	{
@@ -36,7 +36,7 @@ public class Till {
 	
 	/**
 	 * This adds a customer to the current queue of the till 
-	 * @param c
+	 * @param c The customer instance that is being added
 	 */
 	public void addCustomer(Customer c)
 	{

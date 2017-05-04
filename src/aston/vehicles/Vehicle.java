@@ -38,7 +38,8 @@ public abstract class Vehicle{
 	/**
 	 * Constructor of the Vehicle
 	 * 
-	 * @param ps - Petrol Station
+	 * @param ps Petrol Station
+	 * @param steps What step the vehicle was created on, used to work out how long spent in queue
 	 */
 	public Vehicle(PetrolStation ps, int steps){
 		petrolStation = ps;
@@ -54,7 +55,8 @@ public abstract class Vehicle{
 	/**
 	 * Fill the Vehicle's Tank 
 	 * 
-	 * @param pumpSpd
+	 * @param pumpSpd the speed at which fuel is pumped into the vehicle
+	 * @return boolean whether it pumped fuel or not
 	 */
 	public boolean fillTank(int pumpSpd)
 	{

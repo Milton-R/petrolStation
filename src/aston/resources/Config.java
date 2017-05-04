@@ -93,7 +93,7 @@ public class Config {
 	/**
 	 * This sets the probability of the Small Cars
 	 * 
-	 * @param p Double Data Type
+	 * @param b Double Data Type
 	 */
 	public void setIsChecked(boolean b)
 	{

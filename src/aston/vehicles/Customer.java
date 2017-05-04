@@ -22,10 +22,10 @@ public class Customer {
 	 * Constructor<br>
 	 * Create a new customer with a set time to shop and state that the customer owns this vehicle
 	 * 
-	 * @param ov Current Vehicle
-	 * @param shoppingTime
-	 * @param happy
-	 * @param shopMoney
+	 * @param ov Instance of the vehicle which the customer owns
+	 * @param shoppingTime how long the customer will spend shopping
+	 * @param happy boolean whether the customer is happy
+	 * @param shopMoney how much the customer will spend in the shop
 	 */
 	public Customer(Vehicle ov, int shoppingTime, boolean happy, int shopMoney)
 	{
@@ -132,7 +132,7 @@ public class Customer {
 
 	/**
 	 * Mutator Method for additional Money
-	 * @param additionalMoney
+	 * @param additionalMoney sets the value of the money that will be spent by the customer in the shop
 	 */
 	public void setAdditionalMoney(int additionalMoney) {
 		this.additionalMoney = additionalMoney;

@@ -48,6 +48,9 @@ public class PetrolStation {
 	
 	/**
 	 * Main run method, runs every step/tick.
+	 * 
+	 * @param gui Takes the instance of the gui being used
+	 * @return String all the information about the current state of the simulation
 	 */
 	public String run(boolean gui)
 	{
@@ -133,6 +136,7 @@ public class PetrolStation {
 	/**
 	 * Send the customer to the store
 	 * @param c Customer Class
+	 * @param i Integer is 0 normally, but may be 1 if the customer goes straight to the till (motorbikes and unhappy customers)
 	 */
 	public void goToShop(Customer c, int i)
 	{

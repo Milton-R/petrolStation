@@ -191,7 +191,7 @@ public class Output {
 
 	/**
 	 * Add the current amount of lost money by the next amount of money lost
-	 * @param lostMoney
+	 * @param lostMoney money lost when customer doesnt go to store or vehicle has no space at pump and leaves
 	 */
 	public void addLostMoney(int lostMoney) {
 		this.lostMoney += lostMoney;
@@ -207,7 +207,7 @@ public class Output {
 
 	/**
 	 * Mutator Method of Addtional Money
-	 * @param additionalMoney
+	 * @param additionalMoney the money that is made in the store for a customer
 	 */
 	public void addAdditionalMoney(int additionalMoney) {
 		this.additionalMoney += additionalMoney;

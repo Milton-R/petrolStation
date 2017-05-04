@@ -18,7 +18,7 @@ public class runText {
 	 * Main Argument<br>
 	 * Standard to run a class as an executable
 	 * 
-	 * @param args
+	 * @param args the arguements which change how the program will be run in text mode e.g. the p and q values
 	 */
 	public static void main(String[] args) {
 		int numSteps = 1;  // By default, run for 1 step
