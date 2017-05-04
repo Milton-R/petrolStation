@@ -58,7 +58,7 @@ public class PetrolStation {
 		}
 		else
 		{
-			information += (output.getNumSteps());	// + "," + output.getLostMoney() + "," + output.getAdditionalMoney() + "," + output.getFuelMoney() + ","
+			information += (output.getNumSteps() + ","); //+ output.getLostMoney() + "," + output.getAdditionalMoney() + "," + output.getFuelMoney() + ","
 		}
 		
 		//customers
