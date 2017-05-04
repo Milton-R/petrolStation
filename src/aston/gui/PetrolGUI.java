@@ -811,8 +811,8 @@ public class PetrolGUI {
 			
 		}
 		
-		simMoney.setText("Gained Money: £" + Double.parseDouble(splitInfo[2])/100 +"p");
-		simLoss.setText("Missed Money: £" + Double.parseDouble(splitInfo[1])/100 + "p");
+		simMoney.setText("Gained Money: £" + Double.parseDouble(splitInfo[2])/100);
+		simLoss.setText("Missed Money: £" + Double.parseDouble(splitInfo[1])/100);
 	}
 
 	/**
