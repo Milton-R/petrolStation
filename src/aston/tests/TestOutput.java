@@ -12,12 +12,13 @@ public class TestOutput {
 		
 		output.addTruck();
 		output.addSC();
+		output.addFS();
 		output.addM();
-		output.addSC();
 		output.incStep();
 		output.addAdditionalMoney(1);
 		output.addLostMoney(1);
 		output.setFuelMoney(1);
+		output.setNumGallons(1);
 		testGetSC();
 		testGetM();
 		testGetFS();
@@ -35,25 +36,8 @@ public class TestOutput {
 	@Test
 	public void testGetTotalVehicles()
 	{
-		assertEquals(" the number of vehicles must be 1" ,1, output.getTotalVehicles());
+		assertEquals(" the number of vehicles must be 1" ,4, output.getTotalVehicles());
 	}
-	/*public void testAddM()
-	{
-		int i;
-		assertEquals(" the number of num of m must be one more than before ",(numM++) , i= output.addM());
-		numM++;
-		totalVSpwnd++;
-	}
-	public void addFS()
-	{
-		numFs++;
-		totalVSpwnd++;
-	}
-	public void addTruck()
-	{
-		numTruck++;
-		totalVSpwnd++;
-	}*/
 	@Test
 	public void testGetSC()
 	{
@@ -79,15 +63,6 @@ public class TestOutput {
 	{
 		assertEquals(" the number of steps must be 1" ,1, output.getNumSteps());
 	}
-	/*public void incStep()
-	{
-		currentStep++;
-	}
-	public void setFuelMoney(int m)
-	{
-		fuelMoney += m;
-	}
-	*/
 	@Test
 	public void testGetFuelMoney()
 	{
@@ -98,21 +73,9 @@ public class TestOutput {
 	{
 		assertEquals(" the amount of lost money must be 1" ,1, output.getLostMoney());
 	}
-	
-	/*
-	public void addLostMoney(int lostMoney) {
-		this.lostMoney += lostMoney;
-	}
-	*/
 	@Test
 	public void testGetAdditionalMoney() {
 		assertEquals(" the amount of vehicles must be 1" ,1, output.getAdditionalMoney());
 	}
-
-	/*
-	public void addAdditionalMoney(int additionalMoney) {
-		this.additionalMoney += additionalMoney;
-	}
-	*/
 
 }
