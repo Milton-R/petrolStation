@@ -130,10 +130,11 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 	* Kelvin and Tristan finished the Till Queue To the GUI 
 	* Matas, Tristan and Kelvin have integrated the money and lost sales
 	* Tristan has added the Shopping Tick to the Customer Class
-		* Ticks are calculated in relation of 2-3 minutes
+		* Ticks are calculated in ticks related to 2-3 minutes
 	* Matas and Tristan made the Probability of the Customer Shopping 
 	* Kelvin added the other additional JavaDocs for Methods for ALL classes
-	
+		* Tristan recompiled the JavaDoc Files
+	* Milton was reminded to do the Wireframe
 	
 # Advisory
 Used for Aston University CS1410: Java Programming Development

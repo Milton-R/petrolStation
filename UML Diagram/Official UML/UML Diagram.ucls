@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="aston.vehicles.Vehicle" project="petrolStation" 
     file="/petrolStation/src/aston/vehicles/Vehicle.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1274" y="-540"/>    
+    <position height="-1" width="-1" x="1276" y="-531"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -57,7 +57,7 @@
   </class>  
   <class id="7" language="java" name="aston.station.Output" project="petrolStation" 
     file="/petrolStation/src/aston/station/Output.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="359" y="-852"/>    
+    <position height="-1" width="-1" x="368" y="-852"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -66,7 +66,7 @@
   </class>  
   <class id="8" language="java" name="aston.station.PetrolStation" project="petrolStation" 
     file="/petrolStation/src/aston/station/PetrolStation.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="634" y="-662"/>    
+    <position height="-1" width="-1" x="651" y="-657"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -75,7 +75,7 @@
   </class>  
   <class id="9" language="java" name="aston.station.Pump" project="petrolStation" 
     file="/petrolStation/src/aston/station/Pump.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="831" y="-423"/>    
+    <position height="-1" width="-1" x="873" y="-435"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -102,7 +102,7 @@
   </class>  
   <class id="12" language="java" name="aston.simulator.Simulator" project="petrolStation" 
     file="/petrolStation/src/aston/simulator/Simulator.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="604" y="-429"/>    
+    <position height="-1" width="-1" x="613" y="-378"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -145,121 +145,121 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <generalization id="17">    
+  <association id="17">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="18" name="generatedV">        
+        <position height="0" width="0" x="286" y="-989"/>      
+      </attribute>      
+      <multiplicity id="19" minimum="0" maximum="1">        
+        <position height="0" width="0" x="286" y="-989"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="20">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="21">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <association id="22">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="23" name="t">        
+        <position height="0" width="0" x="6" y="-841"/>      
+      </attribute>      
+      <multiplicity id="24" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="6" y="-841"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="25">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="26" name="shop">        
+        <position height="0" width="0" x="-52" y="-607"/>      
+      </attribute>      
+      <multiplicity id="27" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-52" y="-607"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="28">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="1"/>  
   </generalization>  
-  <association id="18">    
-    <end type="SOURCE" refId="15" navigable="false">      
-      <attribute id="19" name="s">        
-        <position height="0" width="0" x="278" y="-872"/>      
-      </attribute>      
-      <multiplicity id="20" minimum="0" maximum="1">        
-        <position height="0" width="0" x="278" y="-872"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="21">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="22" name="petrolStation">        
-        <position height="0" width="0" x="-3" y="-975"/>      
-      </attribute>      
-      <multiplicity id="23" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-3" y="-975"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="24">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="25" name="petrolStation">        
-        <position height="0" width="0" x="-3" y="-975"/>      
-      </attribute>      
-      <multiplicity id="26" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-3" y="-975"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="27">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="1"/>  
-  </generalization>  
-  <association id="28">    
-    <end type="SOURCE" refId="14" navigable="false">      
-      <attribute id="29" name="t">        
-        <position height="0" width="0" x="6" y="-841"/>      
-      </attribute>      
-      <multiplicity id="30" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="6" y="-841"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="31">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="32" name="shoppingCustomers">        
-        <position height="0" width="0" x="6" y="-841"/>      
-      </attribute>      
-      <multiplicity id="33" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="6" y="-841"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="34">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="35" name="currentTillQueue">        
-        <position height="0" width="0" x="-265" y="-582"/>      
-      </attribute>      
-      <multiplicity id="36" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-265" y="-582"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="37">    
+  <association id="29">    
     <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="38" name="pumps">        
-        <position height="0" width="0" x="184" y="-988"/>      
-      </attribute>      
-      <multiplicity id="39" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="184" y="-988"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="40">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="41" name="config">        
+      <attribute id="30" name="config">        
         <position height="0" width="0" x="-167" y="-58"/>      
       </attribute>      
-      <multiplicity id="42" minimum="0" maximum="1">        
+      <multiplicity id="31" minimum="0" maximum="1">        
         <position height="0" width="0" x="-167" y="-58"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="16" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="43">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="1"/>  
-  </generalization>  
+  <association id="32">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="33" name="currentQueue">        
+        <position height="0" width="0" x="-94" y="-904"/>      
+      </attribute>      
+      <multiplicity id="34" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-94" y="-904"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="35">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="36" name="output">        
+        <position height="0" width="0" x="292" y="-1123"/>      
+      </attribute>      
+      <multiplicity id="37" minimum="0" maximum="1">        
+        <position height="0" width="0" x="292" y="-1123"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="38">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="39" name="ownedVehicle">        
+        <position height="0" width="0" x="286" y="-989"/>      
+      </attribute>      
+      <multiplicity id="40" minimum="0" maximum="1">        
+        <position height="0" width="0" x="286" y="-989"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="41">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="42" name="s">        
+        <position height="0" width="0" x="287" y="-821"/>      
+      </attribute>      
+      <multiplicity id="43" minimum="0" maximum="1">        
+        <position height="0" width="0" x="287" y="-821"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <association id="44">    
     <end type="SOURCE" refId="9" navigable="false">      
       <attribute id="45" name="currentVehicle">        
-        <position height="0" width="0" x="284" y="-998"/>      
+        <position height="0" width="0" x="286" y="-989"/>      
       </attribute>      
       <multiplicity id="46" minimum="0" maximum="1">        
-        <position height="0" width="0" x="284" y="-998"/>      
+        <position height="0" width="0" x="286" y="-989"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
@@ -267,150 +267,150 @@
   </association>  
   <association id="47">    
     <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="48" name="config">        
-        <position height="0" width="0" x="-167" y="-58"/>      
-      </attribute>      
-      <multiplicity id="49" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-167" y="-58"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="16" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="50">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="1"/>  
-  </generalization>  
-  <association id="51">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="52" name="pgui">        
+      <attribute id="48" name="pgui">        
         <position height="0" width="0" x="52" y="-926"/>      
       </attribute>      
-      <multiplicity id="53" minimum="0" maximum="1">        
+      <multiplicity id="49" minimum="0" maximum="1">        
         <position height="0" width="0" x="52" y="-926"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="15" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="54">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="55" name="q">        
-        <position height="0" width="0" x="284" y="-998"/>      
+  <generalization id="50">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <association id="51">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="52" name="pumps">        
+        <position height="0" width="0" x="226" y="-1000"/>      
       </attribute>      
-      <multiplicity id="56" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="284" y="-998"/>      
+      <multiplicity id="53" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="226" y="-1000"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="54">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="55" name="currentTillQueue">        
+        <position height="0" width="0" x="-265" y="-582"/>      
+      </attribute>      
+      <multiplicity id="56" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-265" y="-582"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="57">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="58" name="vQ">        
-        <position height="0" width="0" x="-94" y="-904"/>      
-      </attribute>      
-      <multiplicity id="59" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-94" y="-904"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="60">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="61" name="currentQueue">        
-        <position height="0" width="0" x="-94" y="-904"/>      
-      </attribute>      
-      <multiplicity id="62" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-94" y="-904"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="63">    
     <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="64" name="shop">        
+      <attribute id="58" name="shop">        
         <position height="0" width="0" x="-52" y="-607"/>      
       </attribute>      
-      <multiplicity id="65" minimum="0" maximum="1">        
+      <multiplicity id="59" minimum="0" maximum="1">        
         <position height="0" width="0" x="-52" y="-607"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="66">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="67" name="tills">        
-        <position height="0" width="0" x="-252" y="-472"/>      
+  <association id="60">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="61" name="q">        
+        <position height="0" width="0" x="286" y="-989"/>      
       </attribute>      
-      <multiplicity id="68" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="-252" y="-472"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="69">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="70" name="output">        
-        <position height="0" width="0" x="283" y="-1123"/>      
-      </attribute>      
-      <multiplicity id="71" minimum="0" maximum="1">        
-        <position height="0" width="0" x="283" y="-1123"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="72">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="73" name="ownedVehicle">        
-        <position height="0" width="0" x="284" y="-998"/>      
-      </attribute>      
-      <multiplicity id="74" minimum="0" maximum="1">        
-        <position height="0" width="0" x="284" y="-998"/>      
+      <multiplicity id="62" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="286" y="-989"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="75">    
+  <association id="63">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="76" name="customer">        
+      <attribute id="64" name="customer">        
         <position height="0" width="0" x="6" y="-841"/>      
       </attribute>      
-      <multiplicity id="77" minimum="0" maximum="1">        
+      <multiplicity id="65" minimum="0" maximum="1">        
         <position height="0" width="0" x="6" y="-841"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="78">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="79" name="shop">        
-        <position height="0" width="0" x="-52" y="-607"/>      
+  <association id="66">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="67" name="petrolStation">        
+        <position height="0" width="0" x="14" y="-970"/>      
       </attribute>      
-      <multiplicity id="80" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-52" y="-607"/>      
+      <multiplicity id="68" minimum="0" maximum="1">        
+        <position height="0" width="0" x="14" y="-970"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="69">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="70" name="tills">        
+        <position height="0" width="0" x="-252" y="-472"/>      
+      </attribute>      
+      <multiplicity id="71" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="-252" y="-472"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="72">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="73" name="shoppingCustomers">        
+        <position height="0" width="0" x="6" y="-841"/>      
+      </attribute>      
+      <multiplicity id="74" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="6" y="-841"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="75">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="76" name="petrolStation">        
+        <position height="0" width="0" x="14" y="-970"/>      
+      </attribute>      
+      <multiplicity id="77" minimum="0" maximum="1">        
+        <position height="0" width="0" x="14" y="-970"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="78">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="79" name="config">        
+        <position height="0" width="0" x="-167" y="-58"/>      
+      </attribute>      
+      <multiplicity id="80" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-167" y="-58"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="81">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="82" name="generatedV">        
-        <position height="0" width="0" x="284" y="-998"/>      
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="82" name="vQ">        
+        <position height="0" width="0" x="-94" y="-904"/>      
       </attribute>      
       <multiplicity id="83" minimum="0" maximum="1">        
-        <position height="0" width="0" x="284" y="-998"/>      
+        <position height="0" width="0" x="-94" y="-904"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
+    <end type="TARGET" refId="13" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
