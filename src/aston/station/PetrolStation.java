@@ -54,11 +54,11 @@ public class PetrolStation {
 		String information = "";
 		if (!gui)
 		{
-			information += ("\nStep: " + output.getNumSteps());
+			information += ("\nStep: " + output.getNumSteps() + ", Lost Money: " + output.getLostMoney() + ", Additional Money: " + output.getAdditionalMoney() + ", Fuel Money: " + output.getFuelMoney());
 		}
 		else
 		{
-			information += (output.getNumSteps() + ",");
+			information += (output.getNumSteps());	// + "," + output.getLostMoney() + "," + output.getAdditionalMoney() + "," + output.getFuelMoney() + ","
 		}
 		
 		//customers
@@ -86,10 +86,12 @@ public class PetrolStation {
 			}
 			if (shortestQueue.addVehicleToQueue(v))
 			{
+				//vehicle goes into a pump queue
 			}
 			else
 			{
-				//System.out.println("vehicle leaves as no space at pump");
+				System.out.println(v.getName() + " leaves as no space at pump");
+				output.addLostMoney(v.getTankSize()*config.getPencePerGallon());
 			}
 		}
 		else
@@ -98,10 +100,8 @@ public class PetrolStation {
 		}
 		
 		//update output and print Pump info
-		int totalPumped = 0;
 		for (Pump p : pumps)
 		{
-			totalPumped += p.getNumOfGallons();
 			if (!gui)
 			{
 				information += (p.textToString());
@@ -130,15 +130,7 @@ public class PetrolStation {
 				}
 			}
 			
-		}
-		
-		if (!gui)
-		{
-			output.setNumGallons(totalPumped);
-			output.setFuelMoney((int) totalPumped*config.getPencePerGallon());
-			//System.out.println(output.getGallons());
-		}
-		
+		}	
 		return information;
 	}
 	
@@ -146,9 +138,17 @@ public class PetrolStation {
 	 * Send the customer to the store
 	 * @param c Customer Class
 	 */
-	public void goToShop(Customer c)
+	public void goToShop(Customer c, int i)
 	{
-		shop.enter(c);
+		if (i == 0)
+		{
+			shop.enter(c);
+		}
+		else
+		{
+			shop.tillEnter(c);
+			output.addLostMoney(c.getAdditionalMoney());
+		}
 	}
 	
 	public Config getConfig()
@@ -185,7 +185,7 @@ public class PetrolStation {
 			generatedV = new FamilySedan(Integer.toString(output.getFS()),this,output.getNumSteps());
 			return true;
 		}
-		else if (num < config.getTruckProb()  ){
+		else if (num < (config.getTruckProb() + config.getScProb() + config.getMProb() + config.getFsProb()) && (config.getisChecked())) {
 			
 			output.addTruck();
 			generatedV = new Truck(Integer.toString(output.getTruck()),this, output.getNumSteps());

@@ -14,6 +14,8 @@ public class Customer {
 	private String name;
 	private int shoppingTime;
 	private Shop shop;
+	private int fuelMoney;
+	private int additionalMoney;
 	private int tillTime = 13;	//min time in till queue + 1
 
 	
@@ -24,8 +26,10 @@ public class Customer {
 	 * @param ov Current Vehicle
 	 * @param shoppingTime
 	 */
-	public Customer(Vehicle ov, int shoppingTime, boolean happy)
+	public Customer(Vehicle ov, int shoppingTime, boolean happy, int shopMoney)
 	{
+		setAdditionalMoney(shopMoney);
+		fuelMoney= 0; 
 		ownedVehicle = ov;
 		this.shoppingTime = shoppingTime;
 		String vName = ov.getName();
@@ -73,7 +77,7 @@ public class Customer {
 		}
 		else
 		{
-			shoppingTime -= Config.secondsPerTick;
+			shoppingTime--;
 			return false;
 		}
 	}
@@ -96,6 +100,9 @@ public class Customer {
 	 */
 	public void leave()
 	{
+		PetrolStation ps = ownedVehicle.petrolStation;
+		ps.output.addAdditionalMoney(additionalMoney);
+		ps.output.setFuelMoney(ownedVehicle.getTankSize()*ps.getConfig().getPencePerGallon());
 		ownedVehicle.vLeave();
 		System.out.println(name + " drives away");
 	}
@@ -106,5 +113,13 @@ public class Customer {
 	public String getName()
 	{
 		return name;
+	}
+
+	public int getAdditionalMoney() {
+		return additionalMoney;
+	}
+
+	public void setAdditionalMoney(int additionalMoney) {
+		this.additionalMoney = additionalMoney;
 	}
 }

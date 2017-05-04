@@ -42,13 +42,11 @@ public abstract class Vehicle{
 	 */
 	public Vehicle(PetrolStation ps, int steps){
 		petrolStation = ps;
-		
 		tank = 0;
 		space = 0;
 		this.steps = steps;
 		currentTank = 0;
 		shopTimeLimit = 2;
-		shoppingProbability = 0.02;
 		timeTakenShopping = 1;
 		moneySpentShopping = 2;
 	}
@@ -144,7 +142,7 @@ public abstract class Vehicle{
 	public void createCustomer()
 	{
 		hasCustomer = true;
-		int shoppingTime = 20;
+		int shoppingTime = 0;
 		if (name.contains("SmallCar"))
 		{
 			shoppingTime = Config.smallCarTimeTakenShopping 
@@ -159,14 +157,22 @@ public abstract class Vehicle{
 			shoppingTime = Config.familySedanTimeTakenShopping 
 					+ petrolStation.rand.nextInt(Config.familySedanTimeTakenShoppingRange);
 		}
-		else // creates customer truck
+		else if (name.contains("Truck")) // creates customer truck
 		{
 			shoppingTime = Config.truck_timeTakenShopping 
 					+ petrolStation.rand.nextInt(Config.truck_timeTakenShoppingRange);
 		}
-		customer = new Customer(this, shoppingTime,	getHappy());
-		System.out.println(customer.getName() + " goes into the store");
-		petrolStation.goToShop(customer);
+		customer = new Customer(this, shoppingTime,	getHappy(), moneySpentShopping);
+		if (!(petrolStation.rand.nextDouble() <= shoppingProbability))
+		{
+			petrolStation.goToShop(customer,0);
+			System.out.println(customer.getName() + " goes into the store");
+		}
+		else
+		{
+			petrolStation.goToShop(customer,1);
+			System.out.println(customer.getName() + " goes straight to the till");
+		}
 	}
 	
 	private boolean getHappy()
