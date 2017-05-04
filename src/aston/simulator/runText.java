@@ -1,7 +1,5 @@
 package aston.simulator;
 
-//IS THIS STILL IN USE????
-
 import aston.gui.*;
 
 /**

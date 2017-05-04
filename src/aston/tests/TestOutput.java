@@ -1,8 +1,8 @@
 package aston.tests;
-import aston.station.Output;
-import static org.junit.Assert.assertEquals;
 
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
+import aston.station.Output;
 
 public class TestOutput {
 	
