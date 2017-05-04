@@ -136,7 +136,7 @@ public class PetrolGUI {
 		tillSlideNum.setText("1");
 		
 			// Step Field
-		stepField.setText("1000");
+		stepField.setText("100");
 			
 			// Price Field
 		priceField.setText("1.20");
@@ -395,24 +395,28 @@ public class PetrolGUI {
 	
 		tillFields[0] = new JTextArea(6,12);
 		tillFields[0].setEditable(false);
+		tillFields[0].getPreferredScrollableViewportSize();
 
 			//Row 2
 		JLabel tillLabel2 = new JLabel();
 	
 		tillFields[1] = new JTextArea(6,12);
 		tillFields[1].setEditable(false);
+		tillFields[1].getPreferredScrollableViewportSize();
 		
 			//Row 3
 		JLabel tillLabel3 = new JLabel();
 		
 		tillFields[2] = new JTextArea(6,12);
 		tillFields[2].setEditable(false);
+		tillFields[2].getPreferredScrollableViewportSize();
 
 			//Row 4
 		JLabel tillLabel4 = new JLabel();
 		
 		tillFields[3] = new JTextArea(6,12);
 		tillFields[3].setEditable(false);
+		tillFields[3].getPreferredScrollableViewportSize();
 		
 		// Step 2: Set the properties of the components
 		titleLog.setText("Petrol Station Simulation");
@@ -722,8 +726,93 @@ public class PetrolGUI {
 		String[] splitInfo = info.split(",");
 		//Output the info String to the Console
 		System.out.println(info);
+		
 		//Loop through the splitInfo array
-		for (int i = 0; i < 16; i++)
+		ticksStep.setText("Step: " + splitInfo[0] + "\t");
+		
+		for (int i = 0; i < splitInfo.length; i++)
+		{
+			//Set the ticksStep JLabel to the current tick
+			ticksStep.setText("Step: " + splitInfo[0] + "\t");
+			
+			//If the number of Pumps are in used based on the Pump Slider value in Parameter GUI
+			if(i < ((4 * Math.pow(2, pumpSlider.getValue())))){ 
+				//Each pumpField is placed on its respective TextField
+				pumpFields[i].setText(splitInfo[i+1]);
+			} else {
+				//Pump states its not in use
+				//pumpFields[i].setText("Pump not in use"); // RELOCATE
+				//pumpFields[i].setBackground(Color.white);
+			}
+		}
+		
+		tillFields[0].setText("");
+		tillFields[1].setText("");
+		tillFields[2].setText("");
+		tillFields[3].setText("");
+		
+		for (int i = 0; i < splitInfo.length; i++)
+		{
+			if (splitInfo[i].equals("Till1"))
+			{
+				for (int j = 1; j < splitInfo.length - i; j++)
+				{
+					if (!splitInfo[i+j].equals("Till2"))
+					{
+						tillFields[0].append(splitInfo[i+j]+"\n");
+					}
+					else
+					{
+						break;
+					}
+				}
+			}
+			if (splitInfo[i].equals("Till2"))
+			{
+				for (int j = 1; j < splitInfo.length - i; j++)
+				{
+					if (!splitInfo[i+j].equals("Till3"))
+					{
+						tillFields[1].append(splitInfo[i+j]+"\n");
+					}
+					else
+					{
+						break;
+					}
+				}
+			}
+			if (splitInfo[i].equals("Till3"))
+			{
+				for (int j = 1; j < splitInfo.length - i; j++)
+				{
+					if (!splitInfo[i+j].equals("Till4"))
+					{
+						tillFields[2].append(splitInfo[i+j]+"\n");
+					}
+					else
+					{
+						break;
+					}
+				}
+			}
+			if (splitInfo[i].equals("Till4"))
+			{
+				for (int j = 1; j < splitInfo.length - i; j++)
+				{
+					if (!splitInfo[i+j].equals("Till5"))
+					{
+						tillFields[3].append(splitInfo[i+j]+"\n");
+					}
+					else
+					{
+						break;
+					}
+				}
+			}
+		}
+		
+			/*
+		for (int i = 0; i < splitInfo.length; i++)
 		{
 			//Set the ticksStep JLabel to the current tick
 			ticksStep.setText("Step: " + splitInfo[0] + "\t");
@@ -738,17 +827,39 @@ public class PetrolGUI {
 				pumpFields[i].setBackground(Color.white);
 			}
 			
+			boolean b;
+			int index;
 			//If the number of tills are in used based on the Pump Slider value in Parameter GUI
-			if(i < ((Math.pow(2, tillSlider.getValue())))){ 
-				//Each tillField is placed on its respective TextField
-				tillFields[i].setText("Sample");
-				//tillFields[i].setText(splitInfo[i+1]);
+			if(i < ((Math.pow(2, tillSlider.getValue())))){ 	
+				//I made
+				for(int inc = 0; inc < ((Math.pow(2, tillSlider.getValue()))); inc++){
+						b = false;
+						index = 0;
+						for (int id=inc; (id<splitInfo.length && !b) ; id++){
+							String toTest = ("Till"+(inc+1));
+							String toFur = (toTest + (inc-1));
+							if( splitInfo[i+id].equals(toTest) ){
+								System.out.println("<<<<<<<<<  " + toTest);
+								System.out.println(">>>>>>> <<<<<< " + toFur);
+								System.out.println(toFur);
+								 b=true;
+								 index = id;
+							}
+						}
+						if( b ){
+							//Each tillField is placed on its respective TextField
+							//tillFields[i].setText( splitInfo[i+index+1] );
+							tillFields[i].setText( splitInfo[index+1] );
+						}
+				}
 			} else {
 				//Till states its not in use
 				tillFields[i].setText("Till not in use");
 				tillFields[i].setBackground(Color.white);
 			}
+			
 		}
+		*/
 	}
 
 	/**
@@ -771,8 +882,10 @@ public class PetrolGUI {
 		{
 			//Create the new JTextField, based on info from arrays
 			pumpFields[i] = new JTextField();
+			pumpFields[i].setText("Pumps not in use");
 			if(i >= tillSlider.getValue()){
 				tillFields[i] = new JTextArea();
+				tillFields[i].setText("Tills not in use");
 			}
 		}
 	}
