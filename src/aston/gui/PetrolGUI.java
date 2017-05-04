@@ -740,6 +740,7 @@ public class PetrolGUI {
 			if(i < ((4 * Math.pow(2, pumpSlider.getValue())))){ 
 				//Each pumpField is placed on its respective TextField
 				pumpFields[i].setText(splitInfo[i+1]);
+				pumpFields[i].setText(splitInfo[i+3]);
 			}
 		}
 		
@@ -807,7 +808,11 @@ public class PetrolGUI {
 					}
 				}
 			}
+			
 		}
+		
+		simMoney.setText("Gained Money: " + splitInfo[2]);
+		simLoss.setText("Missed Money: " + splitInfo[1]);
 	}
 
 	/**
