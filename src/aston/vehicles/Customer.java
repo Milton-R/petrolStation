@@ -14,7 +14,6 @@ public class Customer {
 	private String name;
 	private int shoppingTime;
 	private Shop shop;
-	private int fuelMoney;
 	private int additionalMoney;
 	private int tillTime = 13;	//min time in till queue + 1
 
@@ -29,7 +28,6 @@ public class Customer {
 	public Customer(Vehicle ov, int shoppingTime, boolean happy, int shopMoney)
 	{
 		setAdditionalMoney(shopMoney);
-		fuelMoney= 0; 
 		ownedVehicle = ov;
 		this.shoppingTime = shoppingTime;
 		String vName = ov.getName();
