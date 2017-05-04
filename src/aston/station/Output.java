@@ -37,12 +37,6 @@ public class Output {
 	/**
 	 * Output Consructor
 	 */
-	public Output(){ 
-		
-		
-		
-	}
-	
 	
 	/**
 	 * Set the number of Gallons

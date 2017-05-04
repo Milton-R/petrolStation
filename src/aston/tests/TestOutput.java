@@ -60,24 +60,24 @@ public class TestOutput {
 	}*/
 	public void testGetSC()
 	{
-		assertEquals(" the number of vehicles must be "+numSc+"" ,numSc, output.getSC());
+		assertEquals(" the number of Small Cars must be "+numSc+"" ,numSc, output.getSC());
 	}
 	public void testGetM()
 	{
-		assertEquals(" the number of vehicles must be "+numM+"" ,numM, output.getM());
+		assertEquals(" the number of Motorbikes must be "+numM+"" ,numM, output.getM());
 	}
 	public void getFS()
 	{
-		assertEquals(" the number of vehicles must be "+numFs+"" ,numFs, output.getFS());
+		assertEquals(" the number of Family Sedans must be "+numFs+"" ,numFs, output.getFS());
 	}
 	public void testGetTruck()
 	{
-		assertEquals(" the number of vehicles must be "+numTruck+"" ,numTruck, output.getTruck());
+		assertEquals(" the number of Trucks must be "+numTruck+"" ,numTruck, output.getTruck());
 		
 	}
 	public void testGetNumSteps()
 	{
-		assertEquals(" the number of vehicles must be "+currentStep+"" ,currentStep, output.getNumSteps());
+		assertEquals(" the number of steps must be "+currentStep+"" ,currentStep, output.getNumSteps());
 		
 	}
 	/*public void incStep()
@@ -91,12 +91,12 @@ public class TestOutput {
 	*/
 	public void testGetFuelMoney()
 	{
-		assertEquals(" the number of vehicles must be "+fuelMoney+"" ,fuelMoney, output.getFuelMoney());
+		assertEquals(" the amount of fuel money must be "+fuelMoney+"" ,fuelMoney, output.getFuelMoney());
 	}
 
 	public void testGetLostMoney() 
 	{
-		assertEquals(" the number of vehicles must be "+lostMoney+"" ,lostMoney, output.getLostMoney());
+		assertEquals(" the amount of lost money must be "+lostMoney+"" ,lostMoney, output.getLostMoney());
 	}
 	
 	/*
@@ -107,7 +107,7 @@ public class TestOutput {
 
 
 	public void getAdditionalMoney() {
-		assertEquals(" the number of vehicles must be "+additionalMoney+"" ,additionalMoney, output.getAdditionalMoney());
+		assertEquals(" the amount of vehicles must be "+additionalMoney+"" ,additionalMoney, output.getAdditionalMoney());
 	}
 
 	/*
