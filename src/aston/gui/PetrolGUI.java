@@ -136,7 +136,7 @@ public class PetrolGUI {
 		tillSlideNum.setText("1");
 		
 			// Step Field
-		stepField.setText("100");
+		stepField.setText("1440");
 			
 			// Price Field
 		priceField.setText("1.20");
@@ -148,7 +148,7 @@ public class PetrolGUI {
 		quitButton.setToolTipText("Quit the Program");
 		
 			// Checkbox
-		truckCheck.setSelected(false);
+		truckCheck.setSelected(true);
 
 		// Step 3: Create containers to hold the components
 		mainParameterFrame = new JFrame("Petrol Station Simulation Parameters");
@@ -739,14 +739,12 @@ public class PetrolGUI {
 			//If the number of Pumps are in used based on the Pump Slider value in Parameter GUI
 			if(i < ((4 * Math.pow(2, pumpSlider.getValue())))){ 
 				//Each pumpField is placed on its respective TextField
+				pumpFields[i].setText(splitInfo[i+1]);
 				pumpFields[i].setText(splitInfo[i+3]);
-			} else {
-				//Pump states its not in use
-				//pumpFields[i].setText("Pump not in use"); // RELOCATE
-				//pumpFields[i].setBackground(Color.white);
 			}
 		}
 		
+		//Set all the Fields as 
 		tillFields[0].setText("");
 		tillFields[1].setText("");
 		tillFields[2].setText("");
@@ -813,8 +811,8 @@ public class PetrolGUI {
 			
 		}
 		
-		simMoney.setText("Gained Money: " + splitInfo[2]);
-		simLoss.setText("Missed Money: " + splitInfo[1]);
+		simMoney.setText("Gained Money: £" + Double.parseDouble(splitInfo[2])/100);
+		simLoss.setText("Missed Money: £" + Double.parseDouble(splitInfo[1])/100);
 	}
 
 	/**
@@ -837,10 +835,8 @@ public class PetrolGUI {
 		{
 			//Create the new JTextField, based on info from arrays
 			pumpFields[i] = new JTextField();
-			pumpFields[i].setText("Pumps not in use");
 			if(i >= tillSlider.getValue()){
 				tillFields[i] = new JTextArea();
-				tillFields[i].setText("Tills not in use");
 			}
 		}
 	}
