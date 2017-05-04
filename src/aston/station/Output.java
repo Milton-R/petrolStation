@@ -1,7 +1,6 @@
 package aston.station;
 
 /**
- * 
  * This presents the information with the amount of information required to present to user.
  * 
  * @author Tristan P.
@@ -13,27 +12,6 @@ public class Output {
 	
 	private int numTruck, numSc, numM, numFs, numGallons, totalVSpwnd, currentStep = 0, fuelMoney, lostMoney, additionalMoney;
 	
-	/*Things we need to keep track of:
-	 * #At the end of simulation
-	 * - Total number of vehicles
-	 * - How many of each type of vehicle
-	 * - Amount of fuel pumped
-	 * - Amount of money earned from fuel
-	 * - Amount of money earned from store
-	 * - Amount of money missed
-	 * 
-	 * #Throughout simulation
-	 * - What vehicles are in what pump queues
-	 * - Current fuel tank of vehicle at front of queue
-	 * - How much of the queue is taken up for each queue
-	 * - What Customers are in the store?
-	 * - What Customers are in what till queues?
-	 * - What step it is on.
-	 * 
-	 * #Truck
-	 * - truck probability?
-	 */
-	
 	/**
 	 * Output Consructor
 	 */
@@ -42,7 +20,6 @@ public class Output {
 		
 		
 	}
-	
 	
 	/**
 	 * Set the number of Gallons
@@ -64,11 +41,17 @@ public class Output {
 		return numGallons;
 	}
 	
+	/**
+	 * Money Store Method
+	 */
 	public void MoneyStore(){
 		
 		
 	}
 	
+	/**
+	 * Vehicle in Queue
+	 */
 	public void VehicleInQueue()
 	{
 		
@@ -197,20 +180,35 @@ public class Output {
 		return fuelMoney;
 	}
 
+	/**
+	 * Accessor Method of Money Lost during each tick
+	 * 
+	 * @return Money loss
+	 */
 	public int getLostMoney() {
 		return lostMoney;
 	}
 
+	/**
+	 * Add the current amount of lost money by the next amount of money lost
+	 * @param lostMoney
+	 */
 	public void addLostMoney(int lostMoney) {
 		this.lostMoney += lostMoney;
 	}
 
-
+	/**
+	 * Accessor Method of Addtional Money
+	 * @return additionalMoney
+	 */
 	public int getAdditionalMoney() {
 		return additionalMoney;
 	}
 
-
+	/**
+	 * Mutator Method of Addtional Money
+	 * @param additionalMoney
+	 */
 	public void addAdditionalMoney(int additionalMoney) {
 		this.additionalMoney += additionalMoney;
 	}

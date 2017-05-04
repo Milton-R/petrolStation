@@ -2,10 +2,22 @@ package aston.vehicles;
 
 import aston.resources.*;
 import aston.station.*;
-
+/**
+ * The Family Sedan is a subclass of the Abstract Vehicle Class.<br>
+ * This will cointain information that comes from the Config File.
+ *  * 
+ * @author Tristan P.
+ * @author Kelvin M.
+ * @author Matas B.
+ *
+ */
 public class FamilySedan extends Vehicle{
 	/**
-	 * Motorbike Constructor that is calling the super-class: Vehicle
+	 * Family Sedan Constructor that is calling the super-class: Vehicle
+	 * 
+	 * @param n
+	 * @param ps PetrolStation Class
+	 * @param steps
 	 */
 	public FamilySedan(String n, PetrolStation ps, int steps){
 		super(ps,steps);

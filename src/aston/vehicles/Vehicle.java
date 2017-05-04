@@ -8,8 +8,10 @@ import aston.resources.*;
  *
  * @author Kelvin M.
  * @author Tristan P.
+ * @author Matas B. 
+ * @author Milton R.
  * 
- * @version 27/03/2017
+ * @version 1.7 03/05/2017
  * 
  */
 public abstract class Vehicle{
@@ -32,9 +34,7 @@ public abstract class Vehicle{
 	protected VehicleQueue vQ;
 	
 	public PetrolStation petrolStation;
-	
-	//Methods
-		//Constructors
+
 	/**
 	 * Constructor of the Vehicle
 	 * 
@@ -175,6 +175,11 @@ public abstract class Vehicle{
 		}
 	}
 	
+	/**
+	 * Get how happy a customer/vehicle is
+	 * @return true Number of steps is within the shop time limit
+	 * @return false Number of steps outside the shop time limit
+	 */
 	private boolean getHappy()
 	{
 		int currentStep = petrolStation.output.getNumSteps();
@@ -186,21 +191,35 @@ public abstract class Vehicle{
 		else return false;
 	}
 	
+	/**
+	 * Accessor for the Vehicle Name
+	 * @return name
+	 */
 	public String getName()
 	{
 		return name;
 	}
 	
+	/**
+	 * Boolean if a Vehicle has a Customer out of the Vehicle
+	 * @return hasCustomer
+	 */
 	public boolean hasCustomer()
 	{
 		return hasCustomer;
 	}
 	
+	/**
+	 * Set the Queue of Vehicles. 
+	 * @param vq VehicleQueue Class
+	 */
 	public void setVehicleQueue(VehicleQueue vq)
 	{
 		vQ = vq;
 	}
-	
+	/**
+	 * Vehicle Leaves the Queue of Vehicles 
+	 */
 	public void vLeave()
 	{
 		vQ.removeFrontVehicle();

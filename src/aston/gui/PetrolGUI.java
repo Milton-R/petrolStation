@@ -744,7 +744,7 @@ public class PetrolGUI {
 			}
 		}
 		
-		//Set all the Fields as 
+		//Set all the Fields as Empty
 		tillFields[0].setText("");
 		tillFields[1].setText("");
 		tillFields[2].setText("");
@@ -811,8 +811,8 @@ public class PetrolGUI {
 			
 		}
 		
-		simMoney.setText("Gained Money: £" + Double.parseDouble(splitInfo[2])/100);
-		simLoss.setText("Missed Money: £" + Double.parseDouble(splitInfo[1])/100);
+		simMoney.setText("Gained Money: ï¿½" + Double.parseDouble(splitInfo[2])/100);
+		simLoss.setText("Missed Money: ï¿½" + Double.parseDouble(splitInfo[1])/100);
 	}
 
 	/**

@@ -39,7 +39,11 @@ public class Shop {
 		c.setShop(this);
 		shoppingCustomers.add(c);
 	}
-	
+	/**
+	 * Customer enters the Till Queue
+	 * 
+	 * @param c Customer
+	 */
 	public void tillEnter(Customer c)
 	{
 		c.setShop(this);
@@ -48,7 +52,7 @@ public class Shop {
 
 	/**
 	 * Remove the customer from the array
-	 * @param c
+	 * @param c Customer
 	 */
 	public void removeCustomer(Customer c)
 	{

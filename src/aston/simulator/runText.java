@@ -14,7 +14,12 @@ import aston.gui.*;
  * @version 10/04/2017
  */
 public class runText {
-	
+	/**
+	 * Main Argument<br>
+	 * Standard to run a class as an executable
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		int numSteps = 1;  // By default, run for 1 step
 		

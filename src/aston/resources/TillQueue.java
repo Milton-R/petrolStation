@@ -17,28 +17,47 @@ public class TillQueue {
 	private Queue<Customer> t;
 	private int numC = 0;
 	
+	/**
+	 * Till Queue Constructor<br>
+	 * This creates a new Till in the Shop Class to use. 
+	 */
 	public TillQueue()
 	{
 		t = new LinkedList<Customer>();
 	}
 	
+	/**
+	 * Add a customer to the Queue
+	 * @param c Customer
+	 */
 	public void addCustomer(Customer c)
 	{
 		t.add(c);
 		numC++;
 	}
 	
+	/**
+	 * Get the front of the Customer
+	 * @return The first person of the Customer being served 
+	 */
 	public Customer getFrontCustomer()
 	{
 		return t.peek();
 	}
 	
+	/**
+	 * Remove the front of the customer of the till.
+	 */
 	public void removeFrontCustomer()
 	{
 		t.remove();
 		numC--;
 	}
 	
+	/**
+	 * Accessor Method of the Number of Customers
+	 * @return numC Number of Customers
+	 */
 	public int getNumberC()
 	{
 		return numC;

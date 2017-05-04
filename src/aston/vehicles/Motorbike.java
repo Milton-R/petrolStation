@@ -3,6 +3,14 @@ package aston.vehicles;
 import aston.resources.Config;
 import aston.station.PetrolStation;
 
+/**
+ * The Motorbike is a subclass of the Abstract Vehicle Class.<br>
+ * This will cointain information that comes from the Config File.
+ * 
+ * @author Matas B.
+ * @author Tristan P.
+ *
+ */
 public class Motorbike extends Vehicle{
 	
 	/**

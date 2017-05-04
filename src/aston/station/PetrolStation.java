@@ -17,7 +17,7 @@ import aston.vehicles.*;
 
 public class PetrolStation {
 	
-	//variables
+	//Variables
 	Config config;
 	Vehicle generatedV;
 	
@@ -94,12 +94,8 @@ public class PetrolStation {
 				output.addLostMoney(v.getTankSize()*config.getPencePerGallon());
 			}
 		}
-		else
-		{
-			//System.out.println("no v");
-		}
 		
-		//update output and print Pump info
+		//Update output and print Pump info
 		for (Pump p : pumps)
 		{
 			if (!gui)
@@ -113,7 +109,7 @@ public class PetrolStation {
 			
 		}
 		
-		//update output and print Till info
+		//Update output and print Till info
 		for (Till t : shop.tills)
 		{
 			if (!gui)
@@ -151,6 +147,10 @@ public class PetrolStation {
 		}
 	}
 	
+	/**
+	 * Get the current configuration
+	 * @return config Config Class
+	 */
 	public Config getConfig()
 	{
 		return config;

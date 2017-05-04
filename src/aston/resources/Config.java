@@ -1,6 +1,7 @@
 package aston.resources;
 /**
- * This is a class file which contains all the modifiable variables.
+ * This is a class file which contains all the modifiable variables.<br>
+ * This also houses the main information and variables of the vehicles and steps.
  * 
  * @author Matas B.
  * @author Milton R.
@@ -240,6 +241,10 @@ public class Config {
 	{
 		numberOftills = i;
 	}
+	/**
+	 * The Service of the Petrol Station
+	 * @param happy Boolean that understands if the customer is satisfied with the service.
+	 */
 	public void Service(boolean happy)
 	{
 		if(happy)

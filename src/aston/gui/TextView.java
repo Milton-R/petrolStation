@@ -12,7 +12,18 @@ import aston.simulator.Simulator;
  *
  */
 public class TextView {
-	
+	/**
+	 * Text View Constructor<br>
+	 * This sets the format to print to the information to a file. 
+	 * 
+	 * @param steps
+	 * @param p
+	 * @param q
+	 * @param pumps
+	 * @param tills
+	 * @param gallonPrice
+	 * @param trucks
+	 */
 	public TextView(int steps, double p, double q, int pumps, int tills, int gallonPrice, boolean trucks)
 	{
 		//create simulation
