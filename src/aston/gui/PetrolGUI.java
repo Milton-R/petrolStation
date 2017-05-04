@@ -431,9 +431,9 @@ public class PetrolGUI {
 		tillLabel4.setText("Till: 4");
 		
 		ticksStep.setText("Step:");
-		simMoney.setText("Amount of Money Gained:");
+		simMoney.setText("Gained Money: ");
 		simMoney.setHorizontalAlignment(JLabel.CENTER);
-		simLoss.setText("Money Missed:");
+		simLoss.setText("Missed Money: ");
 		
 		stopButton.setText("Close Current Simulation");
 		
@@ -811,8 +811,8 @@ public class PetrolGUI {
 			
 		}
 		
-		simMoney.setText("Gained Money: Â£" + Double.parseDouble(splitInfo[2])/100);
-		simLoss.setText("Missed Money: Â£" + Double.parseDouble(splitInfo[1])/100);
+		simMoney.setText("Gained Money: £" + Double.parseDouble(splitInfo[2])/100);
+		simLoss.setText("Missed Money: £" + Double.parseDouble(splitInfo[1])/100);
 	}
 
 	/**
