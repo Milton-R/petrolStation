@@ -57,18 +57,6 @@ public class Output {
 	{
 		return numGallons;
 	}
-	
-	public void MoneyStore(){
-		
-		
-	}
-	
-	public void VehicleInQueue()
-	{
-		
-		
-		
-	}
    
 	/**
 	 * Get the total Vehicles 

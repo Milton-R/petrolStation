@@ -2,7 +2,6 @@ package aston.tests;
 import aston.station.PetrolStation;
 import aston.vehicles.SmallCar;
 import aston.vehicles.Vehicle;
-import aston.station.PetrolStation;
 import aston.resources.*;
 
 import static org.junit.Assert.*;
