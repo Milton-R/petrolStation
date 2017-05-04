@@ -4,8 +4,8 @@ import aston.vehicles.*;
 import aston.resources.*;
 
 /**
- * Pump Information.
- * <br>This allows to get information about the type of car passing and
+ * Pump Information.<br>
+ * This allows to get information about the type of car passing and
  * the 
  * 
  * @author Kelvin M.
@@ -24,7 +24,8 @@ public class Pump {
 	private String name;
 	
 	/**
-	 * Constructor
+	 * Pump Constructor<br>
+	 * The Pump will be able to 
 	 * 
 	 * @param n - Number of Pumps from the GUI
 	 */

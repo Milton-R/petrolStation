@@ -14,11 +14,21 @@ public class Till {
 	private TillQueue currentTillQueue = new TillQueue();
 	private String name;
 	
+	/**
+	 * Till Constructor<br>
+	 * This creates a new Till and names the till with a designated number
+	 * 
+	 * @param n Number
+	 */
 	public Till(int n)
 	{
 		name = "Till"+n;
 	}
 	
+	/**
+	 * Accessor Method of the Name of the Till
+	 * @return name the name of the till
+	 */
 	public String getName()
 	{
 		return name;
@@ -26,7 +36,7 @@ public class Till {
 	
 	/**
 	 * This adds a customer to the current queue of the till 
-	 * @param c
+	 * @param c The customer instance that is being added
 	 */
 	public void addCustomer(Customer c)
 	{
@@ -56,12 +66,19 @@ public class Till {
 			}
 		}
 	}
-	
+	/**
+	 * Print the till to Text for TextView Use
+	 * @return The name of the till and the Queue
+	 */
 	public String textToString()
 	{
 		return "\n" + name + ":\n" + currentTillQueue.toTextString();
 	}
 	
+	/**
+	 * Print the String to the GUI
+	 * @return The Queue of a Till.
+	 */
 	public String guiToString()
 	{
 		return (currentTillQueue.toGuiString());

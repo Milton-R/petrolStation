@@ -16,7 +16,9 @@ public class runGUI {
 	
 	/**
 	 * Create a simulation and run it for a specified number of steps.
-	 * <br> This is based on simulator from Lab5.
+	 * This is based on simulator from Lab5
+	 * 
+	 * @param args The arguements that are taken when run as gui (shouldn't be any)
 	 */
 	public static void main(String[] args) {
 		//Make the GUI Visible

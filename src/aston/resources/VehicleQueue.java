@@ -32,6 +32,7 @@ public class VehicleQueue {
 	 * Adds a vehicle to the queue if there is enough space for it to fit, adds the size of the vehicle to the space taken
 	 * 
 	 * @return boolean true if vehicle is added, otherwise false
+	 * @param v The vehicle that is going to be added
 	 */
 	public boolean addVehicle(Vehicle v)
 	{

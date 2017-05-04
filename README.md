@@ -36,7 +36,7 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 	* Tristan has made the Resources Package that contains the vehicle configuration
 	* Tristan has started the Simulator Logic Class
 	* Matas has made changes to the UML Diagram as how the Java Classes are different overall
-	* Kelvin has made Vehicle SuperClass abstract along with some fo the methods
+	* Kelvin has made Vehicle SuperClass abstract along with some skeleton for the methods
 	* Kelvin has started creating the GUI Class
 	* Kelvin hopefully will start the GUI Wireframe
 		* Changed to Milton on the 17th March
@@ -122,12 +122,18 @@ A Petrol Station Simulation made in Java via Eclipse IDE
 	* Milton to redo the Wireframe by tonight
 		* Keep the original as sample of GUI changes. 
 
-18. 3 May 2017 (LAST RECORD OF WORK)
+18. 3 - 4 May 2017 (LAST RECORD OF WORK #TeamNoSleep )
 	* Kelvin has worked on the _"Multiple types of fuel with different prices"_ Subsection of the report
 	* Matas and Milton doing the Test Classes
-		* Small Car Class
-		* 
 	* Matas and Milton have finished the Truck Class
+	* Kelvin changed the GUI to the final version, under group revision of the current situation with Till Queue
+	* Kelvin and Tristan finished the Till Queue To the GUI 
+	* Matas, Tristan and Kelvin have integrated the money and lost sales
+	* Tristan has added the Shopping Tick to the Customer Class
+		* Ticks are calculated in relation of 2-3 minutes
+	* Matas and Tristan made the Probability of the Customer Shopping 
+	* Kelvin added the other additional JavaDocs for Methods for ALL classes
+	
 	
 # Advisory
 Used for Aston University CS1410: Java Programming Development

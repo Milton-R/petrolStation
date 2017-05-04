@@ -17,7 +17,7 @@ import aston.vehicles.*;
 
 public class PetrolStation {
 	
-	//variables
+	//Variables
 	Config config;
 	Vehicle generatedV;
 	
@@ -48,6 +48,9 @@ public class PetrolStation {
 	
 	/**
 	 * Main run method, runs every step/tick.
+	 * 
+	 * @param gui Takes the instance of the gui being used
+	 * @return String all the information about the current state of the simulation
 	 */
 	public String run(boolean gui)
 	{
@@ -94,12 +97,8 @@ public class PetrolStation {
 				output.addLostMoney(v.getTankSize()*config.getPencePerGallon());
 			}
 		}
-		else
-		{
-			//System.out.println("no v");
-		}
 		
-		//update output and print Pump info
+		//Update output and print Pump info
 		for (Pump p : pumps)
 		{
 			if (!gui)
@@ -113,7 +112,7 @@ public class PetrolStation {
 			
 		}
 		
-		//update output and print Till info
+		//Update output and print Till info
 		for (Till t : shop.tills)
 		{
 			if (!gui)
@@ -137,6 +136,7 @@ public class PetrolStation {
 	/**
 	 * Send the customer to the store
 	 * @param c Customer Class
+	 * @param i Integer is 0 normally, but may be 1 if the customer goes straight to the till (motorbikes and unhappy customers)
 	 */
 	public void goToShop(Customer c, int i)
 	{
@@ -151,6 +151,10 @@ public class PetrolStation {
 		}
 	}
 	
+	/**
+	 * Get the current configuration
+	 * @return config Config Class
+	 */
 	public Config getConfig()
 	{
 		return config;

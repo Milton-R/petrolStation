@@ -744,7 +744,7 @@ public class PetrolGUI {
 			}
 		}
 		
-		//Set all the Fields as 
+		//Set all the Fields as Empty
 		tillFields[0].setText("");
 		tillFields[1].setText("");
 		tillFields[2].setText("");
